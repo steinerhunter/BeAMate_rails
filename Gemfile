@@ -7,6 +7,9 @@ group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
   gem 'test-unit'
+  gem 'bcrypt-ruby'
+  gem 'faker', '1.0.1'
+  gem 'factory_girl_rails', '4.1.0'
 end
 
 # Gems used only for assets and not required

@@ -9,7 +9,7 @@ group :development, :test do
   gem 'test-unit'
   gem 'bcrypt-ruby'
   gem 'faker', '1.0.1'
-  gem 'factory_girl_rails', '4.1.0'
+  gem 'factory_girl_rails'
 end
 
 # Gems used only for assets and not required

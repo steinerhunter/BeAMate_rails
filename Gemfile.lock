@@ -157,7 +157,7 @@ DEPENDENCIES
   bootstrap-sass (= 2.1)
   capybara (= 1.1.2)
   coffee-rails (= 3.2.2)
-  factory_girl_rails (= 4.1.0)
+  factory_girl_rails
   faker (= 1.0.1)
   jquery-rails (= 2.0.2)
   pg (= 0.12.2)

@@ -1,0 +1,29 @@
+Running `rake db:migrate --trace` attached to terminal... up, run.5939
+(in /app)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+rake aborted!
+/app/lib/tasks/heroku.rake:1: syntax error, unexpected '<'
+<html>
+ ^
+/app/lib/tasks/heroku.rake:2: syntax error, unexpected tCONSTANT, expecting $end
+<head><title>301 Moved Permanently</title></head>
+                      ^
+/app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:425:in `load'
+/app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:425:in `block in load_tasks'
+/app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:425:in `each'
+/app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:425:in `load_tasks'
+/app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:145:in `load_tasks'
+/app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/railtie/configurable.rb:30:in `method_missing'
+/app/Rakefile:7:in `<top (required)>'
+/app/vendor/bundle/ruby/1.9.1/gems/rake-0.8.7/lib/rake.rb:2383:in `load'
+/app/vendor/bundle/ruby/1.9.1/gems/rake-0.8.7/lib/rake.rb:2383:in `raw_load_rakefile'
+/app/vendor/bundle/ruby/1.9.1/gems/rake-0.8.7/lib/rake.rb:2017:in `block in load_rakefile'
+/app/vendor/bundle/ruby/1.9.1/gems/rake-0.8.7/lib/rake.rb:2068:in `standard_exception_handling'
+/app/vendor/bundle/ruby/1.9.1/gems/rake-0.8.7/lib/rake.rb:2016:in `load_rakefile'
+/app/vendor/bundle/ruby/1.9.1/gems/rake-0.8.7/lib/rake.rb:2000:in `block in run'
+/app/vendor/bundle/ruby/1.9.1/gems/rake-0.8.7/lib/rake.rb:2068:in `standard_exception_handling'
+/app/vendor/bundle/ruby/1.9.1/gems/rake-0.8.7/lib/rake.rb:1998:in `run'
+/app/vendor/bundle/ruby/1.9.1/gems/rake-0.8.7/bin/rake:31:in `<top (required)>'
+/app/vendor/bundle/ruby/1.9.1/bin/rake:19:in `load'
+/app/vendor/bundle/ruby/1.9.1/bin/rake:19:in `<main>'

@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'bootstrap-sass', '2.1'
+gem 'bcrypt-ruby'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
@@ -9,7 +10,6 @@ group :development, :test do
   gem 'test-unit'
   gem 'faker', '1.0.1'
   gem 'factory_girl_rails'
-  gem 'bcrypt-ruby'
 end
 
 # Gems used only for assets and not required

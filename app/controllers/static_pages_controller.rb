@@ -1,10 +1,11 @@
 class StaticPagesController < ApplicationController
+
+  before_filter :signed_in_user, only: [:request_item]
+  
   def home
     if signed_in?
-      @micropost = current_user.microposts.build
-      @feed_items = current_user.feed
+      @feed_items = current_user.general_feed
     end
-
   end
 
   def help
@@ -15,4 +16,11 @@ class StaticPagesController < ApplicationController
 
   def about
   end
+
+  def request_item
+    if signed_in?
+      @micropost = current_user.microposts.build
+    end
+  end
+
 end

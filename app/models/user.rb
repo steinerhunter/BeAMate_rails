@@ -25,8 +25,12 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 8 }
   validates :password_confirmation, presence: true
 
-  def feed
+  def user_feed
     Micropost.where("user_id = ?", id)
+  end
+
+  def general_feed
+    Micropost.all
   end
 
   private

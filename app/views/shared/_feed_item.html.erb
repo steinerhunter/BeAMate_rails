@@ -1,9 +1,12 @@
 <li id="<%= feed_item.id %>">
   <%=  link_to gravatar_for(feed_item.user), feed_item.user  %>
   <span class="user">
-    <%=  link_to feed_item.user.name, feed_item.user  %>
+    <%= feed_item.user.name %> is looking for a mate who can get <%= feed_item.requested_item %>
+    and is willing to pay <%= feed_item.willing_to_pay  %> for the service.<br>
+    more details: <br>
+    <%= feed_item.content %><br>
+    <%=  link_to "view profile", feed_item.user  %>
   </span>
-  <span class="content"><%=  feed_item.content  %></span>
   <span class="timestamp">
     Posted <%=  time_ago_in_words(feed_item.created_at) %> ago.
   </span>

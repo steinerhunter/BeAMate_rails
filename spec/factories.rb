@@ -13,6 +13,8 @@ FactoryGirl.define do
 
   factory :micropost do
     content "Lorem ipsum"
+    requested_item "Some tablet"
+    willing_to_pay "50$"
     user
   end
 end

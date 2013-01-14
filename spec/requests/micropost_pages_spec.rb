@@ -7,12 +7,12 @@ describe "Micropost Pages" do
   let(:user) { FactoryGirl.create(:user) }
   before { sign_in user }
 
-  describe "micropost creation" do
-    before { visit root_path }
+  describe "new request creation" do
+    before { visit request_path }
 
     describe "with invalid information" do
 
-      it "should not create a micropost" do
+      it "should not create a new request" do
         expect { click_button "Post" }.not_to change(Micropost, :count)
       end
 
@@ -23,6 +23,8 @@ describe "Micropost Pages" do
     end
 
     describe "with valid information" do
+      before { fill_in 'micropost_requested_item', with: "Some tablet"}
+      before { fill_in 'micropost_willing_to_pay', with: "50$"}
       before { fill_in 'micropost_content', with: "Lorem Ipsum"}
       it "should create a micropost" do
         expect { click_button "Post" }.to change(Micropost, :count).by(1)
@@ -34,7 +36,7 @@ describe "Micropost Pages" do
     before { FactoryGirl.create(:micropost, user: user) }
 
     describe "as correct user" do
-      before { visit root_path }
+      before { visit user_path(user) }
 
       it "should delete a micropost" do
         expect { click_link "delete" }.to change(Micropost, :count).by(-1)

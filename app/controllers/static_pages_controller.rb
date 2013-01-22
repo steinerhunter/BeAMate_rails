@@ -1,10 +1,11 @@
 class StaticPagesController < ApplicationController
 
-  before_filter :signed_in_user, only: [:request_item]
+  before_filter :signed_in_user, only: [:request_item, :matepost_item]
   
   def home
     if signed_in?
-      @feed_items = current_user.general_feed
+      @request_feed_items = current_user.request_feed
+      @mate_feed_items = current_user.mate_feed
     end
   end
 
@@ -19,7 +20,13 @@ class StaticPagesController < ApplicationController
 
   def request_item
     if signed_in?
-      @micropost = current_user.microposts.build
+      @requestpost = current_user.requestposts.build
+    end
+  end
+
+  def matepost_item
+    if signed_in?
+      @matepost = current_user.mateposts.build
     end
   end
 

@@ -8,9 +8,10 @@
           <li><%= link_to "Help",    help_path %></li>
           <% if signed_in?  %>
               <li><%= link_to "Want Something", request_path  %></li>
+              <li><%= link_to "Help Someone", mate_path  %></li>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Account <b class="caret"></b>
+                  <%= current_user.name %> <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
                   <li><%= link_to "Profile", current_user  %></li>

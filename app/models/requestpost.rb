@@ -1,4 +1,4 @@
-class Micropost < ActiveRecord::Base
+class Requestpost < ActiveRecord::Base
   attr_accessible :content, :requested_item, :willing_to_pay
   belongs_to :user
 
@@ -7,5 +7,5 @@ class Micropost < ActiveRecord::Base
   validates :willing_to_pay, :presence => true, :length =>  { maximum: 8 }
   validates :content, :presence => true, :length => { maximum: 140 }
 
-  default_scope order: 'microposts.created_at DESC'
+  default_scope order: 'requestposts.created_at DESC'
 end

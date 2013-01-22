@@ -1,0 +1,11 @@
+<%= form_for(@matepost) do |f| %>
+    <%=  render 'shared/error_messages', object: f.object  %>
+    <div class="field">
+      <%= f.text_field :flying_to, placeholder: "What's your destination?" %>
+      <%= f.text_field :flying_from, placeholder: "Where are you coming from?" %>
+      <%= f.text_field :departing_on, placeholder: "When are you going?" %>
+      <%= f.text_field :returning_on, placeholder: "When will you return??" %>
+      <%= f.text_area :content, placeholder: "Post some more details..." %>
+    </div>
+    <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>

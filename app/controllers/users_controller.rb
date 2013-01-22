@@ -5,7 +5,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts
+    @user_request_feed_items = @user.user_request_feed
+    @user_mate_feed_items =@user.user_mate_feed
   end
 
   def new

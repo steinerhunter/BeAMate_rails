@@ -1,6 +1,0 @@
-<% @microposts.each do |micropost| %>
-    <li>
-      <%= micropost.content  %><br>
-      Posted <%=  time_ago_in_words(micropost.created_at) %> ago by <%= micropost.user.name  %>.
-    </li>
-<% end %>

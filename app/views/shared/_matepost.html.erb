@@ -1,0 +1,6 @@
+<% @mateposts.each do |matepost| %>
+    <li>
+      <%= matepost.content  %><br>
+      Posted <%=  time_ago_in_words(matepost.created_at) %> ago by <%= matepost.user.name  %>.
+    </li>
+<% end %>

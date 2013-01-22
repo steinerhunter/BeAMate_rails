@@ -1,7 +1,8 @@
 BeAMateRails::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :microposts, only: [:create, :destroy]
+  resources :requestposts, only: [:create, :destroy]
+  resources :mateposts, only: [:create, :destroy]
 
   root to: 'static_pages#home'
 
@@ -13,6 +14,7 @@ BeAMateRails::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   match '/request', to: 'static_pages#request_item'
+  match '/mate', to: 'static_pages#matepost_item'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,6 @@
+<% @requestposts.each do |requestpost| %>
+    <li>
+      <%= requestpost.content  %><br>
+      Posted <%=  time_ago_in_words(requestpost.created_at) %> ago by <%= requestpost.user.name  %>.
+    </li>
+<% end %>

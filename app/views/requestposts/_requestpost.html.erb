@@ -1,0 +1,9 @@
+<li>
+  <span class="content"><%= requestpost.content  %></span>
+  <span class="timestamp">This was posted <%= time_ago_in_words(requestpost.created_at)  %> ago.</span>
+  <% if current_user?(requestpost.user)  %>
+      <%=  link_to "delete" , requestpost, method: :delete,
+                   data: { confirm: "Delete requestpost?"},
+                   title: requestpost.content  %>
+  <% end %>
+</li>

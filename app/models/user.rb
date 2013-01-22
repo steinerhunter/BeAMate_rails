@@ -12,7 +12,8 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
   has_secure_password
-  has_many :microposts, dependent: :destroy
+  has_many :requestposts, dependent: :destroy
+  has_many :mateposts, dependent: :destroy
 
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
@@ -25,12 +26,20 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 8 }
   validates :password_confirmation, presence: true
 
-  def user_feed
-    Micropost.where("user_id = ?", id)
+  def user_request_feed
+    Requestpost.where("user_id = ?", id)
   end
 
-  def general_feed
-    Micropost.all
+  def user_mate_feed
+    Matepost.where("user_id = ?", id)
+  end
+
+  def request_feed
+    Requestpost.all
+  end
+
+  def mate_feed
+    Matepost.all
   end
 
   private

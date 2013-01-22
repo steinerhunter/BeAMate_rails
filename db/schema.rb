@@ -11,9 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130112215242) do
+ActiveRecord::Schema.define(:version => 20130115184155) do
 
-  create_table "microposts", :force => true do |t|
+  create_table "mateposts", :force => true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "flying_to"
+    t.string   "flying_from"
+    t.string   "departing_on"
+    t.string   "returning_on"
+  end
+
+  add_index "mateposts", ["user_id", "created_at"], :name => "index_mateposts_on_user_id_and_created_at"
+
+  create_table "requestposts", :force => true do |t|
     t.string   "content"
     t.integer  "user_id"
     t.datetime "created_at",     :null => false
@@ -22,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20130112215242) do
     t.string   "willing_to_pay"
   end
 
-  add_index "microposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"
+  add_index "requestposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "name"

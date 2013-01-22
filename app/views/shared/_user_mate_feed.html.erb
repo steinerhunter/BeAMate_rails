@@ -1,0 +1,5 @@
+<% if @user_mate_feed_items.any? %>
+    <ol class="requestposts">
+      <%= render partial: 'shared/user_mate_feed_item', collection: @user_mate_feed_items %>
+    </ol>
+<% end  %>

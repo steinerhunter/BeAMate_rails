@@ -29,8 +29,9 @@ describe User do
   it { should respond_to(:remember_token) }
   it { should respond_to(:admin) }
   it { should respond_to(:authenticate)}
-  it { should respond_to(:microposts) }
-  it { should respond_to(:feed) }
+  it { should respond_to(:requestposts) }
+  it { should respond_to(:request_feed) }
+  it { should respond_to(:mate_feed) }
 
   it { should be_valid }
   it { should_not be_admin }
@@ -140,37 +141,69 @@ describe User do
     its(:remember_token) { should_not be_blank }
   end
 
-  describe "micropost associations" do
+  describe "requestpost associations" do
 
     before { @user.save }
-    let!(:older_micropost) do
-      FactoryGirl.create(:micropost, :user => @user, :created_at => 1.day.ago)
+    let!(:older_requestpost) do
+      FactoryGirl.create(:requestpost, :user => @user, :created_at => 1.day.ago)
     end
-    let!(:newer_micropost) do
-      FactoryGirl.create(:micropost, :user => @user, :created_at => 1.hour.ago)
-    end
-
-    it "should have the right microposts in the right order" do
-      @user.microposts.should == [newer_micropost, older_micropost]
+    let!(:newer_requestpost) do
+      FactoryGirl.create(:requestpost, :user => @user, :created_at => 1.hour.ago)
     end
 
-    it "should destroy associated microposts" do
-      microposts = @user.microposts.dup
+    it "should have the right requestposts in the right order" do
+      @user.requestposts.should == [newer_requestpost, older_requestpost]
+    end
+
+    it "should destroy associated requestposts" do
+      requestposts = @user.requestposts.dup
       @user.destroy
-      microposts.should_not be_empty
-      microposts.each do |micropost|
-        Micropost.find_by_id(micropost.id).should be_nil
+      requestposts.should_not be_empty
+      requestposts.each do |requestpost|
+        Requestpost.find_by_id(requestpost.id).should be_nil
       end
     end
 
     describe "status" do
       let(:unfollowed_post) do
-        FactoryGirl.create(:micropost, user: FactoryGirl.create(:user))
+        FactoryGirl.create(:requestpost, user: FactoryGirl.create(:user))
       end
 
-      its(:feed) { should include(newer_micropost) }
-      its(:feed) { should include(older_micropost) }
-      its(:feed) { should_not include(unfollowed_post) }
+      its(:request_feed) { should include(newer_requestpost) }
+      its(:request_feed) { should include(older_requestpost) }
+    end
+  end
+
+  describe "matepost associations" do
+
+    before { @user.save }
+    let!(:older_matepost) do
+      FactoryGirl.create(:matepost, :user => @user, :created_at => 1.day.ago)
+    end
+    let!(:newer_matepost) do
+      FactoryGirl.create(:matepost, :user => @user, :created_at => 1.hour.ago)
+    end
+
+    it "should have the right mateposts in the right order" do
+      @user.mateposts.should == [newer_matepost, older_matepost]
+    end
+
+    it "should destroy associated mateposts" do
+      mateposts = @user.mateposts.dup
+      @user.destroy
+      mateposts.should_not be_empty
+      mateposts.each do |matepost|
+        Requestpost.find_by_id(matepost.id).should be_nil
+      end
+    end
+
+    describe "status" do
+      let(:unfollowed_post) do
+        FactoryGirl.create(:matepost, user: FactoryGirl.create(:user))
+      end
+
+      its(:mate_feed) { should include(newer_matepost) }
+      its(:mate_feed) { should include(older_matepost) }
     end
   end
 

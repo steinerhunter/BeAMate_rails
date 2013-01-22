@@ -11,16 +11,6 @@ describe "Static pages" do
     it { should have_selector('title', text: full_title('')) }
     it { should_not have_selector 'title', text: '| Home' }
 
-    describe "for signed in users" do
-      let(:user) { FactoryGirl.create(:user) }
-      before do
-        FactoryGirl.create(:micropost, user: user, content: "Lorem ipsum")
-        FactoryGirl.create(:micropost, user: user, content: "Dolor sit amet")
-        sign_in user
-        visit root_path
-      end
-
-    end
   end
 
   describe "Help page" do
@@ -47,7 +37,12 @@ describe "Static pages" do
   describe "Request page" do
     before { visit request_path }
 
-    it { should have_selector('h1',    text: 'Request Something.') }
-    it { should have_selector('title', text: full_title('Request Something')) }
+    it { should have_selector('h1',    text: 'How can we help you?.') }
+  end
+
+  describe "Matepost page" do
+    before { visit mate_path }
+
+    it { should have_selector('h1',    text: 'Perhaps you can help?.') }
   end
 end

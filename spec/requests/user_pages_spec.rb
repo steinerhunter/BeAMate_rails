@@ -49,18 +49,26 @@ describe "User pages" do
 
   describe "profile page" do
     let(:user) { FactoryGirl.create(:user) }
-    let!(:micropost1) { FactoryGirl.create(:micropost, :user => user, :content => "First post!") }
-    let!(:micropost2) { FactoryGirl.create(:micropost, :user => user, :content => "Second post...") }
+    let!(:requestpost1) { FactoryGirl.create(:requestpost, :user => user, :content => "First request post!") }
+    let!(:requestpost2) { FactoryGirl.create(:requestpost, :user => user, :content => "Second request post...") }
+    let!(:matepost1) { FactoryGirl.create(:matepost, :user => user, :content => "First mate post!") }
+    let!(:matepost2) { FactoryGirl.create(:matepost, :user => user, :content => "Second mate post...") }
 
     before { visit user_path(user)}
 
     it { should have_selector('h1', text: user.name)}
     it { should have_selector('title', text: user.name)}
 
-    describe "microposts" do
-      it { should have_content(micropost1.content) }
-      it { should have_content(micropost2.content) }
-      it { should have_content(user.microposts.count) }
+    describe "requestposts" do
+      it { should have_content(requestpost1.content) }
+      it { should have_content(requestpost2.content) }
+      it { should have_content(user.requestposts.count) }
+    end
+
+    describe "mateposts" do
+      it { should have_content(matepost1.content) }
+      it { should have_content(matepost2.content) }
+      it { should have_content(user.mateposts.count) }
     end
   end
 

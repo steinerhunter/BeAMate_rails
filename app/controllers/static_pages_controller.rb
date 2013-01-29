@@ -21,12 +21,14 @@ class StaticPagesController < ApplicationController
   def request_item
     if signed_in?
       @requestpost = current_user.requestposts.build
+      render "request_item.html.erb", :layout => false
     end
   end
 
   def matepost_item
     if signed_in?
       @matepost = current_user.mateposts.build
+      render "matepost_item.html.erb", :layout => false
     end
   end
 

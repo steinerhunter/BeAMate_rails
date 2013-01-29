@@ -5,7 +5,7 @@
       <%= f.text_field :flying_from, placeholder: "Where are you coming from?" %>
       <%= f.text_field :departing_on, placeholder: "When are you going?" %>
       <%= f.text_field :returning_on, placeholder: "When will you return??" %>
-      <%= f.text_area :content, placeholder: "Post some more details..." %>
+      <%= f.text_area :content, placeholder: "Post some more details...", "rows" => 3 %>
     </div>
     <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>

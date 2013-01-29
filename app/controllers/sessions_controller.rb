@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
+    render "new.html.erb", :layout => false
   end
 
   def create

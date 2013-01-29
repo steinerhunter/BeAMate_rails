@@ -214,3 +214,15 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+.modal, a:active, a:focus {
+  outline: 0 none;
+}
+
+.modal-header {
+  height: 20px;
+}
+
+.modal-footer {
+  height: 10px;
+}

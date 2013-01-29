@@ -3,7 +3,7 @@
     <div class="field">
       <%= f.text_field :requested_item, placeholder: "What do you want?" %>
       <%= f.text_field :willing_to_pay, placeholder: "How much will you pay for the service?" %>
-      <%= f.text_area :content, placeholder: "Post some more details..." %>
+      <%= f.text_area :content, placeholder: "Post some more details...", "rows" => 3 %>
     </div>
     <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>

@@ -226,3 +226,24 @@ aside {
 .modal-footer {
   height: 10px;
 }
+
+#FeedbackButton {
+  background-image: url("FeedbackButtonUp.png");
+  height: 168px;
+  width: 45px;
+  position: fixed;
+  top: 40%;
+  z-index: 999;
+}
+
+#FeedbackButton a {
+  display: block;
+  height: 168px;
+  width: 45px;
+}
+
+#FeedbackButton a:hover {
+  background-image: url("FeedbackButtonDown.png");
+  height: 168px;
+  width: 45px;
+}

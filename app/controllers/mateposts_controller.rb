@@ -5,25 +5,22 @@ class MatepostsController < ApplicationController
 
   def create
     @matepost = current_user.mateposts.build(params[:matepost])
-
-    respond_to do |format|
-      if @matepost.save
-        flash[:success] = "Mate post successfully created!"
-        format.html { redirect_to root_path, :layout => !request.xhr? }
-        format.js { render :js => @matepost, :status => :created, :location => @comment, :layout => !request.xhr? }
-      else
-        format.html { render 'static_pages/matepost_item', :layout => !request.xhr? }
-        format.js { render :js => @matepost.errors, :status => :unprocessable_entity }
-      #else
-        #@feed_items = []
-        #render 'static_pages/matepost_item'
-      end
+    if @matepost.save
+      flash[:success] = "Request successfully created!"
+      redirect_to root_url
+    else
+      @feed_items = []
+      render 'static_pages/request_item'
     end
   end
 
   def destroy
     @matepost.destroy
-    redirect_to root_url
+    respond_to do |format|
+      format.html { redirect_to(root_url) }
+      format.json { head :no_content }
+      format.js   { render :nothing => true }
+    end
   end
 
   private

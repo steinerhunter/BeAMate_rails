@@ -15,7 +15,11 @@ class RequestpostsController < ApplicationController
 
   def destroy
     @requestpost.destroy
-    redirect_to root_url
+    respond_to do |format|
+      format.html { redirect_to(root_url) }
+      format.json { head :no_content }
+      format.js   { render :nothing => true }
+      end
   end
 
   private

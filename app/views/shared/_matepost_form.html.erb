@@ -1,4 +1,4 @@
-<%= form_for(@matepost) do |f| %>
+<%= form_for(@matepost, :remote => true, :html => { :id => 'new-matepost-form' }) do |f| %>
     <%=  render 'shared/error_messages', object: f.object  %>
     <div class="field">
       <%= f.text_field :flying_to, placeholder: "What's your destination?" %>
@@ -6,6 +6,7 @@
       <%= f.text_field :departing_on, placeholder: "When are you going?" %>
       <%= f.text_field :returning_on, placeholder: "When will you return??" %>
       <%= f.text_area :content, placeholder: "Post some more details...", "rows" => 3 %>
+      <div class="errors"></div>
     </div>
     <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>

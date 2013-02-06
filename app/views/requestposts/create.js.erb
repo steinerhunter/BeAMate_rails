@@ -1,0 +1,21 @@
+var form = $('#new_requestpost');
+
+<% if @requestpost.errors.any? %>
+
+// Create a list of errors
+var errors = $('<ul />');
+
+<% @requestpost.errors.full_messages.each do |error| %>
+errors.append('<li><%= escape_javascript(error) %></li>');
+<% end %>
+
+// Display errors before the form
+$('<div />').addClass('.errors').html(errors).prependTo("#new_requestpost");
+
+<% else %>
+
+// Add the new requestpost to the beginning of the #requestpost division
+$("#requestposts").prepend('<%= j(render(:partial => "requestpost", :object => @requestpost))%>').hide().fadeIn(850);
+$('#myModal').modal('hide');
+
+<% end %>

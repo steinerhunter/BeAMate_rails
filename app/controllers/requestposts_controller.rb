@@ -1,12 +1,13 @@
 class RequestpostsController < ApplicationController
   before_filter :signed_in_user
   before_filter :correct_user, only: :destroy
+  respond_to :html, :js
 
   def create
     @requestpost = current_user.requestposts.build(params[:requestpost])
     if @requestpost.save
       flash[:success] = "Request successfully created!"
-      redirect_to root_url
+      respond_with(@requestpost, :location => root_path)
     else
       @feed_items = []
       render 'static_pages/request_item'

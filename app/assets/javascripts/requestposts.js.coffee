@@ -1,5 +1,5 @@
 $(document).ready( ->
-  $('.delete_requestpost').bind('ajax:success', ->
+  $('.delete_requestpost').live('ajax:success', ->
     $(this).closest('li').animate({ height: 'toggle', opacity: 'toggle' }, 'slow');
   );
 );

@@ -7,7 +7,7 @@ class MatepostsController < ApplicationController
     @matepost = current_user.mateposts.build(params[:matepost])
     if @matepost.save
       flash[:success] = "Request successfully created!"
-      redirect_to root_url
+      respond_with(@matepost, :location => root_path)
     else
       @feed_items = []
       render 'static_pages/request_item'

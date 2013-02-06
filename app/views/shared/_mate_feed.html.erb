@@ -1,7 +1,7 @@
 <% if @mate_feed_items.any? %>
-    <div id="mateposts">
-      <ol class="mateposts">
+    <ol class="mateposts">
+      <div id="mateposts">
         <%= render partial: 'shared/mate_feed_item', collection: @mate_feed_items %>
-      </ol>
-    </div>
+      </div>
+    </ol>
 <% end  %>

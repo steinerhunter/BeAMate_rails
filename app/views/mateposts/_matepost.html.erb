@@ -1,9 +1,19 @@
-<li>
-  <span class="content"><%= matepost.content  %></span>
-  <span class="timestamp">This was posted <%= time_ago_in_words(matepost.created_at)  %> ago.</span>
+<li id="<%= matepost.id %>">
+  <h4><%= matepost.user.name %> is flying soon!</h4>
+  <%=  link_to gravatar_for(matepost.user), matepost.user  %>
+  <span class="user">
+    <b>Flying to:</b><%= matepost.flying_to %><br>
+    <b>Country of origin:</b> <%= matepost.flying_from  %><br>
+    <b>Departure date:</b><%= matepost.departing_on  %><br>
+    <b>Return date:</b> <%= matepost.returning_on  %><br>
+    <b>more details:</b> <br>
+    <%= matepost.content %><br>
+    <%=  link_to "view profile", matepost.user  %>
+  </span>
+  <span class="timestamp">
+    Posted <%=  time_ago_in_words(matepost.created_at) %> ago.
+  </span>
   <% if current_user?(matepost.user)  %>
-      <%=  link_to "delete" , matepost, method: :delete,
-                   data: { confirm: "Delete matepost?"},
-                   title: matepost.content  %>
+      <%=  link_to "Remove my post" , matepost, method: :delete, title:matepost.content, :remote=>true, :class=>'delete_matepost' %>
   <% end %>
 </li>

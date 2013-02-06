@@ -1,0 +1,21 @@
+var form = $('#new_matepost');
+
+<% if @matepost.errors.any? %>
+
+// Create a list of errors
+var errors = $('<ul />');
+
+<% @matepost.errors.full_messages.each do |error| %>
+errors.append('<li><%= escape_javascript(error) %></li>');
+<% end %>
+
+// Display errors before the form
+$('<div />').addClass('.errors').html(errors).prependTo("#new_matepost");
+
+<% else %>
+
+// Add the new matepost to the beginning of the #matepost division
+$("#mateposts").prepend('<%= j(render(:partial => "matepost", :object => @matepost))%>').hide().fadeIn(850);
+$('#myModal').modal('hide');
+
+<% end %>

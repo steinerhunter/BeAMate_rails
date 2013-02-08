@@ -8,9 +8,6 @@ class MatepostsController < ApplicationController
     if @matepost.save
       flash[:success] = "Request successfully created!"
       respond_with(@matepost, :location => root_path)
-    else
-      @feed_items = []
-      render 'static_pages/request_item'
     end
   end
 

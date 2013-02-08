@@ -3,11 +3,12 @@ class Matepost < ActiveRecord::Base
   belongs_to :user
 
   validates :user_id, :presence => true
-  validates :flying_to, :presence => true
-  validates :flying_from, :presence => true
-  validates :departing_on, :presence => true
-  validates :returning_on, :presence => true
-  validates :content, :presence => true, :length => { maximum: 140 }
+  validates :flying_to, :presence => { :message => "OOPS! Looks like you didn't tell us where you were flying to..."}
+  validates :flying_from, :presence => { :message => "OOPS! Looks like you didn't tell us where you were flying from..."}
+  validates :departing_on, :presence => { :message => "OOPS! Looks like you didn't tell us when you were departing..."}
+  validates :returning_on, :presence =>  { :message => "OOPS! Looks like you didn't tell us when you were returning..."}
+  validates :content, :presence => { :message => "OOPS! Looks like you didn't tell us a bit more details..."}
+  validates :content, :length => { maximum: 140 , :message => "OOPS! Looks like you wrote a bit too much..."}
 
   default_scope order: 'mateposts.created_at DESC'
 end

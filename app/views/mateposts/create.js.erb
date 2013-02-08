@@ -2,6 +2,10 @@ var form = $('#new_matepost');
 
 <% if @matepost.errors.any? %>
 
+if ($(".errors")[0]){
+    $('.errors').remove();
+}
+
 // Create a list of errors
 var errors = $('<ul />');
 
@@ -10,7 +14,7 @@ errors.append('<li><%= escape_javascript(error) %></li>');
 <% end %>
 
 // Display errors before the form
-$('<div />').addClass('.errors').html(errors).prependTo("#new_matepost");
+$('<div />').addClass('errors').html(errors).prependTo("#new_matepost");
 
 <% else %>
 

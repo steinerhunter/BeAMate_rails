@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_filter :signed_in_user, only: [:index, :edit, :update, :destroy]
   before_filter :correct_user, only: [:edit, :update]
   before_filter :admin_user, only: :destroy
+  respond_to :html, :js
 
   def show
     @user = User.find(params[:id])
@@ -19,9 +20,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to BeAMate!"
-      redirect_to root_path
-    else
-      render 'new'
+      respond_with(@user, :location => root_path)
     end
   end
 

@@ -1,0 +1,31 @@
+var form = $('#new_user');
+
+<% if @user.errors.any? %>
+
+if ($(".errors")[0]){
+    $('.errors').remove();
+}
+
+// Create a list of errors
+var errors = $('<ul />');
+
+<% if @user.errors.has_key?(:password_digest) %>
+    <% @user.errors.delete(:password_digest) %>
+<% end %>
+
+<% @user.errors.each do |attribute, message| %>
+    <% if @user.errors[attribute].first == message %>
+        errors.append('<li><%= escape_javascript(message) %></li>');
+    <% end %>
+<% end %>
+
+// Display errors before the form
+$('<div />').addClass('errors').html(errors).prependTo("#new_user");
+
+<% else %>
+
+// Add the new user to the beginning of the #user division
+window.location.href = "/"
+$('#myModal').modal('hide');
+
+<% end %>

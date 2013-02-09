@@ -4,3 +4,6 @@
 en:
   errors:
     format: "%{message}"
+    messages:
+          confirmation: "OOPS! It seems like your password doesn't match your confirmation..."
+

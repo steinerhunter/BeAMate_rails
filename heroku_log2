@@ -1,0 +1,101 @@
+2013-02-11T22:09:11+00:00 app[web.1]: 
+2013-02-11T22:09:11+00:00 app[web.1]:     11:   <%= csrf_meta_tags %>
+2013-02-11T22:09:11+00:00 app[web.1]:   app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2698493409219812986_31543720'
+2013-02-11T22:09:11+00:00 app[web.1]: 
+2013-02-11T22:09:13+00:00 heroku[router]: at=info method=GET path=/ host=thawing-cliffs-5599.herokuapp.com fwd=109.186.143.214 dyno=web.1 queue=0 wait=0ms connect=1ms service=13ms status=500 bytes=643
+2013-02-11T22:09:13+00:00 app[web.1]: Started GET "/" for 109.186.143.214 at 2013-02-11 22:09:13 +0000
+2013-02-11T22:09:13+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-02-11T22:09:13+00:00 app[web.1]: ActionView::Template::Error (modal.js isn't precompiled):
+2013-02-11T22:09:13+00:00 app[web.1]:     6:   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+2013-02-11T22:09:13+00:00 app[web.1]:     7:   <%= stylesheet_link_tag    "application", media: "all" %>
+2013-02-11T22:09:13+00:00 app[web.1]:     8:   <%= javascript_include_tag "application" %>
+2013-02-11T22:09:13+00:00 app[web.1]:     10:   <%= javascript_include_tag "flash_fade" %>
+2013-02-11T22:09:13+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+2013-02-11T22:09:13+00:00 app[web.1]: 
+2013-02-11T22:09:13+00:00 app[web.1]: Completed 500 Internal Server Error in 4ms
+2013-02-11T22:09:13+00:00 app[web.1]:     9:   <%= javascript_include_tag "modal" %>
+2013-02-11T22:09:13+00:00 app[web.1]:   app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2698493409219812986_31543720'
+2013-02-11T22:09:13+00:00 app[web.1]: 
+2013-02-11T22:09:13+00:00 app[web.1]: 
+2013-02-11T22:09:13+00:00 app[web.1]:     11:   <%= csrf_meta_tags %>
+2013-02-11T22:09:13+00:00 app[web.1]:     12:   <%= render 'layouts/shim' %>
+2013-02-11T22:09:26+00:00 app[web.1]: Started GET "/" for 109.186.143.214 at 2013-02-11 22:09:26 +0000
+2013-02-11T22:09:26+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-02-11T22:09:26+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+2013-02-11T22:09:26+00:00 app[web.1]: Completed 500 Internal Server Error in 5ms
+2013-02-11T22:09:26+00:00 app[web.1]:     6:   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+2013-02-11T22:09:26+00:00 app[web.1]:     7:   <%= stylesheet_link_tag    "application", media: "all" %>
+2013-02-11T22:09:26+00:00 app[web.1]:     9:   <%= javascript_include_tag "modal" %>
+2013-02-11T22:09:26+00:00 app[web.1]: 
+2013-02-11T22:09:26+00:00 app[web.1]: ActionView::Template::Error (modal.js isn't precompiled):
+2013-02-11T22:09:26+00:00 heroku[router]: at=info method=GET path=/ host=thawing-cliffs-5599.herokuapp.com fwd=109.186.143.214 dyno=web.1 queue=0 wait=0ms connect=2ms service=20ms status=500 bytes=643
+2013-02-11T22:09:26+00:00 app[web.1]:     10:   <%= javascript_include_tag "flash_fade" %>
+2013-02-11T22:09:26+00:00 app[web.1]:     11:   <%= csrf_meta_tags %>
+2013-02-11T22:09:26+00:00 app[web.1]: 
+2013-02-11T22:09:26+00:00 app[web.1]: 
+2013-02-11T22:09:26+00:00 app[web.1]:     12:   <%= render 'layouts/shim' %>
+2013-02-11T22:09:26+00:00 app[web.1]:     8:   <%= javascript_include_tag "application" %>
+2013-02-11T22:09:26+00:00 app[web.1]:   app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2698493409219812986_31543720'
+2013-02-11T22:11:40+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-02-11T22:11:40+00:00 app[web.1]: Started GET "/" for 109.186.143.214 at 2013-02-11 22:11:40 +0000
+2013-02-11T22:11:40+00:00 app[web.1]: 
+2013-02-11T22:11:40+00:00 app[web.1]: ActionView::Template::Error (modal.js isn't precompiled):
+2013-02-11T22:11:40+00:00 app[web.1]:     6:   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+2013-02-11T22:11:40+00:00 app[web.1]:     7:   <%= stylesheet_link_tag    "application", media: "all" %>
+2013-02-11T22:11:40+00:00 app[web.1]:     8:   <%= javascript_include_tag "application" %>
+2013-02-11T22:11:40+00:00 app[web.1]:     9:   <%= javascript_include_tag "modal" %>
+2013-02-11T22:11:40+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+2013-02-11T22:11:40+00:00 app[web.1]: Completed 500 Internal Server Error in 10ms
+2013-02-11T22:11:40+00:00 app[web.1]:     10:   <%= javascript_include_tag "flash_fade" %>
+2013-02-11T22:11:40+00:00 app[web.1]:     11:   <%= csrf_meta_tags %>
+2013-02-11T22:11:40+00:00 app[web.1]: 
+2013-02-11T22:11:40+00:00 app[web.1]:   app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2698493409219812986_31543720'
+2013-02-11T22:11:40+00:00 app[web.1]:     12:   <%= render 'layouts/shim' %>
+2013-02-11T22:11:40+00:00 app[web.1]: 
+2013-02-11T22:11:40+00:00 heroku[router]: at=info method=GET path=/ host=thawing-cliffs-5599.herokuapp.com fwd=109.186.143.214 dyno=web.1 queue=0 wait=0ms connect=2ms service=25ms status=500 bytes=643
+2013-02-11T22:16:23+00:00 heroku[slugc]: Slug compilation started
+2013-02-11T22:17:16+00:00 heroku[api]: Release v17 created by steinerhunter@gmail.com
+2013-02-11T22:17:16+00:00 heroku[api]: Deploy 3e89ffc by steinerhunter@gmail.com
+2013-02-11T22:17:17+00:00 heroku[web.1]: State changed from up to starting
+2013-02-11T22:17:17+00:00 heroku[slugc]: Slug compilation finished
+2013-02-11T22:17:19+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2013-02-11T22:17:20+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 7429`
+2013-02-11T22:17:20+00:00 app[web.1]: [2013-02-11 22:17:20] ERROR SignalException: SIGTERM
+2013-02-11T22:17:20+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2013-02-11T22:17:27+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2013-02-11T22:17:27+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2013-02-11T22:17:29+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+2013-02-11T22:17:29+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
+2013-02-11T22:17:31+00:00 heroku[web.1]: Process exited with status 137
+2013-02-11T22:17:33+00:00 app[web.1]: => Booting WEBrick
+2013-02-11T22:17:33+00:00 app[web.1]: => Rails 3.2.11 application starting in production on http://0.0.0.0:7429
+2013-02-11T22:17:33+00:00 app[web.1]: => Call with -d to detach
+2013-02-11T22:17:33+00:00 app[web.1]: => Ctrl-C to shutdown server
+2013-02-11T22:17:33+00:00 app[web.1]: Connecting to database specified by DATABASE_URL
+2013-02-11T22:17:35+00:00 app[web.1]: [2013-02-11 22:17:35] INFO  WEBrick 1.3.1
+2013-02-11T22:17:35+00:00 app[web.1]: [2013-02-11 22:17:35] INFO  WEBrick::HTTPServer#start: pid=2 port=7429
+2013-02-11T22:17:35+00:00 app[web.1]: [2013-02-11 22:17:35] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+2013-02-11T22:17:36+00:00 heroku[web.1]: State changed from starting to up
+2013-02-11T22:18:30+00:00 heroku[api]: Starting process with command `bundle exec rake db:migrate` by steinerhunter@gmail.com
+2013-02-11T22:18:37+00:00 heroku[run.8109]: Starting process with command `bundle exec rake db:migrate`
+2013-02-11T22:18:37+00:00 heroku[run.8109]: Awaiting client
+2013-02-11T22:18:37+00:00 heroku[run.8109]: State changed from starting to up
+2013-02-11T22:18:50+00:00 heroku[run.8109]: Client connection closed. Sending SIGHUP to all processes
+2013-02-11T22:18:51+00:00 heroku[run.8109]: Process exited with status 0
+2013-02-11T22:18:51+00:00 heroku[run.8109]: State changed from up to complete
+2013-02-11T22:18:53+00:00 app[web.1]: Started GET "/" for 109.186.143.214 at 2013-02-11 22:18:53 +0000
+2013-02-11T22:18:53+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-02-11T22:18:53+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (10.5ms)
+2013-02-11T22:18:53+00:00 app[web.1]: Completed 500 Internal Server Error in 288ms
+2013-02-11T22:18:53+00:00 app[web.1]: ActionView::Template::Error (flash_fade.js isn't precompiled):
+2013-02-11T22:18:53+00:00 app[web.1]:     7:   <%= stylesheet_link_tag    "application", media: "all" %>
+2013-02-11T22:18:53+00:00 app[web.1]: 
+2013-02-11T22:18:53+00:00 app[web.1]:     8:   <%= javascript_include_tag "application" %>
+2013-02-11T22:18:53+00:00 app[web.1]:     9:   <%= javascript_include_tag "modal" %>
+2013-02-11T22:18:53+00:00 app[web.1]:     11:   <%= csrf_meta_tags %>
+2013-02-11T22:18:53+00:00 app[web.1]:     12:   <%= render 'layouts/shim' %>
+2013-02-11T22:18:53+00:00 app[web.1]:     10:   <%= javascript_include_tag "flash_fade" %>
+2013-02-11T22:18:53+00:00 app[web.1]:     13: </head>
+2013-02-11T22:18:53+00:00 app[web.1]:   app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___1843926646933006316_42855860'
+2013-02-11T22:18:53+00:00 app[web.1]: 
+2013-02-11T22:18:53+00:00 app[web.1]: 

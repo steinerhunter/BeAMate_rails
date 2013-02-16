@@ -1,0 +1,22 @@
+var form = $('#new_session');
+
+<% if !(@session) %>
+
+// Delete errors from previous submission
+if ($(".errors")[0]){
+    $('.errors').remove();
+}
+
+// Create a list of errors
+var errors = '<ul><li>OOPS! We could not find an account for this Email/password combination... </li></ul>'
+
+// Display errors before the form
+$('<div />').addClass('errors').html(errors).prependTo("#new_session");
+
+<% else %>
+
+// On successful signin, redirect to main page
+window.location.href = "/"
+$('#myModal').modal('hide');
+
+<% end %>

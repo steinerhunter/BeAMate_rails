@@ -7,8 +7,16 @@
           <li><%= link_to "Home",    root_path %></li>
           <li><%= link_to "Help",    help_path %></li>
           <% if signed_in?  %>
-              <li><%= link_to "Want Something", request_path, "data-target" => "#myModal", "data-toggle" => "modal", class:"modal-link" %></li>
-              <li><%= link_to "Help Someone", mate_path, "data-target" => "#myModal", "data-toggle" => "modal", class:"modal-link" %></li>
+              <li><%= link_to "Want Something", request_path, class:"modal-link",
+                                                                                                                    "data-target" => "#myModal",
+                                                                                                                    "data-toggle" => "modal",
+                                                                                                                    "data-backdrop" => "static",
+                                                                                                                    "data-keyboard" => "false" %></li>
+              <li><%= link_to "Help Someone", mate_path, class:"modal-link",
+                                                                                                                    "data-target" => "#myModal",
+                                                                                                                    "data-toggle" => "modal",
+                                                                                                                    "data-backdrop" => "static",
+                                                                                                                    "data-keyboard" => "false" %></li>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <%= current_user.name %> <b class="caret"></b>
@@ -23,7 +31,11 @@
                 </ul>
               </li>
           <% else  %>
-            <li><%= link_to "Sign in", signin_path, "data-target" => "#myModal", "data-toggle" => "modal", class:"modal-link" %></li>
+            <li><%= link_to "Sign in", signin_path, class:"modal-link",
+                                                                                              "data-target" => "#myModal",
+                                                                                              "data-toggle" => "modal",
+                                                                                              "data-backdrop" => "static",
+                                                                                              "data-keyboard" => "false" %></li>
          <% end %>
         </ul>
       </nav>

@@ -14,16 +14,32 @@
     </div>
    </div>
 <% else  %>
-    <div class="center hero-unit">
-
-      <h1>BeAMate</h1>
-      <h2> This is BeAMate Home.</h2>
-      <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary modal-link",
-                                                                                        "data-target" => "#myModal",
-                                                                                        "data-toggle" => "modal",
-                                                                                        "data-backdrop" => "static",
-                                                                                        "data-keyboard" => "false" %>
-
+    <div class="HomeNotSignedIn" style="margin-top: 80px;margin-left: 100px;">
+      <div class="span5">
+        <%= image_tag("Logo.png")%>
+      </div>
+      <div class="span10">
+        <%= image_tag("Text.png")%>
+      </div>
+    </div>
+    <div class="ButtonsNotSignedIn" style="margin-top: 400px; margin-left: 200px;">
+      <div class="span4">
+        <%= link_to image_tag("SignUp.png"),  signup_path, :class => "modal-link",
+                                                                                                                "data-target" => "#myModal",
+                                                                                                                "data-toggle" => "modal" ,
+                                                                                                                "data-backdrop" => "static",
+                                                                                                                "data-keyboard" => "false" %>
+      </div>
+      <div class="span4">
+        <%= link_to image_tag("SignIn.png"), signin_path, class:"modal-link",
+                                                                                                              "data-target" => "#myModal",
+                                                                                                              "data-toggle" => "modal",
+                                                                                                              "data-backdrop" => "static",
+                                                                                                              "data-keyboard" => "false" %>
+      </div>
+      <div class="span4">
+        <%= image_tag("SeeHow.png")%>
+      </div>
     </div>
 
 <% end %>

@@ -13,13 +13,12 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
-<div class="container">
+<div class="container" style="width:1400px">
   <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
   <%= yield %>
-  <%= render 'layouts/footer' %>
-  <%= debug(params) if Rails.env.development? %>
+
 </div>
 <div id="FeedbackButton">
   <%= link_to "", contact_path, class:"modal-link",

@@ -1,16 +1,16 @@
 class ContactController < ApplicationController
 
   def new
-    @message = Message.new
+    @feedback = Feedback.new
     render "new.html.erb", :layout => false
   end
 
   def create
-    @message = Message.new(params[:message])
+    @feedback = Feedback.new(params[:feedback])
 
-    if @message.valid?
-      NotificationsMailer.new_message(@message).deliver
-      redirect_to(root_path, :success => "Message was successfully sent.")
+    if @feedback.valid?
+      NotificationsMailer.new_feedback(@feedback).deliver
+      redirect_to(root_path, :success => "Feedback  successfully sent.")
     else
       flash.now.alert = "Please fill all fields."
       render :new

@@ -1,4 +1,4 @@
-class Message
+class Feedback
 
   include ActiveModel::Validations
   include ActiveModel::Conversion

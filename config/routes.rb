@@ -3,6 +3,13 @@ BeAMateRails::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :requestposts, only: [:create, :destroy]
   resources :mateposts, only: [:create, :destroy]
+  resources :conversations, only: [:index, :show, :new, :create] do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+  end
 
   root to: 'static_pages#home'
 

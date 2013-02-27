@@ -12,6 +12,7 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
   has_secure_password
+  acts_as_messageable
   has_many :requestposts, dependent: :destroy
   has_many :mateposts, dependent: :destroy
 

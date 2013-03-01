@@ -9,12 +9,14 @@ ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.perform_deliveries = true
 ActionMailer::Base.raise_delivery_errors = true
 ActionMailer::Base.smtp_settings = {
-    :address            => "smtp.gmail.com",
-    :port                   => 587,
+    :address            => "smtp.zoho.com",
+    :port                   => 465,
     :domain              => "beamate.com",
     :user_name       => "firstmate@beamate.com",
     :password         => "thiswillbeourflagship",
-    :authentication       => :plain,
+    :authentication       => :login,
+    :ssl                  => true,
+    :tls                  => true,
     :enable_starttls_auto => true
 }
 

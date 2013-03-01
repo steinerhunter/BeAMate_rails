@@ -4,5 +4,6 @@
   <% message = receipt.message %>
   <%= message.subject %>
   <%= message.body %>
-  <%= render 'messages/form', conversation: conversation %>
 <% end %>
+</ul>
+<%= render 'messages/form', conversation: conversation %>

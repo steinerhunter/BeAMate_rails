@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h2>Hi there <%= @message.recipients.first.name %> - we've got news for you!</h2>
+    <h3>It seems <%= @message.sender.name  %> has sent you a reply! </h3>
+    <h3>Why don't you go to <%= link_to "www.beamate.com", root_url %> and see for yourself?</h3>
+    <p>
+    <h3>Yours, firstmate@beamate.com</h3>
+    </p>
+  </body>
+</html>

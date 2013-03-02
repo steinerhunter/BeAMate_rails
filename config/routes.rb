@@ -25,9 +25,6 @@ BeAMateRails::Application.routes.draw do
   match '/contact', to: 'contact#new', :as => 'contact', :via => :get
   match '/contact', to: 'contact#create', :as => 'contact', :via => :post
 
-  match '/inbox', to: 'conversations#inbox'
-  match '/sentbox', to: 'conversations#sentbox'
-
   match "empty_trash" => "users#empty_trash"
 
   # The priority is based upon order of creation:

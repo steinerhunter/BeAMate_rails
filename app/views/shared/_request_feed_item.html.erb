@@ -7,12 +7,13 @@
     <b>more details:</b> <br>
     <%= request_feed_item.content %><br>
     <%=  link_to "view profile", request_feed_item.user  %><br>
-    <%= link_to "BeAMate!",  {:controller => "conversations", :action => "new", :recipient_id => request_feed_item.user.id}, :class => "btn btn-primary btn-large"%><br>
   </span>
   <span class="timestamp">
-    Posted <%=  time_ago_in_words(request_feed_item.created_at) %> ago.
+    Posted <%=  time_ago_in_words(request_feed_item.created_at) %> ago.<br>
   </span>
   <% if current_user?(request_feed_item.user)  %>
-      <%=  link_to "Remove my post" , request_feed_item, method: :delete, title:request_feed_item.content, :remote=>true, :class=>'delete_requestpost'  %>
+      <%=  link_to "Remove my post" , request_feed_item, method: :delete, title:request_feed_item.content, :remote=>true, :class=>'delete_requestpost'  %><br>
+  <% else  %>
+      <%= link_to "Help #{request_feed_item.user.name}!",  {:controller => "conversations", :action => "new", :recipient_id => request_feed_item.user.id}, :class => "btn btn-primary btn-large"%><br>
   <% end %>
 </li>

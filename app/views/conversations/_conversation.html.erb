@@ -1,5 +1,7 @@
 <%= content_tag_for(:li, conversation) do |conversation| %>
-  <%= link_to conversation.subject, conversation %>
+  <%= link_to conversation.subject, conversation %><br>
+  Conversation originally initiated by <%= conversation.originator.name %> <%=  time_ago_in_words(conversation.created_at) %> ago<br>
+  Last message sent by <%= conversation.last_sender.name %> <%=  time_ago_in_words(conversation.last_message.created_at) %> ago<br>
   <% if conversation.is_completely_trashed?(current_user) %>
     <%= link_to 'Untrash', [:untrash, conversation], method: :post %>
   <% else %>

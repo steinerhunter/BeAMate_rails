@@ -8,12 +8,14 @@
     <b>Return date:</b> <%= mate_feed_item.returning_on  %><br>
     <b>more details:</b> <br>
     <%= mate_feed_item.content %><br>
-    <%=  link_to "view profile", mate_feed_item.user  %>
+    <%=  link_to "view profile", mate_feed_item.user  %>.<br>
   </span>
   <span class="timestamp">
-    Posted <%=  time_ago_in_words(mate_feed_item.created_at) %> ago.
+    Posted <%=  time_ago_in_words(mate_feed_item.created_at) %> ago.<br>
   </span>
   <% if current_user?(mate_feed_item.user)  %>
-      <%=  link_to "Remove my post" , mate_feed_item, method: :delete, title:mate_feed_item.content, :remote=>true, :class=>'delete_matepost' %>
+      <%=  link_to "Remove my post" , mate_feed_item, method: :delete, title:mate_feed_item.content, :remote=>true, :class=>'delete_matepost' %><br>
+  <% else  %>
+      <%= link_to "Ask #{mate_feed_item.user.name}!",  {:controller => "conversations", :action => "new", :recipient_id => mate_feed_item.user.id}, :class => "btn btn-primary btn-large"%><br>
   <% end %>
 </li>

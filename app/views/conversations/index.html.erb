@@ -1,7 +1,15 @@
 <h1>Conversations</h1>
 <h2>Inbox</h2>
 <%= render mailbox.inbox %>
-<h2>Sentbox</h2>
 <%= render mailbox.sentbox %>
 <h2>Trash</h2>
-<%= render mailbox.trash %>
+<% mailbox.trash.each do |conversation| %>
+  <% if (conversation.receipts_for(current_user).where("deleted = ?", true).empty?) %>
+    <%= render conversation %>
+  <% else  %>
+
+  <% end %>
+<% end %>
+<% if !(mailbox.trash.empty?) %>
+    <%= link_to 'Empty Trash', 'empty_trash', :confirm => 'Empty trash?'%>
+<% end  %>

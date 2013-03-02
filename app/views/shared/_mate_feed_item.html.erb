@@ -16,6 +16,9 @@
   <% if current_user?(mate_feed_item.user)  %>
       <%=  link_to "Remove my post" , mate_feed_item, method: :delete, title:mate_feed_item.content, :remote=>true, :class=>'delete_matepost' %><br>
   <% else  %>
-      <%= link_to "Ask #{mate_feed_item.user.name}!",  {:controller => "conversations", :action => "new", :recipient_id => mate_feed_item.user.id}, :class => "btn btn-primary btn-large"%><br>
+      <%= link_to "Ask #{mate_feed_item.user.name}!",  {:controller => "conversations", :action => "new", :recipient_id => mate_feed_item.user.id}, :class => "modal-link btn btn-primary btn-large",
+                                                                                                            "data-target" => "#myModal",
+                                                                                                            "data-toggle" => "modal",
+                                                                                                            "data-backdrop" => "static" %><br>
   <% end %>
 </li>

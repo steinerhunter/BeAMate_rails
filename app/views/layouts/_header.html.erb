@@ -15,6 +15,7 @@
                                                                                                                     "data-target" => "#myModal",
                                                                                                                     "data-toggle" => "modal",
                                                                                                                     "data-backdrop" => "static" %></li>
+              <li><%= link_to "My Conversations", conversations_path %></li>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   My Conversations <b class="caret"></b>
@@ -40,7 +41,8 @@
             <li><%= link_to "Sign in", signin_path, class:"modal-link",
                                                                                               "data-target" => "#myModal",
                                                                                               "data-toggle" => "modal",
-                                                                                              "data-backdrop" => "static" %></li>
+                                                                                              "data-backdrop" => "static",
+                                                                                              "data-keyboard" => "false" %></li>
          <% end %>
         </ul>
       </nav>

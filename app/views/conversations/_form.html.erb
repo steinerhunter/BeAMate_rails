@@ -1,9 +1,16 @@
-<%= simple_form_for :conversation, url: :conversations do |f| %>
-  <%= f.input :recipients, :as => :hidden, :input_html => { :value => @recipient.email } %>
-  <%= f.input :subject %>
-  <%= f.input :body %>
-  <div class="form-actions">
-    <%= f.button :submit, class: 'btn-primary' %>
-    <%= submit_tag 'Cancel', type: :reset, class: 'btn btn-danger' %>
+<%= form_for :conversation, url: :conversations do |f| %>
+  <div class="field">
+    <%= f.hidden_field :recipients, :value => @recipient.email %>
   </div>
+  <div class="field">
+    <%= f.label :subject, "What would you like to message #{@recipient.name} about?" %>
+    <%= f.text_field :subject %>
+  </div>
+  <div class="field">
+    <%= f.label :body, "This is your chance to elaborate:" %>
+    <%= f.text_area :body, "rows" => 3 %>
+  </div>
+  <fieldset class="actions">
+    <%= f.submit "Message #{@recipient.name}!", class: "btn btn-large btn-primary" %>
+  </fieldset>
 <% end %>

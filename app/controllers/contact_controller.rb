@@ -1,4 +1,5 @@
 class ContactController < ApplicationController
+  respond_to :html, :js
 
   def new
     @feedback = Feedback.new
@@ -9,11 +10,9 @@ class ContactController < ApplicationController
     @feedback = Feedback.new(params[:feedback])
 
     if @feedback.valid?
+      flash[:success] = "Thank you so much for your feedback!!"
+      respond_with(@feedback, :location => root_path)
       NotificationsMailer.new_feedback(@feedback).deliver
-      redirect_to(root_path, :success => "Feedback  successfully sent.")
-    else
-      flash.now.alert = "Please fill all fields."
-      render :new
     end
   end
 

@@ -1,4 +1,4 @@
-<%= form_for :conversation, url: :conversations do |f| %>
+<%= form_for :conversation, url: :conversations, :remote => true, :html => { :id => "new_conversation" } do |f| %>
   <div class="field">
     <%= f.hidden_field :recipients, :value => @recipient.email %>
   </div>

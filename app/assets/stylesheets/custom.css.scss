@@ -6,9 +6,16 @@ html {
   overflow-y: scroll;
 }
 
-body {
+.body_nonsigned {
   padding-top: 60px;
   background-image: url('Concept.jpg');
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.body_signed {
+  padding-top: 60px;
+  background-image: url('Concept2.jpg');
   background-repeat: no-repeat;
   background-position: left top;
 }
@@ -27,6 +34,10 @@ textarea {
 
 .center h1 {
   margin-bottom: 10px;
+}
+
+#container {
+  margin: 0 100px 100px 200px;
 }
 
 /* typography */

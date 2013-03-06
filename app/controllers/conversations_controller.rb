@@ -13,9 +13,11 @@ class ConversationsController < ApplicationController
   def create
     recipient_emails = conversation_params(:recipients).split(',')
     recipients = User.where(email: recipient_emails).all
-    conversation = current_user.send_message(recipients, *conversation_params(:body, :subject)).conversation
-    flash[:success] = "You've successfully sent your message!"
-    respond_with(conversation, :location => root_path)
+    @conversation = current_user.send_message(recipients, *conversation_params(:body, :subject))
+    if @conversation.errors.blank?
+      flash[:success] = "You've successfully sent your message!"
+      respond_with(@conversation, :location => root_path)
+    end
   end
 
   def index

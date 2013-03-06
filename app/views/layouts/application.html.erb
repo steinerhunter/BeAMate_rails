@@ -11,7 +11,11 @@
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
-<body>
+<% if signed_in? %>
+    <body class="body_signed">
+<% else  %>
+    <body class="body_nonsigned">
+<% end  %>
 <%= render 'layouts/header' %>
 <div class="container" style="width:1400px">
   <% flash.each do |key, value| %>

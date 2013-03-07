@@ -1,4 +1,4 @@
-<li id="<%= mate_feed_item.id %>">
+<div id="<%= mate_feed_item.id %>" class="feed_item">
   <h4><%= mate_feed_item.user.name %> is flying soon!</h4>
   <%=  link_to gravatar_for(mate_feed_item.user), mate_feed_item.user  %>
   <span class="user">
@@ -21,4 +21,4 @@
                                                                                                             "data-toggle" => "modal",
                                                                                                             "data-backdrop" => "static" %><br>
   <% end %>
-</li>
+</div>

@@ -1,6 +1,6 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-top navbar-inverse">
   <div class="navbar-inner">
-    <div class="container">
+
       <%= link_to "BeAMate", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
@@ -8,22 +8,14 @@
           <li><%= link_to "Help",    help_path %></li>
           <% if signed_in?  %>
               <li><%= link_to "Want Something", request_path, class:"modal-link",
-                                                                                                                    "data-target" => "#myModal",
-                                                                                                                    "data-toggle" => "modal",
-                                                                                                                    "data-backdrop" => "static" %></li>
+                              "data-target" => "#myModal",
+                              "data-toggle" => "modal",
+                              "data-backdrop" => "static" %></li>
               <li><%= link_to "Help Someone", mate_path, class:"modal-link",
-                                                                                                                    "data-target" => "#myModal",
-                                                                                                                    "data-toggle" => "modal",
-                                                                                                                    "data-backdrop" => "static" %></li>
+                              "data-target" => "#myModal",
+                              "data-toggle" => "modal",
+                              "data-backdrop" => "static" %></li>
               <li><%= link_to "My Conversations", conversations_path %></li>
-              <li id="fat-menu" class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  My Conversations <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><%= link_to "Inbox", inbox_path  %></li>
-                </ul>
-              </li>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   My Account <b class="caret"></b>
@@ -38,15 +30,13 @@
                 </ul>
               </li>
           <% else  %>
-            <li><%= link_to "Sign in", signin_path, class:"modal-link",
-                                                                                              "data-target" => "#myModal",
-                                                                                              "data-toggle" => "modal",
-                                                                                              "data-backdrop" => "static",
-                                                                                              "data-keyboard" => "false" %></li>
-         <% end %>
+              <li><%= link_to "Sign in", signin_path, class:"modal-link",
+                              "data-target" => "#myModal",
+                              "data-toggle" => "modal",
+                              "data-backdrop" => "static" %></li>
+          <% end %>
         </ul>
       </nav>
-    </div>
   </div>
 
 </header>

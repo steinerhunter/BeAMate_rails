@@ -1,19 +1,42 @@
 <% if signed_in? %>
     <div id="container" style="width:1200px">
       <div class="row span20">
-        <div class="span10">
+        <div class="ThisIsWhere span10">
           <%= image_tag("ThisIsWhere.png")%>
         </div>
-        <div class="span6" id="mate_feed" style="float:left;">
-          <div class="span6">
-            <h3>Help Someone Out.</h3>
-            <%=  render 'shared/request_feed' %>
+        <div class="ButtonsSignedIn" style="margin-top: 250px; margin-left: 20px;">
+          <div class="span4">
+            <%= link_to image_tag("Want.png"),  request_path, :class => "modal-link",
+                        "data-target" => "#myModal",
+                        "data-toggle" => "modal" ,
+                        "data-backdrop" => "static" %>
+          </div>
+          <div class="span4">
+            <%= link_to image_tag("Help.png"), mate_path, class:"modal-link",
+                        "data-target" => "#myModal",
+                        "data-toggle" => "modal",
+                        "data-backdrop" => "static" %>
+          </div>
+          <div class="span4">
+            <%= link_to image_tag("Inspect.png"), "#inspect", class:"smoothScroll" %>
           </div>
         </div>
-        <div id="request_feed" style="float:left;">
-          <div class="span6">
-            <h3>Find a Mate.</h3>
-            <%=  render 'shared/mate_feed' %>
+        <div class="MakeAConnect span8">
+          <%= image_tag("MakeAConnect.png")%>
+          <a name="inspect"></a>
+        </div>
+        <div class="feeds">
+          <div id="mate_feed" style="float:left;">
+            <div class="span5">
+              <h3>Help Someone Out.</h3>
+              <%=  render 'shared/request_feed' %>
+            </div>
+          </div>
+          <div id="request_feed" style="float:left;">
+            <div class="span5">
+              <h3>Find a Mate.</h3>
+              <%=  render 'shared/mate_feed' %>
+            </div>
           </div>
         </div>
       </div>

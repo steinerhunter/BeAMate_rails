@@ -1,4 +1,4 @@
-<li id="<%= request_feed_item.id %>">
+<div id="<%= request_feed_item.id %>" class="feed_item">
   <h4><%= request_feed_item.user.name %> needs someone's help!</h4>
   <%=  link_to gravatar_for(request_feed_item.user), request_feed_item.user  %>
   <span class="user">
@@ -20,4 +20,4 @@
                                                                                                                     "data-backdrop" => "static" %><br>
 
   <% end %>
-</li>
+</div>

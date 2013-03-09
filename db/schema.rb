@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130303220937) do
+ActiveRecord::Schema.define(:version => 20130309130606) do
 
   create_table "conversations", :force => true do |t|
     t.string   "subject",    :default => ""
@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20130303220937) do
     t.datetime "updated_at",     :null => false
     t.string   "requested_item"
     t.string   "willing_to_pay"
+    t.string   "giftCardsPlace"
   end
 
   add_index "requestposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"

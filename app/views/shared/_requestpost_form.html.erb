@@ -2,7 +2,8 @@
       <%=  render 'shared/error_messages', object: f.object  %>
       <div class="field">
         <%= f.text_field :requested_item, placeholder: "What do you want?" %>
-        <%= f.text_field :willing_to_pay, placeholder: "How much will you pay for the service?" %>
+        <b style="text-align: left; float: left; display: inline;">I'm willing to give</b>    <%= f.text_field :willing_to_pay, placeholder: "Enter the amount of gift cards:" %> <br>
+        <%= f.text_field :giftCardsPlace, placeholder: "from ?" %>
         <%= f.text_area :content, placeholder: "Post some more details...", "rows" => 3 %>
       </div>
       <%= f.submit "Post", class: " btn btn-large btn-primary" %>

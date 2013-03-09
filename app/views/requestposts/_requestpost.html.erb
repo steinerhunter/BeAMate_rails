@@ -3,7 +3,8 @@
   <%=  link_to gravatar_for(requestpost.user), requestpost.user  %>
   <span class="user">
     <b>Wanted item:</b><%= requestpost.requested_item %><br>
-    <b>Willing to pay:</b><%= requestpost.willing_to_pay  %><br>
+    <b>Willing to give</b><%= requestpost.willing_to_pay  %><br>
+    <b>from:</b><%= requestpost.giftCardsPlace  %>     <br>
     <b>more details:</b> <br>
     <%= requestpost.content %><br>
     <%=  link_to "view profile", requestpost.user  %>

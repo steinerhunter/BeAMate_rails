@@ -4,6 +4,7 @@
   <span class="user">
     <b>Wanted item:</b><%= user_request_feed_item.requested_item %><br>
     <b>Willing to pay:</b><%= user_request_feed_item.willing_to_pay  %><br>
+    <b>from:</b><%= requestpost.giftCardsPlace  %><br>
     <b>more details:</b> <br>
     <%= user_request_feed_item.content %><br>
     <%=  link_to "view profile", user_request_feed_item.user  %>

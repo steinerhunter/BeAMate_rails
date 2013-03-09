@@ -1,0 +1,22 @@
+<div id="<%= request_feed_item.id %>" class="feed_item" style="width:350px">
+  <ul class="user">
+    <h4><%= request_feed_item.user.name %> needs help!</h4>
+    <%=  link_to gravatar_for(request_feed_item.user), request_feed_item.user  %>
+    <li><b>Wanted item:</b><%= request_feed_item.requested_item %></li>
+    <li><b>Willing to pay:</b><%= request_feed_item.willing_to_pay  %></li>
+    <li><b>more details:</b> </li>
+    <%= request_feed_item.content %>
+    <li><%=  link_to "#{request_feed_item.user.name}'s profile", request_feed_item.user  %></li>
+    <% if current_user?(request_feed_item.user)  %>
+        <%=  link_to "Remove my post" , request_feed_item, method: :delete, title:request_feed_item.content, :remote=>true, :class=>'delete_requestpost'  %>
+    <% else  %>
+        <%= link_to "Help #{request_feed_item.user.name}!",  {:controller => "conversations", :action => "new", :recipient_id => request_feed_item.user.id}, :class => "modal-link btn btn-primary btn-large",
+                    "data-target" => "#myModal",
+                    "data-toggle" => "modal",
+                    "data-backdrop" => "static" %>
+    <% end %>
+  </ul>
+  <span class="timestamp">
+    Posted <%=  time_ago_in_words(request_feed_item.created_at) %> ago.<br>
+  </span>
+</div>

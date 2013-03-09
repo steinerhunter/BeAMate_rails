@@ -1,0 +1,25 @@
+<div id="<%= mate_feed_item.id %>" class="feed_item">
+  <ul class="user">
+    <h4><%= mate_feed_item.user.name %> is flying soon!</h4>
+    <%=  link_to gravatar_for(mate_feed_item.user), mate_feed_item.user  %>
+    <li><b>Flying to:</b><%= mate_feed_item.flying_to %></li>
+    <li><b>Country of origin:</b> <%= mate_feed_item.flying_from  %></li>
+    <li><b>Departure date:</b><%= mate_feed_item.departing_on  %></li>
+    <li><b>Return date:</b> <%= mate_feed_item.returning_on  %></li>
+    <li><b>more details:</b></li>
+    <%= mate_feed_item.content %>
+    <li><%=  link_to "#{mate_feed_item.user.name}'s profile", mate_feed_item.user  %>.</li>
+    <% if current_user?(mate_feed_item.user)  %>
+        <%=  link_to "Remove my post" , mate_feed_item, method: :delete, title:mate_feed_item.content, :remote=>true, :class=>'delete_matepost' %>
+    <% else  %>
+        <%= link_to "Ask #{mate_feed_item.user.name}!",  {:controller => "conversations", :action => "new", :recipient_id => mate_feed_item.user.id}, :class => "modal-link btn btn-primary btn-large",
+                    "data-target" => "#myModal",
+                    "data-toggle" => "modal",
+                    "data-backdrop" => "static" %>
+    <% end %>
+  </ul>
+  <span class="timestamp">
+    This was posted <%=  time_ago_in_words(mate_feed_item.created_at) %> ago.<br>
+  </span>
+
+</div>

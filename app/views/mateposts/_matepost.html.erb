@@ -1,19 +1,22 @@
-<li id="<%= matepost.id %>">
-  <h4><%= matepost.user.name %> is flying soon!</h4>
-  <%=  link_to gravatar_for(matepost.user), matepost.user  %>
-  <span class="user">
-    <b>Flying to:</b><%= matepost.flying_to %><br>
-    <b>Country of origin:</b> <%= matepost.flying_from  %><br>
-    <b>Departure date:</b><%= matepost.departing_on  %><br>
-    <b>Return date:</b> <%= matepost.returning_on  %><br>
-    <b>more details:</b> <br>
-    <%= matepost.content %><br>
-    <%=  link_to "view profile", matepost.user  %>
-  </span>
-  <span class="timestamp">
-    Posted <%=  time_ago_in_words(matepost.created_at) %> ago.
-  </span>
-  <% if current_user?(matepost.user)  %>
-      <%=  link_to "Remove my post" , matepost, method: :delete, title:matepost.content, :remote=>true, :class=>'delete_matepost' %>
-  <% end %>
-</li>
+<div id="<%= matepost.id %>" class="feed_item" style="width:350px">
+  <ul class="user_mate">
+    <h4><%= matepost.user.name %> is flying soon!</h4>
+    <li><%=  link_to gravatar_for(matepost.user), matepost.user  %></li>
+    <li><b>Flying to:</b><%= matepost.flying_to %></li>
+    <li><b>Country of origin:</b> <%= matepost.flying_from  %></li>
+    <li><b>Departure date:</b><%= matepost.departing_on  %></li>
+    <li><b>Return date:</b> <%= matepost.returning_on  %></li>
+    <li><b>More details:</b><%= matepost.content %></li>
+    <% if current_user?(matepost.user)  %>
+        <li><%=  link_to "Remove my post" , matepost, method: :delete, title:matepost.content, :remote=>true, :class=>'delete_matepost' %></li>
+    <% else  %>
+        <li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => matepost.user.id}, :class => "modal-link",
+                        "data-target" => "#myModal",
+                        "data-toggle" => "modal",
+                        "data-backdrop" => "static" %> <%=  link_to image_tag("ViewProfile.png"), matepost.user %></li>
+    <% end %>
+    <div class="timestamp">
+      <li>This was posted <%=  time_ago_in_words(matepost.created_at) %> ago.</li>
+    </div>
+  </ul>
+</div>

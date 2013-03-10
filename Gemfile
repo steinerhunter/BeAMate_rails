@@ -7,6 +7,7 @@ gem 'rake', '0.8.7'
 gem 'mailboxer'
 gem 'haml'
 gem 'simple_form'
+gem 'delayed_job_active_record'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

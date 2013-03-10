@@ -1,8 +1,11 @@
-= content_tag_for(:li, conversation) do |conversation|
-  %p
-    = link_to conversation.subject, conversation
-    |
-    - if conversation.is_completely_trashed?(current_user)
-      = link_to 'Untrash', [:untrash, conversation], method: :post
-    - else
-      = link_to 'Move to trash', [:trash, conversation], method: :post
+<ul class="user_chat">
+  <li><h3><%= link_to conversation.subject, conversation %></h3></li>
+  <h6>Last message sent by <%= conversation.last_sender.name %> <%=  time_ago_in_words(conversation.last_message.created_at) %> ago<br></h6>
+  <h6>Originally initiated by <%= conversation.originator.name %> <%=  time_ago_in_words(conversation.created_at) %> ago<br></h6>
+  <% if conversation.is_completely_trashed?(current_user) %>
+    <%= link_to 'Untrash', [:untrash, conversation], method: :post %>
+  <% else %>
+    <%= link_to 'Move to trash', [:trash, conversation], method: :post %>
+  <% end %>
+</ul>
+

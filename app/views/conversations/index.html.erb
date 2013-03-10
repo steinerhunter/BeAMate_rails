@@ -1,27 +1,31 @@
-<h1>My Conversations</h1>
-<%= render mailbox.inbox %>
-<%  mailbox.sentbox.each do |sentconv| %>
-    <% mailbox.inbox.each do |inboxconv| %>
-        <% if (sentconv.id == inboxconv.id)%>
-            <% @flag = 1 %>
-        <% end %>
-     <% end %>
-    <% if (@flag == 0) %>
-        <%= render sentconv %>
-    <% end %>
-<% end %>
 
-
-<% if !(mailbox.trash.empty?) %>
-    <h2>Trash</h2>
-<% end %>
-<% mailbox.trash.each do |conversation| %>
-  <% if (conversation.receipts_for(current_user).where("deleted = ?", true).empty?) %>
-    <%= render conversation %>
-  <% else  %>
-
+<div class="LetsTalk">
+    <%= image_tag("LetsTalk.png")%>
+</div>
+<div class="MyConversations">
+  <%= render mailbox.inbox %>
+  <%  mailbox.sentbox.each do |sentconv| %>
+      <% mailbox.inbox.each do |inboxconv| %>
+          <% if (sentconv.id == inboxconv.id)%>
+              <% @flag = 1 %>
+          <% end %>
+      <% end %>
+      <% if (@flag == 0) %>
+          <%= render sentconv %>
+      <% end %>
   <% end %>
-<% end %>
-<% if !(mailbox.trash.empty?) %>
-    <%= link_to 'Empty Trash', 'empty_trash', :confirm => 'Empty trash?'%>
-<% end  %>
+
+  <% if !(mailbox.trash.empty?) %>
+      <h2>Trash</h2>
+  <% end %>
+  <% mailbox.trash.each do |conversation| %>
+      <% if (conversation.receipts_for(current_user).where("deleted = ?", true).empty?) %>
+          <%= render conversation %>
+      <% else  %>
+
+      <% end %>
+  <% end %>
+  <% if !(mailbox.trash.empty?) %>
+      <%= link_to 'Empty Trash', 'empty_trash', :confirm => 'Empty trash?'%>
+  <% end  %>
+</div>

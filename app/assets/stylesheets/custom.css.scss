@@ -51,6 +51,10 @@ textarea {
   margin: 100px 350px 70px 250px;
 }
 
+.LetsTalk {
+  margin: 0 30px 10px 450px;
+}
+
 .feeds {
   margin: 0 100px 80px 100px;
 }
@@ -320,4 +324,15 @@ aside {
   padding: 1px 5px 5px 5px;
   margin: 5px 5px 5px 5px;
   background: url('HelpSmall.png') no-repeat right top;
+}
+
+.user_chat {
+  list-style: none;
+  padding: 1px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  background: url('ChatSmall.png') no-repeat right top;
+}
+
+.MyConversations {
+  margin: 0 100px 100px 530px;
 }

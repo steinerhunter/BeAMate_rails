@@ -1,19 +1,17 @@
 <div id="<%= requestpost.id %>" class="feed_item" style="width:350px">
   <ul class="user_request">
     <h4><%= requestpost.user.name %> needs help!</h4>
-    <%=  link_to gravatar_for(requestpost.user), requestpost.user  %>
+    <li><%=  link_to gravatar_for(requestpost.user), requestpost.user  %></li>
     <li><b>Wanted item:</b><%= requestpost.requested_item %></li>
-    <li><b>Willing to pay:</b><%= requestpost.willing_to_pay  %></li>
-    <li><b>more details:</b> </li>
-    <%= requestpost.content %>
-    <li><%=  link_to "#{requestpost.user.name}'s profile", requestpost.user  %></li>
+    <li><b>Willing to pay:</b><%= requestpost.willing_to_pay  %></li><br><br>
+    <li><b>More details:</b><%= requestpost.content %></li>
     <% if current_user?(requestpost.user)  %>
-        <li><%=  link_to "Remove my post" , requestpost, method: :delete, title:requestpost.content, :remote=>true, :class=>'delete_requestpost'  %></li>
+        <center><li><%=  link_to image_tag("RemovePost.png"), requestpost, method: :delete, title:requestpost.content, :remote=>true, :class=>'delete_requestpost'  %></li></center>
     <% else  %>
-        <li><%= link_to "Help #{requestpost.user.name}!",  {:controller => "conversations", :action => "new", :recipient_id => requestpost.user.id}, :class => "modal-link btn btn-primary btn-large",
+        <li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => requestpost.user.id}, :class => "modal-link",
                         "data-target" => "#myModal",
                         "data-toggle" => "modal",
-                        "data-backdrop" => "static" %></li>
+                        "data-backdrop" => "static" %> <%=  link_to image_tag("ViewProfile.png"), requestpost.user  %></li>
     <% end %>
     <div class="timestamp">
       <li>This was posted <%=  time_ago_in_words(requestpost.created_at) %> ago.</li>

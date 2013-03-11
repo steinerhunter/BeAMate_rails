@@ -1,11 +1,28 @@
 <%= form_for(@matepost, :remote => true) do |f| %>
     <%=  render 'shared/error_messages', object: f.object  %>
-    <div class="field">
-      <%= f.text_field :flying_to, placeholder: "What's your destination?" %>
-      <%= f.text_field :flying_from, placeholder: "Where are you coming from?" %>
-      <%= f.text_field :departing_on, placeholder: "When are you going?" %>
-      <%= f.text_field :returning_on, placeholder: "When will you return??" %>
-      <%= f.text_area :content, placeholder: "Post some more details...", "rows" => 3 %>
-    </div>
-    <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+    <fieldset class="fields">
+      <div class="field">
+        <%=  f.label :flying_to, "Where are you going?"   %>
+        <%= f.text_field :flying_to %>
+      </div>
+      <div class="field">
+        <%=  f.label :flying_from, "Where are you flying from?"   %>
+        <%= f.text_field :flying_from %>
+      </div>
+      <div class="field">
+        <%=  f.label :departing_on, "When are you going?"   %>
+        <%= f.text_field :departing_on %>
+      </div>
+      <div class="field">
+        <%=  f.label :returning_on, "When will you return?"   %>
+        <%= f.text_field :returning_on %>
+      </div>
+      <div class="field">
+        <%=  f.label :content, "Please add some more details:"   %>
+        <%= f.text_area :content,  "rows" => 3 %>
+      </div>
+    </fieldset>
+    <fieldset class="actions">
+      <%= f.submit "Help Someone out!!", :type => :image, :src => "assets/HelpSomeoneSubmit.png"  %>
+    </fieldset>
 <% end %>

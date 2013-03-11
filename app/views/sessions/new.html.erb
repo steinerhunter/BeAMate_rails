@@ -1,18 +1,20 @@
-
-<h1>Welcome, come on in!</h1>
-
 <div class="row">
   <div class="span6">
+    <h1>Welcome, come on in!</h1>
     <%= form_for(:session, url: sessions_path, :remote => true, :html => { :id => "new_session" } ) do |f|  %>
-
+    <fieldset class="fields">
+      <div class="field">
         <%=  f.label :email, "What's your email address?"   %>
         <%=  f.text_field :email  %>
-
+      </div>
+      <div class="field">
         <%=  f.label :password, "What's your password?"  %>
         <%=  f.password_field :password  %>
-
-        <%=  f.submit "Come on in!", class: "btn btn-large btn-primary" %>
-
+      </div>
+   </fieldset>
+   <fieldset class="actions">
+     <%=  f.submit "Come on in!", :type => :image, :src => "assets/ComeInSubmit.png"  %>
+   </fieldset>
     <% end  %>
   </div>
 </div>

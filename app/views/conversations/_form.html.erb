@@ -1,16 +1,18 @@
 <%= form_for :conversation, url: :conversations, :remote => true, :html => { :id => "new_conversation" } do |f| %>
-  <div class="field">
-    <%= f.hidden_field :recipients, :value => @recipient.email %>
-  </div>
-  <div class="field">
-    <%= f.label :subject, "What would you like to message #{@recipient.name} about?" %>
-    <%= f.text_field :subject %>
-  </div>
-  <div class="field">
-    <%= f.label :body, "This is your chance to elaborate:" %>
-    <%= f.text_area :body, "rows" => 3 %>
-  </div>
-  <fieldset class="actions">
-    <%= f.submit "Message #{@recipient.name}!", class: "btn btn-large btn-primary" %>
-  </fieldset>
+    <fieldset class="fields">
+      <div class="field">
+        <%= f.hidden_field :recipients, :value => @recipient.email %>
+      </div>
+      <div class="field">
+        <%= f.label :subject, "What would you like to message #{@recipient.name} about?" %>
+        <%= f.text_field :subject %>
+      </div>
+      <div class="field">
+        <%= f.label :body, "This is your chance to elaborate:" %>
+        <%= f.text_area :body, "rows" => 3 %>
+      </div>
+    </fieldset>
+    <fieldset class="actions">
+      <%= f.submit "Send Message!", :type => :image, :src => "assets/SendMessageSubmit.png"  %>
+    </fieldset>
 <% end %>

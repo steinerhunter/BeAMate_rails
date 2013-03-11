@@ -189,6 +189,14 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+  border: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.actions {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #error_explanation {
@@ -261,16 +269,26 @@ aside {
   }
 }
 
+.modal {
+  margin-top: -350px;
+}
+
 .modal, a:active, a:focus {
   outline: 0 none;
 }
 
 .modal-header {
-  height: 20px;
+  height: 25px;
 }
 
 .modal-footer {
   height: 10px;
+}
+
+#myModal .modal-body {
+  max-height: 800px;
+  max-width: 500px;;
+  margin-left: 30px;
 }
 
 #FeedbackButton {

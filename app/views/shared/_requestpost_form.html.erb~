@@ -1,0 +1,17 @@
+  <%= form_for(@requestpost, :remote => true) do |f| %>
+      <%=  render 'shared/error_messages', object: f.object  %>
+      <fieldset class="fields">
+        <div class="field">
+          <%= f.text_field :requested_item, placeholder: "What do you want?" %>
+        </div>
+        <div class="field">
+          <%= f.text_field :willing_to_pay, placeholder: "How much will you pay for the service?" %>
+        </div>
+        <div class="field">
+          <%= f.text_area :content, placeholder: "Post some more details...", "rows" => 3 %>
+        </div>
+      </fieldset>
+      <fieldset class="actions">
+        <%= f.submit "Post", class: " btn btn-large btn-primary" %>
+      </fieldset>
+  <% end %>

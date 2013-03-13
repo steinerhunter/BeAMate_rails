@@ -8,7 +8,7 @@
     <li><b>Return date:</b> <%= user_mate_feed_item.returning_on  %></li>
     <li><b>More details:</b><%= user_mate_feed_item.content %></li>
     <% if current_user?(user_mate_feed_item.user)  %>
-        <li><%=  link_to "Remove my post" , user_mate_feed_item, method: :delete, title:user_mate_feed_item.content, :remote=>true, :class=>'delete_matepost' %></li>
+        <center><li><%=  link_to image_tag("RemovePost.png") , mate_feed_item, method: :delete, title:mate_feed_item.content, :remote=>true, :class=>'delete_matepost' %></li></center>
     <% else  %>
         <li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => user_mate_feed_item.user.id}, :class => "modal-link",
                         "data-target" => "#myModal",

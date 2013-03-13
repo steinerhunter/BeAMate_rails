@@ -18,9 +18,69 @@ html {
   background:#f8bd9a url('Concept2.jpg') no-repeat left top;
 }
 
-.navbar-inner {
-  padding-top: -500px;
-  margin-top: -60px;
+ /* header */
+
+.navbar {
+  .navbar-inner {
+    vertical-align: middle;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    height: 45px;
+    background-color: #c0b2a7;
+    background-image: none;
+
+    .dropdown .dropdown-toggle {
+      height: 23px;
+    }
+
+    .dropdown .dropdown-menu::before,
+    .dropdown .dropdown-menu::after {
+      border: none;
+      content: none;
+    }
+
+    .dropdown .dropdown-menu {
+      border: 1px solid #000000;
+      background-color: #c0b2a7;
+      .divider {
+        border: black;
+        background-color: black;
+      }
+    }
+  }
+  .border{
+    border-right: 1px solid black;
+    height: 43px;;
+  }
+}
+
+#header_items {
+  padding-top: 1px;
+  color: #ffffff;
+
+  a {
+    color: #ffffff;
+    &:hover {
+      color: #333333;
+    }
+  }
+
+  .header_text {
+    float: right;
+  }
+
+  .header_image {
+    float: left;;
+  }
+
+
+}
+
+
+#logo {
+  float: left;
+  margin-left: 10px;
+  padding-top: 5px;
 }
 
 section {
@@ -44,11 +104,11 @@ textarea {
 }
 
 .ThisIsWhere {
-  margin: 0 100px 100px 150px;
+  margin: 0 100px 100px 110px;
 }
 
 .MakeAConnect {
-  margin: 100px 350px 70px 250px;
+  margin: 100px 350px 70px 190px;
 }
 
 .LetsTalk {
@@ -85,24 +145,6 @@ p {
   line-height: 1.7em;
 }
 
-/* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-  &:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-}
-
 /* footer */
 
 footer {
@@ -122,10 +164,6 @@ footer {
   ul {
     float: right;
     list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
   }
 }
 
@@ -219,7 +257,6 @@ input {
   margin: 0;
   li {
     overflow: auto;
-    padding: 10px 0;
     border-top: 1px solid $grayLighter;
     &:last-child {
       border-bottom: 1px solid $grayLighter;

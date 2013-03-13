@@ -14,10 +14,10 @@
 </head>
 <% if signed_in? %>
     <body class="body_signed">
+    <%= render 'layouts/header' %>
 <% else  %>
     <body class="body_nonsigned">
 <% end  %>
-<%= render 'layouts/header' %>
 <div class="container" style="width:1400px">
   <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>

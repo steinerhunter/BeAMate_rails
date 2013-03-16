@@ -1,4 +1,7 @@
 <% if signed_in? %>
+    <div class="TopOfThings">
+      <a name="topofthings"></a>
+    </div>
     <div id="container">
         <div class="ChooseYourPath">
           <%= image_tag("ChooseYourPath.png")%>
@@ -29,8 +32,9 @@
         <div class="MakeAConnect">
           <%= image_tag("MakeAConnect.png")%>
         </div>
-        <div class="BrowseOurLists">
+        <div class="BrowseOurLists" style="float:left;">
             <%= image_tag("BrowseOurLists.png")%>
+          <%= link_to image_tag("Participate.png"), "#topofthings", class:"smoothScroll" %>
         </div>
         <div class="feeds">
           <div id="mate_feed" style="float:left;">

@@ -101,7 +101,7 @@ textarea {
   right:0;
 }
 
-.first {
+.first_home {
   background-image: url('First.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -109,7 +109,7 @@ textarea {
   overflow: hidden;
 }
 
-.second {
+.second_home {
   background-image: url('Second.jpg');
   background-color: #c8a589;
   background-repeat: no-repeat;
@@ -117,7 +117,7 @@ textarea {
   overflow: hidden;
 }
 
-.third {
+.third_home {
   background-image: url('Third.jpg');
   background-repeat: no-repeat;
   background-position: left top;;
@@ -208,12 +208,32 @@ textarea {
   background: url('ChatSmall.png') no-repeat right top;
 }
 
+.first_conversations {
+  margin-top: -20px;
+  margin-bottom: 100px;;
+  background-image: url('FirstConversation.jpg');
+  background-color: #f6f6f6;
+  background-repeat: no-repeat;
+  background-position: left top;
+  overflow: hidden;
+}
+
+.Communicate {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 37%;
+}
+
 .MyConversations {
-  margin: 0 100px 100px 530px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 42%;
 }
 
 .LetsTalk {
-  margin: 0 30px 10px 300px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 25%;
 }
 
 /* typography */

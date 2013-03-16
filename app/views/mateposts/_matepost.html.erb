@@ -8,7 +8,7 @@
     <li><b>Return date:</b> <%= matepost.returning_on  %></li>
     <li><b>More details:</b><%= matepost.content %></li>
     <% if current_user?(matepost.user)  %>
-        <li><%=  link_to "Remove my post" , matepost, method: :delete, title:matepost.content, :remote=>true, :class=>'delete_matepost' %></li>
+        <center><li><%=  link_to image_tag("RemovePost.png") , matepost, method: :delete, title:matepost.content, :remote=>true, :class=>'delete_matepost' %></li></center>
     <% else  %>
         <li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => matepost.user.id}, :class => "modal-link",
                         "data-target" => "#myModal",

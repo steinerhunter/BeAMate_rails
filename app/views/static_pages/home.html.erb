@@ -3,12 +3,13 @@
       <a name="topofthings"></a>
     </div>
     <div id="container">
+      <div class="first">
         <div class="ChooseYourPath">
           <%= image_tag("ChooseYourPath.png")%>
         </div>
-      <div class="WhatIsIt">
-        <%= image_tag("WhatIsIt.png")%>
-      </div>
+        <div class="WhatIsIt">
+          <%= image_tag("WhatIsIt.png")%>
+        </div>
         <div class="ButtonsSignedIn">
           <div style="float:left;">
             <%= link_to image_tag("Want.png"),  request_path, :class => "modal-link",
@@ -26,14 +27,16 @@
             <%= link_to image_tag("Connect.png"), "#connect", class:"smoothScroll" %>
           </div>
         </div>
-        <div class="InBetween">
+      </div>
+      <div class="second">
+        <div class="InBetween1">
           <a name="connect"></a>
         </div>
         <div class="MakeAConnect">
           <%= image_tag("MakeAConnect.png")%>
         </div>
         <div class="BrowseOurLists" style="float:left;">
-            <%= image_tag("BrowseOurLists.png")%>
+          <%= image_tag("BrowseOurLists.png")%>
           <%= link_to image_tag("Participate.png"), "#topofthings", class:"smoothScroll" %>
         </div>
         <div class="feeds">
@@ -50,6 +53,15 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="third">
+        <div class="InBetween2">
+          <a name="blog"></a>
+        </div>
+        <div class="ReadOurWords">
+          <%= image_tag("ReadOurWords.png")%>
+        </div>
+      </div>
    </div>
 <% else  %>
     <div class="HomeNotSignedIn" style="margin-top: 80px;margin-left: 100px;">

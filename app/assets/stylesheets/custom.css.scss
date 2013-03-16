@@ -15,7 +15,6 @@ html {
 
 .body_signed {
   padding-top: 60px;
-  background:#f8bd9a url('Concept2.jpg') no-repeat left top;
 }
 
  /* header */
@@ -97,7 +96,32 @@ textarea {
 }
 
 #container {
-  margin: 0 100px 100px 200px;
+  position:absolute;
+  left:0;
+  right:0;
+}
+
+.first {
+  background-image: url('First.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  overflow: hidden;
+}
+
+.second {
+  background-image: url('Second.jpg');
+  background-color: #c8a589;
+  background-repeat: no-repeat;
+  background-position: left top;;
+  overflow: hidden;
+}
+
+.third {
+  background-image: url('Third.jpg');
+  background-repeat: no-repeat;
+  background-position: left top;;
+  overflow: hidden;
 }
 
 .TopOfThings {
@@ -106,45 +130,86 @@ textarea {
 }
 
 .ChooseYourPath {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 70px;
+  position: absolute;
+  left: 25%;
+  margin-top: 30px;
 }
 
 .WhatIsIt {
-  margin-top: 70px;
+  margin-top: 350px;
   margin-bottom: 50px;
-  margin-left: 280px
+  margin-left: 37%;
 }
 
 .ButtonsSignedIn {
   margin-top: 50px;
   margin-bottom: 400px;
-  margin-left: 100px
+  margin-left: 27%;
 }
 
-.InBetween {
-  margin-top: 50px;
-  margin-bottom: 500px;
+.InBetween1 {
+  margin-top: -20px;
+  margin-bottom: 50px;
   margin-left: 100px
 }
 
 .MakeAConnect {
-  margin-top:270px;
+  margin-top:30px;
   margin-bottom: 20px;
-  margin-left: 40px;
+  margin-left: 23%;
 }
 
 .BrowseOurLists {
-  margin-top: 30px;
-  margin-bottom: 50px;
-  margin-left: 110px;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   margin-left: 27%;
+ }
+
+.ReadOurWords {
+  margin-top: 250px;
+  margin-bottom: 30px;
+  margin-left: 27%;
 }
 
 .feeds {
-  margin-top: 50px;
+  margin-top: 0px;
   margin-bottom: 50px;
-  margin-left: 130px;
+  margin-left: 28%;
+}
+
+.feed_item {
+  background-color:#e2d4d0;
+  -moz-box-shadow: 5px 5px 5px #333333;; /* Old Firefox */
+  box-shadow: 5px 5px 5px #333333;
+  border:1px solid;
+  border-radius:10px;
+  -moz-border-radius:10px; /* Old Firefox */
+  margin-bottom: 20px;
+}
+
+.user_request {
+  list-style: none;
+  padding: 1px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  background: url('WantSmall.png') no-repeat right top;
+}
+
+.user_mate {
+  list-style: none;
+  padding: 1px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  background: url('HelpSmall.png') no-repeat right top;
+}
+
+.user_chat {
+  list-style: none;
+  padding: 1px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  background: url('ChatSmall.png') no-repeat right top;
+}
+
+.MyConversations {
+  margin: 0 100px 100px 530px;
 }
 
 .LetsTalk {
@@ -388,39 +453,4 @@ aside {
 
 .main_content {
   margin-bottom: 50px;
-}
-
-.feed_item {
-  background-color:#e2d4d0;
-  -moz-box-shadow: 5px 5px 5px #333333;; /* Old Firefox */
-  box-shadow: 5px 5px 5px #333333;
-  border:1px solid;
-  border-radius:10px;
-  -moz-border-radius:10px; /* Old Firefox */
-  margin-bottom: 20px;
-}
-
-.user_request {
-  list-style: none;
-  padding: 1px 5px 5px 5px;
-  margin: 5px 5px 5px 5px;
-  background: url('WantSmall.png') no-repeat right top;
-}
-
-.user_mate {
-  list-style: none;
-  padding: 1px 5px 5px 5px;
-  margin: 5px 5px 5px 5px;
-  background: url('HelpSmall.png') no-repeat right top;
-}
-
-.user_chat {
-  list-style: none;
-  padding: 1px 5px 5px 5px;
-  margin: 5px 5px 5px 5px;
-  background: url('ChatSmall.png') no-repeat right top;
-}
-
-.MyConversations {
-  margin: 0 100px 100px 530px;
 }

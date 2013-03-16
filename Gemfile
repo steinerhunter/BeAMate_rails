@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-gem 'sass-rails', '~> 3.2.5'
-gem 'bootstrap-sass', '~> 2.3.0.1'
+gem 'sass-rails', '~> 3.2'
+gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'bcrypt-ruby'
 gem 'rake', '0.8.7'
 gem 'mailboxer'

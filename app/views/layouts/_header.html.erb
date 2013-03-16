@@ -4,7 +4,7 @@
       <nav>
         <ul class="nav pull-right" id="header_items">
           <li class="border"><%= link_to image_tag("HomeHeader.png"),    root_path %></li>
-          <li class="border"><%= link_to image_tag("BlogHeader.png"),   "#" %></li>
+          <li class="border"><%= link_to image_tag("BlogHeader.png"),   "#blog", class:"smoothScroll" %></li>
           <li class="border"><%= link_to image_tag("SeeHowHeader.png"), "#" %></li>
           <% if signed_in?  %>
               <li class="border"><%= link_to image_tag("ChatHeader.png"), conversations_path %></li>

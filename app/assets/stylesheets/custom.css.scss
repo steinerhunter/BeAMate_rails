@@ -72,10 +72,7 @@ html {
   .header_image {
     float: left;;
   }
-
-
 }
-
 
 #logo {
   float: left;
@@ -103,21 +100,52 @@ textarea {
   margin: 0 100px 100px 200px;
 }
 
-.ThisIsWhere {
-  margin: 0 100px 100px 110px;
+.ChooseYourPath {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 70px;
+}
+
+.WhatIsIt {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  margin-left: 280px
+}
+
+.ButtonsSignedIn {
+  margin-top: 50px;
+  margin-bottom: 400px;
+  margin-left: 100px
+}
+
+.InBetween {
+  margin-top: 50px;
+  margin-bottom: 500px;
+  margin-left: 100px
 }
 
 .MakeAConnect {
-  margin: 100px 350px 70px 190px;
+  margin-top:270px;
+  margin-bottom: 20px;
+  margin-left: 40px;
 }
 
-.LetsTalk {
-  margin: 0 30px 10px 450px;
+.BrowseOurLists {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 250px;
 }
 
 .feeds {
-  margin: 0 100px 80px 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 130px;
 }
+
+.LetsTalk {
+  margin: 0 30px 10px 300px;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {

@@ -1,29 +1,36 @@
 <% if signed_in? %>
-    <div id="container" style="width:1200px">
-      <div class="main_content row span15">
-        <div class="ThisIsWhere span10">
-          <%= image_tag("ThisIsWhere.png")%>
+    <div id="container">
+        <div class="ChooseYourPath">
+          <%= image_tag("ChooseYourPath.png")%>
         </div>
-        <div class="ButtonsSignedIn" style="margin-top: 250px; margin-left: 20px;">
-          <div class="span4">
+      <div class="WhatIsIt">
+        <%= image_tag("WhatIsIt.png")%>
+      </div>
+        <div class="ButtonsSignedIn">
+          <div style="float:left;">
             <%= link_to image_tag("Want.png"),  request_path, :class => "modal-link",
                         "data-target" => "#myModal",
                         "data-toggle" => "modal" ,
                         "data-backdrop" => "static" %>
           </div>
-          <div class="span4">
+          <div style="float:left;">
             <%= link_to image_tag("Help.png"), mate_path, class:"modal-link",
                         "data-target" => "#myModal",
                         "data-toggle" => "modal",
                         "data-backdrop" => "static" %>
           </div>
-          <div class="span4">
-            <%= link_to image_tag("Inspect.png"), "#inspect", class:"smoothScroll" %>
+          <div style="float:left;">
+            <%= link_to image_tag("Connect.png"), "#connect", class:"smoothScroll" %>
           </div>
         </div>
-        <div class="MakeAConnect span8">
+        <div class="InBetween">
+          <a name="connect"></a>
+        </div>
+        <div class="MakeAConnect">
           <%= image_tag("MakeAConnect.png")%>
-          <a name="inspect"></a>
+        </div>
+        <div class="BrowseOurLists">
+            <%= image_tag("BrowseOurLists.png")%>
         </div>
         <div class="feeds">
           <div id="mate_feed" style="float:left;">
@@ -39,7 +46,6 @@
             </div>
           </div>
         </div>
-      </div>
    </div>
 <% else  %>
     <div class="HomeNotSignedIn" style="margin-top: 80px;margin-left: 100px;">

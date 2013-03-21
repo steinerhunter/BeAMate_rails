@@ -1,13 +1,17 @@
-<h1><%= conversation.subject %></h1>
-<ul>
-<%= content_tag_for(:li, conversation.receipts_for(current_user)) do |receipt| %>
-  <% message = receipt.message %>
-  <% if (message.sender.name == current_user.name) %>
-          You wrote:<br>
-  <% else  %>
-          <%= message.sender.name %> wrote:<br>
-   <% end  %>
-  <%= message.body %>
-<% end %>
-</ul>
-<%= render 'messages/form', conversation: conversation %>
+<div class ="message_wrapper">
+  <div class="feed_item" style="width:500px">
+    <h1><%= conversation.subject %></h1>
+    <ul>
+      <%= content_tag_for(:li, conversation.receipts_for(current_user)) do |receipt| %>
+          <% message = receipt.message %>
+          <% if (message.sender.name == current_user.name) %>
+              <b>You wrote:</b><br>
+          <% else  %>
+              <b><%= message.sender.name %> wrote:</b><br>
+          <% end  %>
+          <%= message.body %>
+      <% end %>
+    </ul>
+    <%= render 'messages/form', conversation: conversation %>
+  </div>
+</div>

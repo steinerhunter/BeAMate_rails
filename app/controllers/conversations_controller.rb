@@ -20,10 +20,6 @@ class ConversationsController < ApplicationController
     end
   end
 
-  def index
-    @flag = 0
-  end
-
   def reply
     current_user.reply_to_conversation(conversation, *message_params(:body, :subject))
     redirect_to conversation

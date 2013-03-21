@@ -7,11 +7,13 @@
       <%= image_tag("Communicate.png")%>
     </div>
     <div class="MyConversations">
-      <%= render mailbox.inbox %>
-      <%=  render mailbox.sentbox %>
+      <%= render (mailbox.inbox + mailbox.sentbox).sort_by { |conversation| conversation.last_message.created_at }.reverse.uniq %>
+
 
       <% if !(mailbox.trash.empty?) %>
-          <h2>Trash</h2>
+        <div class="Trash">
+          <%= image_tag("Trash.png")%>
+        </div>
       <% end %>
       <% mailbox.trash.each do |conversation| %>
           <% if (conversation.receipts_for(current_user).where("deleted = ?", true).empty?) %>
@@ -21,7 +23,9 @@
           <% end %>
       <% end %>
       <% if !(mailbox.trash.empty?) %>
-          <%= link_to 'Empty Trash', 'empty_trash', :confirm => 'Empty trash?'%>
+          <div class="EmptyTrash">
+            <%= link_to image_tag("EmptyTrash.png"), 'empty_trash', :confirm => 'Empty trash?'%>
+          </div>
       <% end  %>
     </div>
   </div>

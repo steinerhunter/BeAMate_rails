@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321160515) do
+ActiveRecord::Schema.define(:version => 20130324085253) do
 
   create_table "conversations", :force => true do |t|
     t.string   "subject",    :default => ""
@@ -55,12 +55,12 @@ ActiveRecord::Schema.define(:version => 20130321160515) do
   create_table "mateposts", :force => true do |t|
     t.string   "content"
     t.integer  "user_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.string   "flying_to"
     t.string   "flying_from"
-    t.string   "departing_on"
-    t.string   "returning_on"
+    t.datetime "departing_on", :limit => 255
+    t.datetime "returning_on", :limit => 255
   end
 
   add_index "mateposts", ["user_id", "created_at"], :name => "index_mateposts_on_user_id_and_created_at"

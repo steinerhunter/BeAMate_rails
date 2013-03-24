@@ -387,12 +387,23 @@ aside {
 
 /* forms */
 
-input, textarea, select, .uneditable-input {
+input, textarea, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   @include box_sizing;
+}
+
+select {
+  border: 1px solid #bbb;
+  padding: 5px;
+  margin-bottom: 15px;
+  margin-right: 13px;
+  @include box_sizing;
+  float: left;
+  width: 140px;
+  height: 40px;
 }
 
 input {

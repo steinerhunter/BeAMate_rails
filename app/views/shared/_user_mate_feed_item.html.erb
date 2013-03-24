@@ -4,8 +4,8 @@
     <li><%=  link_to gravatar_for(user_mate_feed_item.user), user_mate_feed_item.user  %></li>
     <li><b>Flying to:</b><%= user_mate_feed_item.flying_to %></li>
     <li><b>Country of origin:</b> <%= user_mate_feed_item.flying_from  %></li>
-    <li><b>Departure date:</b><%= user_mate_feed_item.departing_on  %></li>
-    <li><b>Return date:</b> <%= user_mate_feed_item.returning_on  %></li>
+    <li><b>Departure date: </b><%= mate_feed_item.departing_on.strftime("%d/%m/%Y")  %></li>
+    <li><b>Return date:</b> <%= mate_feed_item.returning_on.strftime("%d/%m/%Y")  %></li>
     <li><b>More details:</b><%= user_mate_feed_item.content %></li>
     <% if current_user?(user_mate_feed_item.user)  %>
         <center><li><%=  link_to image_tag("RemovePost.png") , mate_feed_item, method: :delete, title:mate_feed_item.content, :remote=>true, :class=>'delete_matepost' %></li></center>

@@ -7,5 +7,4 @@ class NotificationsMailer < ActionMailer::Base
     @feedback = feedback
     mail(:subject => "Some feedback from  #{feedback.name}")
   end
-
 end

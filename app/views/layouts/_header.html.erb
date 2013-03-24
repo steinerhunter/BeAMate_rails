@@ -3,8 +3,11 @@
       <%= link_to image_tag("LogoSmall.png"), root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right" id="header_items">
-          <li class="border"><%= link_to image_tag("HomeHeader.png"),    root_path %></li>
-          <li class="border"><%= link_to image_tag("BlogHeader.png"),   "#blog", class:"smoothScroll" %></li>
+          <li class="border"><%= link_to image_tag("HomeHeader.png"), root_path %></li>
+          <li class="border"><%= link_to image_tag("InviteaFriendHeader.png"), invite_path, class:"modal-link",
+                                                                               "data-target" => "#myModal",
+                                                                               "data-toggle" => "modal",
+                                                                                "data-backdrop" => "static" %></li>
           <li class="border"><%= link_to image_tag("SeeHowHeader.png"), "#" %></li>
           <% if signed_in?  %>
               <li class="border"><%= link_to image_tag("ChatHeader.png"), conversations_path %></li>
@@ -21,14 +24,8 @@
                   </li>
                 </ul>
               </li>
-          <% else  %>
-              <li><%= link_to "Sign in", signin_path, class:"modal-link",
-                              "data-target" => "#myModal",
-                              "data-toggle" => "modal",
-                              "data-backdrop" => "static" %></li>
           <% end %>
         </ul>
       </nav>
   </div>
-
 </header>

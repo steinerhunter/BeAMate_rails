@@ -1,0 +1,29 @@
+var form = $('#new_invitation');
+
+<% if @invitation.errors.any? %>
+
+// Delete errors from previous submission
+if ($(".errors")[0]){
+    $('.errors').remove();
+}
+
+// Create a list of errors
+var errors = $('<ul />');
+
+// Display only first error for each field
+<% @invitation.errors.each do |attribute, message| %>
+    <% if @invitation.errors[attribute].first == message %>
+        errors.append('<li><%= escape_javascript(message) %></li>');
+    <% end %>
+<% end %>
+
+// Display errors before the form
+$('<div />').addClass('errors').html(errors).prependTo("#new_invitation");
+
+<% else %>
+
+// On successful creation of new invitation, redirect to main page
+window.location.href = "/"
+$('#myModal').modal('hide');
+
+<% end %>

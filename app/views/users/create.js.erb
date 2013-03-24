@@ -15,10 +15,21 @@ var errors = $('<ul />');
     <% @user.errors.delete(:password_digest) %>
 <% end %>
 
+// Delete password_digest error is such exists
+<% if @user.errors.has_key?(:invitation_id) %>
+    <% @user.errors.each do |attribute, message| %>
+        <% if attribute == :invitation_id %>
+            <% if @user.errors[attribute].first == message %>
+                errors.append('<li><%= escape_javascript(message) %></li>');
+            <% end %>
+        <% end %>
+    <% end %>
+<% else %>
 // Display only first error for each field
-<% @user.errors.each do |attribute, message| %>
-    <% if @user.errors[attribute].first == message %>
-        errors.append('<li><%= escape_javascript(message) %></li>');
+    <% @user.errors.each do |attribute, message| %>
+        <% if @user.errors[attribute].first == message %>
+            errors.append('<li><%= escape_javascript(message) %></li>');
+        <% end %>
     <% end %>
 <% end %>
 
@@ -29,6 +40,5 @@ $('<div />').addClass('errors').html(errors).prependTo("#new_user");
 
 // On successful creation of new user, redirect to main page
 window.location.href = "/"
-$('#myModal').modal('hide');
 
 <% end %>

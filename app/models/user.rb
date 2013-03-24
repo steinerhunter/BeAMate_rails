@@ -10,11 +10,13 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :password, :password_confirmation, :invitation_token
   has_secure_password
   acts_as_messageable
   has_many :requestposts, dependent: :destroy
   has_many :mateposts, dependent: :destroy
+  has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
+  belongs_to :invitation
 
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
@@ -30,6 +32,9 @@ class User < ActiveRecord::Base
   validates :password, :presence => { :message => "OOPS! Looks like you didn't pick a password..."}
   validates :password, :length => { minimum: 8, :message => "OOPS! Looks like your password is a bit too short..."}
   validates :password_confirmation, :presence => { :message => "OOPS! Looks like you didn't confirm your password..."}
+
+  validates :invitation_id, :presence => { :message => "OOPS! Sorry, we cannot sign you up without an invitation..."}
+  validates :invitation_id, :uniqueness => { :message => "OOPS! Looks like someone has already registered with this invitation..." }
 
   def user_request_feed
     Requestpost.where("user_id = ?", id)
@@ -49,6 +54,14 @@ class User < ActiveRecord::Base
 
   def mailboxer_email(message)
     email
+  end
+
+  def invitation_token
+    invitation.token if invitation
+  end
+
+  def invitation_token=(token)
+    self.invitation = Invitation.find_by_token(token)
   end
 
   private

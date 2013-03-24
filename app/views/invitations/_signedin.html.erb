@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="span6">
+    <h1>Invite a friend to BeAMate!</h1>
+    <h4>Hi again!<br>
+      Know any cool people?<br>
+      Want to share BeAMate with them?<br>
+      Well, here's your chance!<br>
+      Just put their email address here and we'll instantly invite them:</h4>
+    <%= form_for(@invitation, :remote => true, :html => { :id => "new_invitation" }) do |f| %>
+        <%=  render 'shared/error_messages', object: f.object  %>
+        <fieldset class="fields">
+          <div class="field">
+            <%= f.label :recipient_email, "What's your friend's email address?" %>
+            <%= f.text_field :recipient_email %>
+          </div>
+        </fieldset>
+        <fieldset class="actions">
+          <%=  f.submit "Ask Invite!", :type => :image, :src => "assets/InviteaFriendSubmit.png"  %>
+        </fieldset>
+    <% end %>
+  </div>
+</div>

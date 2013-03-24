@@ -13,10 +13,18 @@
   <%= render 'layouts/shim' %>
 </head>
 <% if signed_in? %>
-    <body class="body_signed">
+    <% if current_page? conversations_path%>
+        <body class="body_conversation">
+    <% else %>
+        <body class="body_signed">
+    <% end  %>
     <%= render 'layouts/header' %>
 <% else  %>
-    <body class="body_nonsigned">
+    <% if current_page? root_path  %>
+        <body class="body_nonsigned">
+    <% elsif current_page? signup_path%>
+        <body class="body_signup">
+    <% end  %>
 <% end  %>
 <div class="container" style="width:1400px">
   <% flash.each do |key, value| %>

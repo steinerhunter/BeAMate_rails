@@ -11,8 +11,11 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
-    render "new.html.erb", :layout => false
+    if signed_in?
+      redirect_to root_path
+    end
+    @user = User.new(:invitation_token => params[:invitation_token])
+    @user.email = @user.invitation.recipient_email if @user.invitation
   end
 
   def create

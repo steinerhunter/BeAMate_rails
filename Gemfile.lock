@@ -90,8 +90,12 @@ GEM
       carrierwave (>= 0.5.8)
       foreigner (>= 0.9.1)
       rails (> 3.0.0)
+    metaclass (0.0.1)
     mime-types (1.21)
+    mocha (0.13.3)
+      metaclass (~> 0.0.1)
     multi_json (1.7.0)
+    nifty-generators (0.4.6)
     nokogiri (1.5.6-x86-mingw32)
     pg (0.12.2-x86-mingw32)
     polyglot (0.3.3)
@@ -182,6 +186,8 @@ DEPENDENCIES
   haml
   jquery-rails (= 2.0.2)
   mailboxer
+  mocha
+  nifty-generators
   pg (= 0.12.2)
   rails (= 3.2.11)
   rake (= 0.8.7)

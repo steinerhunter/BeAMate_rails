@@ -21,5 +21,7 @@ ActionMailer::Base.smtp_settings = {
 }
 
 ActionMailer::Base.default_url_options = {
-    :host => "beamate.com"
+    :host => "www.beamate.com"
 }
+
+ActionMailer::Base.asset_host = "localhost:3000"

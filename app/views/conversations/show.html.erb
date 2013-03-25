@@ -1,6 +1,8 @@
 <div class ="message_wrapper">
   <div class="feed_item" style="width:500px">
-    <h1><%= conversation.subject %></h1>
+    <div class="message_title">
+      <h1><%= conversation.subject %></h1>
+    </div>
     <ul>
       <%= content_tag_for(:li, conversation.receipts_for(current_user)) do |receipt| %>
           <% message = receipt.message %>
@@ -12,6 +14,8 @@
           <%= message.body %>
       <% end %>
     </ul>
-    <%= render 'messages/form', conversation: conversation %>
+    <div class="message_reply">
+      <%= render 'messages/form', conversation: conversation %>
+    </div>
   </div>
 </div>

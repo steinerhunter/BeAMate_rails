@@ -4,11 +4,12 @@
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 </head>
 <body>
-<h2>Hi there, we'd like to invite you to join our beta!</h2>
-<h3>It seems someone out there has thought of you...</h3>
-<h3>Why don't you come over and <%= link_to "sign up", signup_url(@invitation.token) %>?</h3>
-<p>
-<h3>Yours, firstmate@beamate.com</h3>
-</p>
+    <%= link_to image_tag("http://www.beamate.com/images/M_images/mvp/Logo.png"), root_url %>
+    <h2>Hi there, we'd like to invite you to join our beta!</h2>
+    <h3>It seems someone out there has thought of you...</h3>
+    <h3>Why don't you come over and <%= link_to "sign up", signup_url(@invitation.token) %>?</h3>
+    <p>
+        <h3>Yours, firstmate</h3>
+    </p>
 </body>
 </html>

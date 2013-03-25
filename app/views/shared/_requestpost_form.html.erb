@@ -6,12 +6,12 @@
 	  <%= f.text_field :requested_item %>
         </div>
         <div class="field">
-          <%= f.label :willing_to_pay, "How much are you willing to pay for the service?"   %>
-	  <%= f.text_field :willing_to_pay %>
+          <%= f.label :give_giftcards, "How many gift cards will you give in return?"   %>
+          <%= f.select :give_giftcards, options_for_select([["Select One", ""], "1 Gift Card", "2 Gift Cards", "3 Gift Cards"]), :id => "requestpost_select"%>
         </div>
         <div class="field">
-          <%= f.label :content, "Please add some more details:"   %>
-	  <%= f.text_area :content,  "rows" => 3 %>
+           <%= f.label :content, "Please add some more details:"   %>
+	       <%= f.text_area :content,  "rows" => 3 %>
         </div>
       </fieldset>
       <fieldset class="actions">

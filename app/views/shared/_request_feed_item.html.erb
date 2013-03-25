@@ -2,9 +2,9 @@
   <ul class="user_request">
     <h4><%= request_feed_item.user.name %> needs help!</h4>
     <li><%=  link_to gravatar_for(request_feed_item.user), request_feed_item.user  %></li>
-    <li><b>Wanted item:</b><%= request_feed_item.requested_item %></li>
-    <li><b>Willing to pay:</b><%= request_feed_item.willing_to_pay  %></li><br><br>
-    <li><b>More details:</b><%= request_feed_item.content %></li>
+    <li><b>Wanted item: </b><%= request_feed_item.requested_item %></li>
+    <li><b>Willing to give: </b><%= request_feed_item.give_giftcards  %></li><br><br>
+    <li><b>More details: </b><%= request_feed_item.content %></li>
     <% if current_user?(request_feed_item.user)  %>
 	    <center><li><%=  link_to image_tag("RemovePost.png"), request_feed_item, method: :delete, title:request_feed_item.content, :remote=>true, :class=>'delete_requestpost'  %></li></center>
     <% else  %>

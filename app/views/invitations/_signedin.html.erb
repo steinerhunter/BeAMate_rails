@@ -5,7 +5,7 @@
       Know any cool people?<br>
       Want to share BeAMate with them?<br>
       Well, here's your chance!<br>
-      Just put their email address here and we'll instantly invite them:</h4>
+      Just put their email address here and we'll send them an invitation:</h4>
     <%= form_for(@invitation, :remote => true, :html => { :id => "new_invitation" }) do |f| %>
         <%=  render 'shared/error_messages', object: f.object  %>
         <fieldset class="fields">

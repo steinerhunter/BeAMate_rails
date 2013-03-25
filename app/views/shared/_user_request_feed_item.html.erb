@@ -3,7 +3,7 @@
     <h4><%= user_request_feed_item.user.name %> needs help!</h4>
     <li><%=  link_to gravatar_for(user_request_feed_item.user), user_request_feed_item.user  %></li>
     <li><b>Wanted item:</b><%= user_request_feed_item.requested_item %></li>
-    <li><b>Willing to pay:</b><%= user_request_feed_item.willing_to_pay  %></li><br><br>
+    <li><b>Willing to give: </b><%= user_request_feed_item.give_giftcards  %></li><br><br>
     <li><b>More details:</b><%= user_request_feed_item.content %></li>
     <li><%=  link_to "#{user_request_feed_item.user.name}'s profile", user_request_feed_item.user  %></li>
     <% if current_user?(user_request_feed_item.user)  %>

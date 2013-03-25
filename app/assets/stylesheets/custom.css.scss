@@ -1,6 +1,16 @@
 @import "bootstrap";
 
 /* universal */
+html, body {
+  height: 96%;
+}
+
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -30px;
+}
 
 html {
   overflow-y: scroll;
@@ -38,8 +48,7 @@ html {
 .navbar {
   .navbar-inner {
     vertical-align: middle;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
+    border: 1px solid #000000;
     height: 45px;
     background-color: #c0b2a7;
     background-image: none;
@@ -56,6 +65,7 @@ html {
 
     .dropdown .dropdown-menu {
       border: 1px solid #000000;
+      border-radius: 2px;
       background-color: #c0b2a7;
       .divider {
         border: black;
@@ -111,7 +121,8 @@ textarea {
   margin-bottom: 10px;
 }
 
-#container {
+.container {
+  width:100%;
   position:absolute;
   left:0;
   right:0;
@@ -122,7 +133,7 @@ textarea {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: left top;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .second_home {
@@ -130,14 +141,15 @@ textarea {
   background-color: #c8a589;
   background-repeat: no-repeat;
   background-position: left top;;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .third_home {
   background-image: url('Third.jpg');
   background-repeat: no-repeat;
   background-position: left top;;
-  overflow: hidden;
+  overflow: auto;
+  height: 40px;
 }
 
 .TopOfThings {
@@ -155,6 +167,16 @@ textarea {
   margin-top: 350px;
   margin-bottom: 50px;
   margin-left: 37%;
+}
+
+.HomeNotSignedIn {
+  margin-top: 3%;
+  margin-left: 14%;
+}
+
+.ButtonsNotSignedIn {
+  margin-top: 400px;
+  margin-left: 21%;
 }
 
 .ButtonsSignedIn {
@@ -232,19 +254,19 @@ textarea {
 .Communicate {
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: 37%;
+  margin-left: 35%;
 }
 
 .MyConversations {
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: 42%;
+  margin-left: 39%;
 }
 
 .LetsTalk {
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: 25%;
+  margin-left: 23%;
 }
 
 .Trash {
@@ -263,6 +285,18 @@ textarea {
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 35%;
+}
+
+.message_title {
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.message_reply {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width:90%;
 }
 
 .signup {
@@ -318,23 +352,13 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #999;
-  a {
-    color: #555;
-    &:hover {
-      color: #222;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-  }
+  margin-top: 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+#bottom, #push {
+  height:10px;
 }
 
 /* mixins, variables, etc. */
@@ -395,17 +419,6 @@ input, textarea, .uneditable-input {
   @include box_sizing;
 }
 
-select {
-  border: 1px solid #bbb;
-  padding: 5px;
-  margin-bottom: 15px;
-  margin-right: 13px;
-  @include box_sizing;
-  float: left;
-  width: 140px;
-  height: 40px;
-}
-
 input {
   height: auto !important;
   border: 0;
@@ -429,6 +442,31 @@ input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+}
+
+#new_matepost {
+  select {
+    border: 1px solid #bbb;
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-right: 13px;
+    @include box_sizing;
+    float: left;
+    width: 100%;
+    width: 140px;
+    height: 40px;
+  }
+}
+
+#new_requestpost {
+  select {
+    border: 1px solid #bbb;
+    padding: 5px;
+    margin-bottom: 15px;
+    @include box_sizing;
+    width: 100%;
+    height: 35px;
+  }
 }
 
 /* users index */

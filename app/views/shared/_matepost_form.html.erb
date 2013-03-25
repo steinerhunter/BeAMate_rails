@@ -11,11 +11,13 @@
       </div>
       <div class="field">
         <%=  f.label :departing_on, "When are you going?"   %>
-        <%= f.date_select :departing_on, :default => Date.today, :order => [:day, :month, :year], :start_year => Date.today.year, :end_year => Date.today.year + 3%>
+        <%= f.date_select :departing_on, :default => Date.today, :order => [:day, :month, :year], :start_year => Date.today.year, :end_year => Date.today.year + 3,
+                                               :id => "matepost_select" %>
       </div>
       <div class="field">
         <%=  f.label :returning_on, "When will you return?"   %>
-        <%= f.date_select :returning_on, :default => Date.today, :order => [:day, :month, :year], :start_year => Date.today.year, :end_year => Date.today.year + 3%>
+        <%= f.date_select :returning_on, :default => Date.today, :order => [:day, :month, :year], :start_year => Date.today.year, :end_year => Date.today.year + 3,
+                                               :id => "matepost_select" %>
       </div>
       <div class="field">
         <%=  f.label :content, "Please add some more details:"   %>

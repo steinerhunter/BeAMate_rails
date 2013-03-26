@@ -1,7 +1,14 @@
-<%= form_tag password_resets_path, :method => :post do %>
-    <div class="field">
-      <%= label_tag :email %>
-      <%= text_field_tag :email, params[:email] %>
-    </div>
-    <div class="actions"><%= submit_tag "Reset Password" %></div>
-<% end %>
+<div class="row">
+  <div class="span6">
+    <h1>Don't worry, it happens!</h1>
+    <%= form_tag password_resets_path, :remote => true, :id => "new_password_reset", :method => :post do %>
+        <div class="field">
+          <%= label_tag :email, "What's your email address?" %>
+          <%= text_field_tag :email, params[:email] %>
+        </div>
+        <div class="actions">
+          <%= submit_tag "Reset Password!", :type => :image, :src => "assets/ResetPasswordSubmit.png" %>
+        </div>
+    <% end %>
+  </div>
+</div>

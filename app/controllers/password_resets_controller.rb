@@ -1,11 +1,18 @@
 class PasswordResetsController < ApplicationController
+  respond_to :html, :js
+
   def new
+    render "new.html.erb", :layout => false
   end
 
   def create
     user = User.find_by_email(params[:email])
-    user.send_password_reset if user
-    redirect_to root_url, :notice => "Email sent with password reset instructions."
+    @user = user
+    if @user
+      user.send_password_reset
+      flash[:success] = "Thanks! We've sent an email with password reset instructions."
+      respond_with(@user, :location => root_path)
+    end
   end
 
   def edit

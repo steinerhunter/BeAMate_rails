@@ -1,0 +1,22 @@
+var form = $('#new_password_reset');
+
+<% if !(@user) %>
+
+// Delete errors from previous submission
+if ($(".errors")[0]){
+    $('.errors').remove();
+}
+
+// Create a list of errors
+var errors = '<ul><li>OOPS! We could not find this email address in our records... </li></ul>'
+
+// Display errors before the form
+$('<div />').addClass('errors').html(errors).prependTo("#new_password_reset");
+
+<% else %>
+
+// On successful signin, redirect to main page
+window.location.href = "/"
+$('#passwordResetModal').modal('hide');
+
+<% end %>

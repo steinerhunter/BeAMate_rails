@@ -16,6 +16,10 @@
      <%=  f.submit "Come on in!", :type => :image, :src => "assets/ComeInSubmit.png"  %>
    </fieldset>
     <% end  %>
-    <p><%= link_to "forgotten password?", reset_password_path %></p>
+    <p><%= link_to "Don't remember your password?", reset_password_path, id: "login-password_reset",
+                                                                                                                                  class:"modal-link",
+                                                                                                                                  "data-target" => "#passwordResetModal",
+                                                                                                                                  "data-toggle" => "modal",
+                                                                                                                                  "data-dismiss" => "modal" %></p>
   </div>
 </div>

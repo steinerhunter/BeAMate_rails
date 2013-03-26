@@ -1,7 +1,8 @@
 BeAMateRails::Application.routes.draw do
-  resources :invitations
 
+  resources :invitations
   resources :users
+  resources :password_resets
   resources :sessions, only: [:new, :create, :destroy]
   resources :requestposts, only: [:create, :destroy]
   resources :mateposts, only: [:create, :destroy]
@@ -15,7 +16,8 @@ BeAMateRails::Application.routes.draw do
 
   root to: 'static_pages#home'
 
-  match '/signup/:invitation_token', to: 'users#new', as: 'signup'
+  match '/signup', to: 'users#new', as: 'signup'
+  match '/signup_with_token/:invitation_token', to: 'users#new', as:'signup_with_token'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
@@ -25,6 +27,8 @@ BeAMateRails::Application.routes.draw do
   match '/mate', to: 'static_pages#matepost_item'
 
   match '/invite', to: 'invitations#new'
+
+  match '/reset_password', to: 'password_resets#new'
 
   match '/contact', to: 'contact#new', :as => 'contact', :via => :get
   match '/contact', to: 'contact#create', :as => 'contact', :via => :post

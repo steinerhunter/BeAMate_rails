@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
   def update
        if @user.update_attributes( params[:user])
-      flash[:success] = "Profile successfully updated!"
+      flash[:success] = "Your profile successfully updated!"
       sign_in @user
       redirect_to root_path
     else

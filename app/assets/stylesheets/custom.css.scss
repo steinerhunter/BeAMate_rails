@@ -602,3 +602,16 @@ aside {
 .main_content {
   margin-bottom: 50px;
 }
+
+//Flash Messages
+.alert-success {
+    background: #0b7d05;
+    color: #ffffff;
+    font-size: 1.1em;
+    border-color: #000000;
+    position: absolute;
+    left:150px;
+    right:150px;
+    margin-left:auto;
+    margin-right:auto;
+}

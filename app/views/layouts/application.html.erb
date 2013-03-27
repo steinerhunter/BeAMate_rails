@@ -23,6 +23,8 @@
 <% else  %>
     <% if current_page? root_path  %>
         <body class="body_nonsigned">
+    <% elsif controller.controller_name == 'password_resets' && controller.action_name == 'edit' %>
+        <body class="body_editpassword">
     <% elsif controller.controller_name == 'users' && controller.action_name == 'new' %>
         <body class="body_signup">
     <% end  %>

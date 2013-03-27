@@ -35,6 +35,14 @@ html {
   background-position: left top;
 }
 
+.body_editpassword {
+  padding-top: 60px;
+  background-image: url('FirstChange.jpg');
+  background-color: #e8def8;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
 .body_conversation {
   padding-top: 60px;
   background-image: url('FirstConversation.jpg');
@@ -317,6 +325,24 @@ textarea {
 }
 
 .SignupForm {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 36%;
+}
+
+.ChangeIsGood {
+  margin-top: 0px;
+  margin-bottom: 60px;
+  margin-left: 25%;
+}
+
+.PickAPass {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 34%;
+}
+
+.EditpasswordForm {
   margin-top: 20px;
   margin-bottom: 30px;
   margin-left: 36%;

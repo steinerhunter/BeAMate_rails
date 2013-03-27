@@ -1,21 +1,28 @@
-<%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
-    <% if @user.errors.any? %>
-        <div class="error_messages">
-          <h2>Form is invalid</h2>
-          <ul>
-            <% for message in @user.errors.full_messages %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-    <div class="field">
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+<div id="container">
+  <div class="editpassword">
+    <div class="ChangeIsGood">
+      <%= image_tag("ChangeIsGood.png")%>
     </div>
-    <div class="field">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation %>
+    <div class="PickAPass">
+      <%= image_tag("PickAPass.png")%>
     </div>
-    <div class="actions"><%= f.submit "Update Password" %></div>
-<% end %>
+    <div class="row">
+      <div class="EditpasswordForm span6">
+        <%= form_for @user, :url => password_reset_path(params[:id] ), :remote => true, :html => { :id => "update_password" } do |f| %>
+            <%=  render 'shared/error_messages', object: f.object  %>
+            <div class="field">
+              <%= f.label :password, "Please select a new password:" %>
+              <%= f.password_field :password %>
+            </div>
+            <div class="field">
+              <%= f.label :password_confirmation, "Please confirm your new password:" %>
+              <%= f.password_field :password_confirmation %>
+            </div>
+            <div class="actions">
+              <%= f.submit "Change Password!", :type => :image, :src => "../../assets/ChangePasswordSubmit.png" %>
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

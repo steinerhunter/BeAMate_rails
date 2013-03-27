@@ -29,9 +29,9 @@ class User < ActiveRecord::Base
   validates :email, :format => { with: VALID_EMAIL_REGEX, :message => "OOPS! Email address should be like 'user@example.com'..." }
   validates :email, :uniqueness => { case_sensitive: false, :message => "OOPS! Looks like someone has already registered with this address..." }
 
-  validates :password, :presence => { :message => "OOPS! Looks like you didn't pick a password..."}, on: :create
-  validates :password, :length => { minimum: 8, :message => "OOPS! Looks like your password is a bit too short..."}, on: :create
-  validates :password_confirmation, :presence => { :message => "OOPS! Looks like you didn't confirm your password..."}, on: :create
+  validates :password, :presence => { :message => "OOPS! Looks like you didn't pick a password..."}
+  validates :password, :length => { minimum: 8, :message => "OOPS! Looks like your password is a bit too short..."}
+  validates :password_confirmation, :presence => { :message => "OOPS! Looks like you didn't confirm your password..."}
 
   validates :invitation_id, :presence => { :message => "OOPS! Sorry, we cannot sign you up without an invitation..."}
   validates :invitation_id, :uniqueness => { :message => "OOPS! Looks like someone has already registered with this invitation..." }
@@ -73,7 +73,7 @@ class User < ActiveRecord::Base
   def send_password_reset
     generate_token(:password_reset_token)
     self.password_reset_sent_at = Time.zone.now
-    save!
+    save!(validate: false)
     PasswordResetsMailer.delay.password_reset(self)
   end
 

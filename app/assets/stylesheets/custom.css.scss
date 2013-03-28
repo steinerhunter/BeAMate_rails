@@ -51,6 +51,14 @@ html {
   background-position: left top;
 }
 
+.body_conversation_message {
+  padding-top: 60px;
+  background-image: url('FirstMessage.jpg');
+  background-color: #e4dc03;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
  /* header */
 
 .navbar {
@@ -252,6 +260,13 @@ textarea {
   padding: 1px 5px 5px 5px;
   margin: 5px 5px 5px 5px;
   background: url('ChatSmall.png') no-repeat right top;
+}
+
+.user_message {
+  list-style: none;
+  padding: 1px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  background: url('MessageSmall.png') no-repeat right top;
 }
 
 .first_conversations {
@@ -537,8 +552,10 @@ input {
   display: block;
 }
 .timestamp {
-  color: $grayLight;
+  color: #585313;
+  font-size: 0.9em;
   text-align: right;
+  margin-right: 10px;
 }
 .gravatar {
   float: left;

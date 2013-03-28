@@ -1,0 +1,19 @@
+<% if signed_in? %>
+    <% if current_page? conversations_path%>
+        <body class="body_conversation">
+    <% elsif controller.controller_name == 'conversations' && controller.action_name == 'show' %>
+        <body class="body_conversation_message">
+    <% else %>
+        <body class="body_signed">
+    <% end  %>
+    <%= render 'layouts/header' %>
+<% else  %>
+    <% if current_page? root_path  %>
+        <body class="body_nonsigned">
+    <% elsif controller.controller_name == 'password_resets' && controller.action_name == 'edit' %>
+        <body class="body_editpassword">
+    <% elsif controller.controller_name == 'users' && controller.action_name == 'new' %>
+        <body class="body_signup">
+    <% end  %>
+
+<% end  %>

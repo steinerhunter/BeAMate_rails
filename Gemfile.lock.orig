@@ -71,7 +71,12 @@ GEM
       i18n (~> 0.4)
     fancybox-rails (0.2.1)
       railties (>= 3.1.0)
+<<<<<<< HEAD
     ffi (1.4.0-x86-mingw32)
+=======
+    ffi (1.2.0)
+    ffi (1.2.0-x86-mingw32)
+>>>>>>> 82be61fe5999c45eedb30e9ca37f5dec440105fc
     foreigner (1.4.0)
       activerecord (>= 3.0.0)
     haml (4.0.0)
@@ -91,12 +96,18 @@ GEM
       carrierwave (>= 0.5.8)
       foreigner (>= 0.9.1)
       rails (> 3.0.0)
+<<<<<<< HEAD
     metaclass (0.0.1)
     mime-types (1.21)
     mocha (0.13.3)
       metaclass (~> 0.0.1)
     multi_json (1.7.0)
     nifty-generators (0.4.6)
+=======
+    mime-types (1.19)
+    multi_json (1.5.0)
+    nokogiri (1.5.6)
+>>>>>>> 82be61fe5999c45eedb30e9ca37f5dec440105fc
     nokogiri (1.5.6-x86-mingw32)
     pg (0.12.2)
     pg (0.12.2-x86-mingw32)

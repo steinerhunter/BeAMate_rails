@@ -1,0 +1,44 @@
+<<<<<<< HEAD
+<div id="<%= user_request_feed_item.id %>" class="feed_item" style="width:350px">
+  <ul class="user_request">
+    <h4><%= user_request_feed_item.user.name %> needs help!</h4>
+    <li><%=  link_to gravatar_for(user_request_feed_item.user), user_request_feed_item.user  %></li>
+    <li><b>Wanted item:</b><%= user_request_feed_item.requested_item %></li>
+    <li><b>Willing to give: </b><%= user_request_feed_item.give_giftcards  %></li><br><br>
+    <li><b>More details:</b><%= user_request_feed_item.content %></li>
+    <li><%=  link_to "#{user_request_feed_item.user.name}'s profile", user_request_feed_item.user  %></li>
+    <% if current_user?(user_request_feed_item.user)  %>
+        <li><%=  link_to "Remove my post" , user_request_feed_item, method: :delete, title:user_request_feed_item.content, :remote=>true, :class=>'delete_requestpost'  %></li>
+    <% else  %>
+        <li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => user_request_feed_item.user.id}, :class => "modal-link",
+                        "data-target" => "#myModal",
+                        "data-toggle" => "modal",
+                        "data-backdrop" => "static" %> <%=  link_to image_tag("ViewProfile.png"), user_request_feed_item.user  %></li>
+    <% end %>
+    <div class="timestamp">
+      <li>This was posted <%=  time_ago_in_words(user_request_feed_item.created_at) %> ago.</li>
+    </div>
+  </ul>
+</div>
+=======
+<li id="<%= user_request_feed_item.id %>">
+  <h4><%= user_request_feed_item.user.name %> needs someone's help!</h4>
+  <%=  link_to gravatar_for(user_request_feed_item.user), user_request_feed_item.user  %>
+  <span class="user">
+    <b>Wanted item:</b><%= user_request_feed_item.requested_item %><br>
+    <b>Willing to pay:</b><%= user_request_feed_item.willing_to_pay  %><br>
+    <b>from:</b><%= requestpost.giftCardsPlace  %><br>
+    <b>more details:</b> <br>
+    <%= user_request_feed_item.content %><br>
+    <%=  link_to "view profile", user_request_feed_item.user  %>
+  </span>
+  <span class="timestamp">
+    Posted <%=  time_ago_in_words(user_request_feed_item.created_at) %> ago.
+  </span>
+  <% if current_user?(user_request_feed_item.user)  %>
+      <%=  link_to "delete" , user_request_feed_item, method: :delete,
+                                                                            data: { confirm: "Delete requestpost?"},
+                                                                            title:user_request_feed_item.content  %>
+  <% end %>
+</li>
+>>>>>>> 82be61fe5999c45eedb30e9ca37f5dec440105fc

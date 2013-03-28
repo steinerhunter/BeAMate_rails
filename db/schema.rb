@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(:version => 20130325120615) do
     t.datetime "updated_at",     :null => false
     t.string   "requested_item"
     t.string   "give_giftcards"
+    t.string   "giftCardsPlace"
   end
 
   add_index "requestposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"

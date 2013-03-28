@@ -1,12 +1,20 @@
 class Requestpost < ActiveRecord::Base
+<<<<<<< HEAD
   attr_accessible :content, :requested_item, :give_giftcards
+=======
+  attr_accessible :content, :requested_item, :willing_to_pay ,:giftCardsPlace
+>>>>>>> 82be61fe5999c45eedb30e9ca37f5dec440105fc
   belongs_to :user
 
   validates :user_id, :presence => true
   validates :requested_item, :presence => { :message => "OOPS! Looks like you didn't tell us what you wanted..."}
   validates :requested_item, :length =>  { maximum: 25, :message => "OOPS!  Looks like your request's title is a bit too long..." }
+<<<<<<< HEAD
   validates :give_giftcards, :presence => { :message => "OOPS! Surely you'd like to give something back, right...?"}
+=======
+  validates :willing_to_pay, :presence => true, :length =>  { maximum: 8 }
   validates :giftCardsPlace, :presence => true, :length => {minimum: 2}
+>>>>>>> 82be61fe5999c45eedb30e9ca37f5dec440105fc
   validates :content, :presence => { :message => "OOPS! Looks like you didn't tell us a bit more about what you wanted..."}
   validates :content, :length => { maximum: 140 , :message => "OOPS! Looks like your description is a little too long..."}
 

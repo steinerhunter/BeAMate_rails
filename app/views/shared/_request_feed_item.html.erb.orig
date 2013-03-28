@@ -1,0 +1,47 @@
+<<<<<<< HEAD
+<div id="<%= request_feed_item.id %>" class="feed_item" style="width:350px">
+  <ul class="user_request">
+    <h4><%= request_feed_item.user.name %> needs help!</h4>
+    <li><%=  link_to gravatar_for(request_feed_item.user), request_feed_item.user  %></li>
+    <li><b>Wanted item: </b><%= request_feed_item.requested_item %></li>
+    <li><b>Willing to give: </b><%= request_feed_item.give_giftcards  %></li><br><br>
+    <li><b>More details: </b><%= request_feed_item.content %></li>
+    <% if current_user?(request_feed_item.user)  %>
+	    <center><li><%=  link_to image_tag("RemovePost.png"), request_feed_item, method: :delete, title:request_feed_item.content, :remote=>true, :class=>'delete_requestpost'  %></li></center>
+    <% else  %>
+	    <li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => request_feed_item.user.id}, :class => "modal-link",
+                    "data-target" => "#myModal",
+                    "data-toggle" => "modal",
+		            "data-backdrop" => "static" %> <%=  link_to image_tag("ViewProfile.png"), request_feed_item.user  %></li>
+    <% end %>
+    <div class="timestamp">
+      <li>This was posted <%=  time_ago_in_words(request_feed_item.created_at) %> ago.</li>
+    </div>
+  </ul>
+</div>
+=======
+<div id="<%= request_feed_item.id %>" class="feed_item">
+  <h4><%= request_feed_item.user.name %> needs someone's help!</h4>
+  <%=  link_to gravatar_for(request_feed_item.user), request_feed_item.user  %>
+  <span class="user">
+    <b>Wanted item:</b><%= request_feed_item.requested_item %><br>
+    <b>Willing to pay:</b><%= request_feed_item.willing_to_pay  %><br>
+    <b>from: </b> <%= request_feed_item.giftCardsPlace  %><br>
+    <b>more details:</b> <br>
+    <%= request_feed_item.content %><br>
+    <%=  link_to "view profile", request_feed_item.user  %><br>
+  </span>
+  <span class="timestamp">
+    Posted <%=  time_ago_in_words(request_feed_item.created_at) %> ago.<br>
+  </span>
+  <% if current_user?(request_feed_item.user)  %>
+      <%=  link_to "Remove my post" , request_feed_item, method: :delete, title:request_feed_item.content, :remote=>true, :class=>'delete_requestpost'  %><br>
+  <% else  %>
+      <%= link_to "Help #{request_feed_item.user.name}!",  {:controller => "conversations", :action => "new", :recipient_id => request_feed_item.user.id}, :class => "modal-link btn btn-primary btn-large",
+                                                                                                                    "data-target" => "#myModal",
+                                                                                                                    "data-toggle" => "modal",
+                                                                                                                    "data-backdrop" => "static" %><br>
+
+  <% end %>
+</div>
+>>>>>>> 82be61fe5999c45eedb30e9ca37f5dec440105fc

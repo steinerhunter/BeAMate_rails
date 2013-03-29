@@ -9,6 +9,7 @@ gem 'mailboxer'
 gem 'haml'
 gem 'simple_form'
 gem 'delayed_job_active_record'
+gem "workless", "~> 1.1.1"
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

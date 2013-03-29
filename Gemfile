@@ -9,7 +9,7 @@ gem 'mailboxer'
 gem 'haml'
 gem 'simple_form'
 gem 'delayed_job_active_record'
-gem "workless", "~> 1.1.1"
+gem 'workless', '~> 1.1.1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
@@ -36,6 +36,7 @@ end
 
 group :production do
   gem 'pg', '0.12.2'
+  gem 'unicorn'
 end
 
 gem "mocha", :group => :test

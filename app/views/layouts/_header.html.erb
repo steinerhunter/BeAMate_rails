@@ -10,7 +10,11 @@
                                                                                 "data-backdrop" => "static" %></li>
           <li class="border"><%= link_to image_tag("SeeHowHeader.png"), "#" %></li>
           <% if signed_in?  %>
-              <li class="border"><%= link_to image_tag("ChatHeader.png"), conversations_path %></li>
+              <% if current_user.mailbox.receipts.where(:is_read => false).count > 0 %>
+                  <li class="border"><%= link_to image_tag("ChatNewHeader.png"), conversations_path %></li>
+              <% else  %>
+                  <li class="border"><%= link_to image_tag("ChatHeader.png"), conversations_path %></li>
+              <% end  %>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <%= image_tag("AccountHeader.png") %> <b class="caret"></b>

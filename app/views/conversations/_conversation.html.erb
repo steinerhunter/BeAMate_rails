@@ -1,4 +1,8 @@
-<div  class="feed_item" style="width:350px">
+<% if conversation.is_unread?(current_user)  %>
+    <div  class="feed_item_unread" style="width:350px">
+<% else %>
+    <div  class="feed_item" style="width:350px">
+<% end  %>
   <ul class="user_chat">
     <li><h4><%= link_to conversation.subject, conversation %></h4></li>
     <% if  conversation.last_sender.name == current_user.name %>

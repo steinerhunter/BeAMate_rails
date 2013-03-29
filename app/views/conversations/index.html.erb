@@ -6,10 +6,15 @@
     <div class="Communicate">
       <%= image_tag("Communicate.png")%>
     </div>
+    <div class="NewMessages">
+      <% if current_user.mailbox.receipts.where(:is_read => false).count > 0 %>
+        You currently have <%= pluralize(current_user.mailbox.receipts.where(:is_read => false).count, "new message") %>!
+      <% else  %>
+          You currently have no new messages.
+    <% end  %>
+    </div>
     <div class="MyConversations">
       <%= render (mailbox.inbox + mailbox.sentbox).sort_by { |conversation| conversation.last_message.created_at }.reverse.uniq %>
-
-
       <% if !(mailbox.trash.empty?) %>
         <div class="Trash">
           <%= image_tag("Trash.png")%>

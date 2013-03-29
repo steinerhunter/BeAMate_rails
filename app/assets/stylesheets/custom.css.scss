@@ -241,6 +241,16 @@ textarea {
   margin-bottom: 20px;
 }
 
+.feed_item_unread {
+  background-color: #cbe2d0;
+  -moz-box-shadow: 5px 5px 5px #333333;; /* Old Firefox */
+  box-shadow: 5px 5px 5px #333333;
+  border:1px solid;
+  border-radius:10px;
+  -moz-border-radius:10px; /* Old Firefox */
+  margin-bottom: 20px;
+}
+
 .user_request {
   list-style: none;
   padding: 1px 5px 5px 5px;
@@ -278,6 +288,14 @@ textarea {
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 35%;
+}
+
+.NewMessages {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 39%;
 }
 
 .MyConversations {

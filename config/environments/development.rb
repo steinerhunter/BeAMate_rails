@@ -22,10 +22,6 @@ BeAMateRails::Application.configure do
       :only_path => false
   }
 
-  config.after_initialize do
-    Delayed::Job.scaler = :local
-  end
-
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 

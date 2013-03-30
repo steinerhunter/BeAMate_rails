@@ -9,6 +9,7 @@ gem 'haml'
 gem 'simple_form'
 gem 'delayed_job_active_record'
 gem 'delayed_job'
+gem 'daemons'
 gem 'hirefire'
 
 group :development, :test do

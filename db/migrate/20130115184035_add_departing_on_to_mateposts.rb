@@ -1,5 +1,5 @@
 class AddDepartingOnToMateposts < ActiveRecord::Migration
   def change
-    add_column :mateposts, :departing_on, :string
+    add_column :mateposts, :departing_on, :datetime
   end
 end

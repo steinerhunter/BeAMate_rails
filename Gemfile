@@ -4,7 +4,6 @@ gem 'rails', '3.2.11'
 gem 'sass-rails', '~> 3.2'
 gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'bcrypt-ruby'
-gem 'rake', '0.8.7'
 gem 'mailboxer'
 gem 'haml'
 gem 'simple_form'
@@ -37,6 +36,7 @@ end
 group :production do
   gem 'pg', '0.12.2'
   gem 'unicorn'
+  gem 'rake', '0.8.7'
 end
 
 gem "mocha", :group => :test

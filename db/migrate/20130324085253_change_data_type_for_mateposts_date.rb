@@ -1,15 +1,15 @@
 class ChangeDataTypeForMatepostsDate < ActiveRecord::Migration
   def up
-    change_table :mateposts do |t|
-      t.change :departing_on, :datetime
-      t.change :returning_on, :datetime
-    end
+    remove_column :departing_on, :string
+    add_column        :departing_on, :datetime
+    remove_column :returning_on, :string
+    add_column        :returning_on, :datetime
   end
 
   def down
-    change_table :mateposts do |t|
-      t.change :departing_on, :string
-      t.change :returning_on, :string
-    end
+    remove_column :departing_on, :datetime
+    add_column        :departing_on, :string
+    remove_column :returning_on, :datetime
+    add_column        :returning_on, :string
   end
 end

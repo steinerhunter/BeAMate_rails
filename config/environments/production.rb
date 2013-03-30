@@ -31,7 +31,7 @@ BeAMateRails::Application.configure do
   config.force_ssl = true
 
   config.after_initialize do
-    Delayed::Job.scaler = :heroku
+    Delayed::Job.scaler = :heroku_cedar
   end
 
   # See everything in the log (default is :info)

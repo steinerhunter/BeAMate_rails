@@ -12,7 +12,7 @@ class ContactController < ApplicationController
     if @feedback.valid?
       flash[:success] = "Thank you so much for your feedback!"
       respond_with(@feedback, :location => root_path)
-      NotificationsMailer.delay.new_feedback(@feedback)
+      FeedbackMailer.delay.new_feedback(@feedback)
     end
   end
 

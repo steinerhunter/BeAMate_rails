@@ -11,7 +11,7 @@ class InvitationsController < ApplicationController
     @invitation.sender = current_user
     if @invitation.save
       if signed_in?
-        InvitationsMailer.delay.new_invitation(@invitation)
+        InvitationsMailer.new_invitation(@invitation).deliver
         flash[:success] = "Thanks! We've sent an invitation to the address you specified."
         respond_with(@invitation, :location => root_path)
       else

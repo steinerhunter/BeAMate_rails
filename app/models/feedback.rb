@@ -1,5 +1,5 @@
 class Feedback
-  attr_accessible :name, :email, :body
+  attr_accessor :name, :email, :body
 
   validates :name, :presence => { :message => "OOPS! Looks like you didn't tell us your name..."}
   validates :email, :presence => { :message => "OOPS! We're going to need your email address..."}

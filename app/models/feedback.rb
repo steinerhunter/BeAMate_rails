@@ -1,4 +1,9 @@
 class Feedback
+
+  include ActiveModel::Validations
+  include ActiveModel::Conversion
+  extend ActiveModel::Naming
+
   attr_accessor :name, :email, :body
 
   validates :name, :presence => { :message => "OOPS! Looks like you didn't tell us your name..."}

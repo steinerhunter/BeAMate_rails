@@ -9,13 +9,7 @@ class StaticPagesController < ApplicationController
     end
   end
 
-  def help
-  end
-  
-  def contact
-  end
-
-  def about
+  def how_it_works
   end
 
   def request_item

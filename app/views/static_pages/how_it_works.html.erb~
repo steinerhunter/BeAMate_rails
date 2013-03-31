@@ -1,0 +1,20 @@
+  <div class="first_how_it_works">
+    <div class="UnderTheHood">
+      <%= image_tag("UnderTheHood.png")%>
+    </div>
+    <div class="SoHowCan">
+      <%= image_tag("SoHowCan.png")%>
+    </div>
+  </div>
+  <div class="second_how_it_works">
+    <ul>
+      <li>hahaha</li>
+      bf383b
+      bf383b
+      bf383b
+      bf383b
+      bf383b
+      bf383b
+      bf383b
+    </ul>
+  </div>

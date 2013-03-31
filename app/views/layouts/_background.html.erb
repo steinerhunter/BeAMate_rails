@@ -3,6 +3,8 @@
         <body class="body_conversation">
     <% elsif controller.controller_name == 'conversations' && controller.action_name == 'show' %>
         <body class="body_conversation_message">
+    <% elsif controller.controller_name == 'static_pages' && controller.action_name == 'how_it_works' %>
+        <body class="body_how_it_works">
     <% else %>
         <body class="body_signed">
     <% end  %>
@@ -14,6 +16,7 @@
         <body class="body_editpassword">
     <% elsif controller.controller_name == 'users' && controller.action_name == 'new' %>
         <body class="body_signup">
+    <% elsif controller.controller_name == 'static_pages' && controller.action_name == 'how_it_works' %>
+        <body class="body_how_it_works">
     <% end  %>
-
 <% end  %>

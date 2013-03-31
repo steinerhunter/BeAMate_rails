@@ -21,8 +21,7 @@ BeAMateRails::Application.routes.draw do
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-  match '/help',    to: 'static_pages#help'
-  match '/about',   to: 'static_pages#about'
+  match '/howitworks', to: 'static_pages#how_it_works'
   match '/request', to: 'static_pages#request_item'
   match '/mate', to: 'static_pages#matepost_item'
 

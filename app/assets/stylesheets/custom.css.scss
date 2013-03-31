@@ -59,6 +59,10 @@ html {
   background-position: left top;
 }
 
+.body_how_it_works {
+
+}
+
  /* header */
 
 .navbar {
@@ -379,6 +383,92 @@ textarea {
   margin-top: 20px;
   margin-bottom: 30px;
   margin-left: 36%;
+}
+
+.howitworks {
+  margin-top: -20px;
+  margin-bottom: 100px;
+}
+
+.first_how_it_works {
+    background-image: url('FirstHowIts.jpg');
+    background-color:#f9d3d3;
+    background-size:  100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    overflow: auto;
+}
+
+.second_how_it_works {
+  background-image: url('SecondHowIts.jpg');
+  background-color: #bf383b;
+  background-repeat: no-repeat;
+  background-position: left top;
+  overflow: auto;
+}
+
+.third_how_it_works {
+  background-image: url('ThirdHowIts.jpg');
+  background-color: #f6ccdb;
+  background-repeat: no-repeat;
+  background-position: left top;
+  overflow: auto;
+}
+
+.fourth_how_it_works {
+  background-image: url('FourthHowIts.jpg');
+  background-color: #997682;
+  background-repeat: no-repeat;
+  background-position: left top;
+  overflow: auto;
+}
+
+.UnderTheHood {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  margin-left: 27%;
+}
+
+.SoHowCan {
+  margin-top: 120px;
+  margin-bottom: 0px;
+  margin-left: 26%;
+}
+
+.step1 {
+  margin-top: 140px;
+  margin-bottom: 0px;
+  margin-left: 30%;
+}
+
+.step1_desc {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 27%;
+}
+
+.step2 {
+  margin-top: 140px;
+  margin-bottom: 0px;
+  margin-left: 24%;
+}
+
+.step2_desc {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 30%;
+}
+
+.step3 {
+  margin-top: 120px;
+  margin-bottom: 20px;
+  margin-left: 24%;
+}
+
+.step3_desc {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  margin-left: 30%;
 }
 
 /* typography */

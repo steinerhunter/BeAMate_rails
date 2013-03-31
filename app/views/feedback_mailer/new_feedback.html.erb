@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+    <%= link_to image_tag("http://www.beamate.com/images/M_images/mvp/Logo.png"), root_url %>
+    <h2>Hi chief, we've got some new feedback!</h2>
+    <h3>Someone named <%= @feedback.name %> says:</h3>
+    <h3>"<%= @feedback.body %>"</h3>
+    <h3>Their email address is: <%= @feedback.email %></h3>
+    <p>
+        <h3>Yours, firstmate</h3>
+    </p>
+</body>
+</html>

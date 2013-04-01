@@ -1,5 +1,5 @@
-<% if @mate_feed_items.any? %>
-      <div id="mateposts">
-        <%= render partial: 'shared/mate_feed_item', collection: @mate_feed_items %>
-      </div>
-<% end  %>
+<div id="mateposts">
+  <% if @mate_feed_items.any? %>
+      <%= render partial: 'shared/mate_feed_item', collection: @mate_feed_items %>
+  <% end  %>
+ </div>

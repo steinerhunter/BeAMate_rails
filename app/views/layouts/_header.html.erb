@@ -8,7 +8,7 @@
                                                                                "data-target" => "#myModal",
                                                                                "data-toggle" => "modal",
                                                                                 "data-backdrop" => "static" %></li>
-          <li class="border"><%= link_to image_tag("SeeHowHeader.png"), "#" %></li>
+          <li class="border"><%= link_to image_tag("SeeHowHeader.png"), howitworks_path %></li>
           <% if signed_in?  %>
               <% if current_user.mailbox.receipts.where(:is_read => false).count > 0 %>
                   <li class="border"><%= link_to image_tag("ChatNewHeader.png"), conversations_path %></li>

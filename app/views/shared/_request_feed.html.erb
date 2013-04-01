@@ -1,5 +1,5 @@
-<% if @request_feed_items.any? %>
-        <div id="requestposts">
-          <%= render partial: 'shared/request_feed_item', collection: @request_feed_items %>
-        </div>
-<% end  %>
+<div id="requestposts">
+  <% if @request_feed_items.any? %>
+      <%= render partial: 'shared/request_feed_item', collection: @request_feed_items %>
+  <% end  %>
+</div>

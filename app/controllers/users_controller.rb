@@ -34,15 +34,14 @@ class UsersController < ApplicationController
   end
 
   def edit
+    render "edit.html.erb", :layout => false
   end
 
   def update
-       if @user.update_attributes( params[:user])
-      flash[:success] = "Your profile successfully updated!"
+    if @user.update_attributes( params[:user])
+      flash[:success] = "Your profile was successfully updated!"
       sign_in @user
-      redirect_to root_path
-    else
-      render 'edit'
+      respond_with(@user, :location => root_path)
     end
   end
 

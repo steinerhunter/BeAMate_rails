@@ -33,8 +33,8 @@ class User < ActiveRecord::Base
   validates :password, :length => { minimum: 8, :message => "OOPS! Looks like your password is a bit too short..."}
   validates :password_confirmation, :presence => { :message => "OOPS! Looks like you didn't confirm your password..."}
 
-  validates :invitation_id, :presence => { :message => "OOPS! Sorry, we cannot sign you up without an invitation..."}
-  validates :invitation_id, :uniqueness => { :message => "OOPS! Looks like someone has already registered with this invitation..." }
+  validates :invitation_id, :presence => { :message => "OOPS! Sorry, we cannot sign you up without an invitation..."}, on: :create
+  validates :invitation_id, :uniqueness => { :message => "OOPS! Looks like someone has already registered with this invitation..." }, on: :create
 
   def user_request_feed
     Requestpost.where("user_id = ?", id)

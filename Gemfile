@@ -12,6 +12,7 @@ gem 'delayed_job'
 gem 'daemons'
 gem 'hirefire'
 gem 'newrelic_rpm'
+gem 'asset_sync'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

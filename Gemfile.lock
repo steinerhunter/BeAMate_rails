@@ -116,6 +116,7 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.7.2)
     netrc (0.7.7)
+    newrelic_rpm (3.6.0.78)
     nifty-generators (0.4.6)
     nokogiri (1.5.9)
     nokogiri (1.5.9-x86-mingw32)
@@ -226,6 +227,7 @@ DEPENDENCIES
   jquery-rails (= 2.0.2)
   mailboxer
   mocha
+  newrelic_rpm
   nifty-generators
   pg (= 0.12.2)
   rails (= 3.2.11)

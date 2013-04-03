@@ -19,5 +19,5 @@ ActionMailer::Base.smtp_settings = {
 }
 
 ActionMailer::Base.default_url_options = {
-    :host => "beamate.herokuapp.com"
+    :host => request.host_with_port
 }

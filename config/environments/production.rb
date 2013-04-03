@@ -66,5 +66,4 @@ BeAMateRails::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   config.action_controller.asset_host = "https://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
-  config.action_mailer.default_url_options = { :host => 'beamate.herokuapp.com' }
 end

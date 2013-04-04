@@ -1,0 +1,69 @@
+@media screen and (min-width: 1450px) and (max-width: 1920px) {
+
+/* General CSS definitions.*/
+  footer {
+    margin-top: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+
+/* CSS definitions for HomeNotSignedIn page.*/
+  .HomeNotSignedIn {
+    margin-top: 3%;
+    margin-left: 14%;
+  }
+
+  .ButtonsNotSignedIn {
+    margin-top: 20%;
+    margin-left: 21%;
+  }
+
+/* CSS definitions for HowItWorks page.*/
+  .UnderTheHood {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-left: 27%;
+  }
+
+  .SoHowCan {
+    margin-top: 120px;
+    margin-bottom: 0px;
+    margin-left: 26%;
+  }
+
+  .step1 {
+    margin-top: 140px;
+    margin-bottom: 0px;
+    margin-left: 30%;
+  }
+
+  .step1_desc {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 27%;
+  }
+
+  .step2 {
+    margin-top: 140px;
+    margin-bottom: 0px;
+    margin-left: 24%;
+  }
+
+  .step2_desc {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 30%;
+  }
+
+  .step3 {
+    margin-top: 120px;
+    margin-bottom: 20px;
+    margin-left: 24%;
+  }
+
+  .step3_desc {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    margin-left: 30%;
+  }
+}

@@ -18,6 +18,7 @@ html {
 
 .body_nonsigned {
   padding-top: 60px;
+  background-size: 100% 100%;
   background-image: url('Concept.jpg');
   background-repeat: no-repeat;
   background-position: left top;
@@ -178,25 +179,14 @@ textarea {
 }
 
 .ChooseYourPath {
-  position: absolute;
-  left: 25%;
+  margin-left: 25%;
   margin-top: 30px;
 }
 
 .WhatIsIt {
-  margin-top: 350px;
+  margin-top: 150px;
   margin-bottom: 50px;
   margin-left: 37%;
-}
-
-.HomeNotSignedIn {
-  margin-top: 3%;
-  margin-left: 14%;
-}
-
-.ButtonsNotSignedIn {
-  margin-top: 400px;
-  margin-left: 21%;
 }
 
 .ButtonsSignedIn {
@@ -407,6 +397,7 @@ textarea {
 .second_how_it_works {
   background-image: url('SecondHowIts.jpg');
   background-color: #bf383b;
+  background-size:  100%;
   background-repeat: no-repeat;
   background-position: left top;
   overflow: auto;
@@ -415,6 +406,7 @@ textarea {
 .third_how_it_works {
   background-image: url('ThirdHowIts.jpg');
   background-color: #f6ccdb;
+  background-size:  100%;
   background-repeat: no-repeat;
   background-position: left top;
   overflow: auto;
@@ -423,57 +415,10 @@ textarea {
 .fourth_how_it_works {
   background-image: url('FourthHowIts.jpg');
   background-color: #997682;
+  background-size:  100%;
   background-repeat: no-repeat;
   background-position: left top;
   overflow: auto;
-}
-
-.UnderTheHood {
-  margin-top: 20px;
-  margin-bottom: 60px;
-  margin-left: 27%;
-}
-
-.SoHowCan {
-  margin-top: 120px;
-  margin-bottom: 0px;
-  margin-left: 26%;
-}
-
-.step1 {
-  margin-top: 140px;
-  margin-bottom: 0px;
-  margin-left: 30%;
-}
-
-.step1_desc {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 27%;
-}
-
-.step2 {
-  margin-top: 140px;
-  margin-bottom: 0px;
-  margin-left: 24%;
-}
-
-.step2_desc {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 30%;
-}
-
-.step3 {
-  margin-top: 120px;
-  margin-bottom: 20px;
-  margin-left: 24%;
-}
-
-.step3_desc {
-  margin-top: 0px;
-  margin-bottom: 50px;
-  margin-left: 30%;
 }
 
 /* typography */
@@ -505,11 +450,7 @@ p {
 
 /* footer */
 
-footer {
-  margin-top: 15px;
-  font-size: 0.9em;
-  font-weight: bold;
-}
+
 
 #bottom, #push {
   height:10px;

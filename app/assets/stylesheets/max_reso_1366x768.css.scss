@@ -1,21 +1,21 @@
 @media screen and (min-width: 1281px) and (max-width: 1366px) {
 
-/* CSS definitions for HomeNotSignedIn page.*/
-  .HomeNotSignedIn {
-    margin-top: 0px;
-    margin-left: 7%;
-  }
-
-  .ButtonsNotSignedIn {
-    margin-top: 20%;
-    margin-left: 16%;
-  }
-
 /* General CSS definitions.*/
   footer {
     margin-top: 5px;
     font-size: 0.9em;
     font-weight: bold;
+  }
+
+/* CSS definitions for HomeNotSignedIn page.*/
+  .HomeNotSignedIn {
+    margin-top: 0px;
+    margin-left: 5%;
+  }
+
+  .ButtonsNotSignedIn {
+    margin-top: 7%;
+    margin-left: 16%;
   }
 
 /* CSS definitions for HowItWorks page.*/

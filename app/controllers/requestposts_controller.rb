@@ -6,7 +6,6 @@ class RequestpostsController < ApplicationController
   def create
     @requestpost = current_user.requestposts.build(params[:requestpost])
     if @requestpost.save
-      flash[:success] = "Your post was succesfully created!"
       respond_with(@requestpost, :location => root_path)
     end
   end

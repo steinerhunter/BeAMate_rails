@@ -6,7 +6,6 @@ class MatepostsController < ApplicationController
   def create
     @matepost = current_user.mateposts.build(params[:matepost])
     if @matepost.save
-      flash[:success] = "Your post was succesfully created!"
       respond_with(@matepost, :location => root_path)
     end
   end

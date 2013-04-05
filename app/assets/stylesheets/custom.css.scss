@@ -96,7 +96,7 @@ html {
   }
   .border{
     border-right: 1px solid black;
-    height: 43px;;
+    height: 43px;
   }
 }
 
@@ -112,11 +112,14 @@ html {
   }
 
   .header_text {
-    float: right;
+    float: left;
+    padding-right: 20px;
+    margin-top:13px;
+    font-size: 1.2em;
   }
 
   .header_image {
-    float: left;;
+    float: left;
   }
 }
 
@@ -449,9 +452,6 @@ p {
 }
 
 /* footer */
-
-
-
 #bottom, #push {
   height:10px;
 }

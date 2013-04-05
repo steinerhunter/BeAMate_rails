@@ -18,8 +18,13 @@ $('<div />').addClass('errors').html(errors).prependTo("#new_requestpost");
 
 <% else %>
 
+// Scroll down to requestpost display area
+$('html, body').animate({
+    scrollTop: $("#requestposts").offset().top
+}, 1000);
+
 // Add the new requestpost to the beginning of the #requestpost division
-$("#requestposts").prepend('<%= j(render(:partial => "requestpost", :object => @requestpost))%>').hide().fadeIn(850);
+$("#requestposts").prepend('<%= j(render(:partial => "requestpost", :object => @requestpost))%>').hide().fadeIn(1500);
 $('#myModal').modal('hide');
 
 <% end %>

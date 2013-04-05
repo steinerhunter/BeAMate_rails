@@ -18,8 +18,13 @@ $('<div />').addClass('errors').html(errors).prependTo("#new_matepost");
 
 <% else %>
 
+// Scroll down to matepost display area
+$('html, body').animate({
+    scrollTop: $("#mateposts").offset().top
+}, 1000);
+
 // Add the new matepost to the beginning of the #matepost division
-$("#mateposts").prepend('<%= j(render(:partial => "matepost", :object => @matepost))%>').hide().fadeIn(850);
+$("#mateposts").prepend('<%= j(render(:partial => "matepost", :object => @matepost))%>').hide().fadeIn(1500);
 $('#myModal').modal('hide');
 
 <% end %>

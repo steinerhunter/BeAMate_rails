@@ -1,6 +1,10 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
-      <%= link_to image_tag("LogoSmall.png"), root_path, id: "logo" %>
+    <ul class="nav pull-left" id="header_items">
+      <li><%= link_to image_tag("LogoSmall.png"), root_path, id: "logo" %></li>
+      <li class="header_text">Hey there <%= current_user.name  %>, we love having you aboard! </li>
+    </ul>
+
       <nav>
         <ul class="nav pull-right" id="header_items">
           <li class="border"><%= link_to image_tag("HomeHeader.png"), root_path %></li>
@@ -20,8 +24,8 @@
                   <%= image_tag("AccountHeader.png") %> <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to "Profile", current_user  %></li>
-                  <li><%= link_to "Settings", edit_user_path(current_user), class:"modal-link",
+                  <li><%= link_to "My posts", '#'  %></li>
+                  <li><%= link_to "My Profile", edit_user_path(current_user), class:"modal-link",
                                                                                                                                             "data-target" => "#myModal",
                                                                                                                                             "data-toggle" => "modal",
                                                                                                                                             "data-backdrop" => "static" %></li>

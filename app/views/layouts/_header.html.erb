@@ -2,7 +2,13 @@
   <div class="navbar-inner">
     <ul class="nav pull-left" id="header_items">
       <li><%= link_to image_tag("LogoSmall.png"), root_path, id: "logo" %></li>
-      <li class="header_text">Hey there <%= current_user.name  %>, we love having you aboard! </li>
+      <li class="header_text">Hey there <%= current_user.name  %>,
+        <% if current_user.mailbox.receipts.where(:is_read => false).count > 0 %>
+          you've got <%= pluralize(current_user.mailbox.receipts.where(:is_read => false).count, "new message") %>!
+      <% else  %>
+          we love having you aboard!
+    <% end  %>
+       </li>
     </ul>
 
       <nav>

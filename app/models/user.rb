@@ -53,10 +53,6 @@ class User < ActiveRecord::Base
     Matepost.all
   end
 
-  def add_mate_points(more_points)
-    mate_points += more_points
-  end
-
   def mailboxer_email(message)
     email
   end

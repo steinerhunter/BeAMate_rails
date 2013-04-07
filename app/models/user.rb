@@ -37,10 +37,6 @@ class User < ActiveRecord::Base
   validates :invitation_id, :presence => { :message => "OOPS! Sorry, we cannot sign you up without an invitation..."}, on: :create
   validates :invitation_id, :uniqueness => { :message => "OOPS! Looks like someone has already registered with this invitation..." }, on: :create
 
-  def init
-    self.mate_points  ||= 0
-  end
-
   def user_request_feed
     Requestpost.where("user_id = ?", id)
   end

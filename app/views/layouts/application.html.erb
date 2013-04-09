@@ -25,9 +25,6 @@
   </div>
   <div id="push"></div>
 </div>
-<% if !(current_page? root_path and signed_in?) %>
-    <%= render  'layouts/footer' %>
-<% end  %>
 <div id="FeedbackButton">
   <%= link_to "", contact_path, class:"modal-link",
                                                               "data-target" => "#myModal",

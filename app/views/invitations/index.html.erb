@@ -6,7 +6,7 @@
     <th>Token</th>
     <th>Sent At</th>
   </tr>
-  <% for invitation in @invitations %>
+      <% @invitations.each do |invitation| %>
     <tr>
       <td><%= invitation.sender_id %></td>
       <td><%= invitation.recipient_email %></td>

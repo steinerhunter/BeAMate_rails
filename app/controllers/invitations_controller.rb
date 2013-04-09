@@ -21,4 +21,12 @@ class InvitationsController < ApplicationController
     end
   end
 
+  def index
+    if current_user.admin?
+      @invitations = Invitation.all
+    else
+      redirect_to root_path
+    end
+  end
+
 end

@@ -22,7 +22,11 @@ class RequestpostsController < ApplicationController
   private
 
     def correct_user
-      @requestpost = current_user.requestposts.find_by_id(params[:id])
+      if current_user.admin?
+        @requestpost = Requestpost.find_by_id(params[:id])
+      else
+        @requestpost = current_user.requestposts.find_by_id(params[:id])
+      end
       redirect_to root_url if @requestpost.nil?
     end
 

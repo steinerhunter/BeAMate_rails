@@ -22,7 +22,11 @@ class MatepostsController < ApplicationController
   private
 
     def correct_user
-      @matepost = current_user.mateposts.find_by_id(params[:id])
+      if current_user.admin?
+        @matepost = Matepost.find_by_id(params[:id])
+      else
+        @matepost = current_user.mateposts.find_by_id(params[:id])
+      end
       redirect_to root_url if @matepost.nil?
     end
 

@@ -8,6 +8,9 @@
     <% if current_user?(request_feed_item.user)  %>
 	    <center><li><%=  link_to image_tag("RemovePost.png"), request_feed_item, method: :delete, title:request_feed_item.content, :remote=>true, :class=>'delete_requestpost'  %></li></center>
     <% else  %>
+        <% if current_user.admin?  %>
+            <center><li><%=  link_to "Remove this post" , request_feed_item, method: :delete, title:request_feed_item.content, :remote=>true, :class=>'delete_matepost' %></li></center>
+        <% end  %>
 	    <li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => request_feed_item.user.id}, :class => "modal-link",
                     "data-target" => "#myModal",
                     "data-toggle" => "modal",

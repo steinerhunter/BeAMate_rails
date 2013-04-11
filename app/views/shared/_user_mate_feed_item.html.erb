@@ -10,6 +10,9 @@
     <% if current_user?(user_mate_feed_item.user)  %>
         <center><li><%=  link_to image_tag("RemovePost.png") , mate_feed_item, method: :delete, title:mate_feed_item.content, :remote=>true, :class=>'delete_matepost' %></li></center>
     <% else  %>
+        <% if current_user.admin?  %>
+            <center><li><%=  link_to "Remove this post" , user_mate_feed_item, method: :delete, title:user_mate_feed_item.content, :remote=>true, :class=>'delete_matepost' %></li></center>
+        <% end  %>
         <li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => user_mate_feed_item.user.id}, :class => "modal-link",
                         "data-target" => "#myModal",
                         "data-toggle" => "modal",

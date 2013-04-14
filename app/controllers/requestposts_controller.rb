@@ -6,12 +6,14 @@ class RequestpostsController < ApplicationController
   def create
     @requestpost = current_user.requestposts.build(params[:requestpost])
     if @requestpost.save
+      current_user.add_mate_points(25)
       respond_with(@requestpost, :location => root_path)
     end
   end
 
   def destroy
     @requestpost.destroy
+    current_user.subtract_mate_points(25)
     respond_to do |format|
       format.html { redirect_to(root_url) }
       format.json { head :no_content }

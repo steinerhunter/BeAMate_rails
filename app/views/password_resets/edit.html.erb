@@ -7,7 +7,7 @@
       <%= image_tag("PickAPass.png")%>
     </div>
     <div class="row">
-      <div class="EditpasswordForm span6">
+      <div class="EditpasswordForm">
         <%= form_for @user, :url => password_reset_path(params[:id] ), :remote => true, :html => { :id => "update_password" } do |f| %>
             <%=  render 'shared/error_messages', object: f.object  %>
             <div class="field">

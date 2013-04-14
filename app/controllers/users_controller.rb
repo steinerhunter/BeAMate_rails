@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
+      current_user.add_mate_points(200)
       sign_in @user
       flash[:success] = "Welcome to BeAMate!"
       respond_with(@user, :location => root_path)

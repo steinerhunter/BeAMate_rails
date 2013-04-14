@@ -5,6 +5,171 @@ html, body {
   height: 96%;
 }
 
+/* General CSS definitions.*/
+footer {
+  margin-top: 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* CSS definitions for HomeNotSignedIn page.*/
+.HomeNotSignedIn {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+  }
+}
+
+.ButtonsNotSignedIn {
+    width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+}
+
+/* CSS definitions for HowItWorks page.*/
+.UnderTheHood {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    margin-bottom: 0px;
+  }
+}
+
+.SoHowCan {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 0px;
+  }
+}
+
+.step1 {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    margin-bottom: 0px;
+  }
+}
+
+.step1_desc {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.step2 {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    margin-bottom: 0px;
+  }
+}
+
+.step2_desc {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.step3 {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    margin-bottom: 0px;
+  }
+}
+
+.step3_desc {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+/* CSS definitions for HomeSignedIn page.*/
+
+.ChooseYourPath {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+}
+
+.WhatIsIt {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+}
+
+.ButtonsSignedIn {
+    width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 400px;
+}
+
+.InBetween1 {
+  margin-top: -20px;
+  margin-bottom: 3%;
+}
+
+.MakeAConnect {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom:3%;
+  }
+}
+
+.BrowseOurLists {
+   width:840px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+.feeds {
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
 #wrapper {
   min-height: 100%;
   height: auto !important;
@@ -133,6 +298,8 @@ html {
   padding-top: 5px;
 }
 
+
+
 section {
   overflow: auto;
 }
@@ -175,6 +342,7 @@ textarea {
 
 .third_home {
   background-image: url('Third.jpg');
+  background-color: #c5e7f3;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: left top;;
@@ -246,29 +414,39 @@ textarea {
 }
 
 .Communicate {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 35%;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom:3%;
+  }
 }
 
 .NewMessages {
+  text-align: center;
   font-size: 1.3em;
   font-weight: bold;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 39%;
+  margin-top: 0px;
+  margin-bottom:3%;
 }
 
 .MyConversations {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 39%;
+  width:350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 3%;
 }
 
 .LetsTalk {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 23%;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom:3%;
+  }
 }
 
 .Trash {
@@ -284,9 +462,11 @@ textarea {
 }
 
 .message_wrapper {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: 35%;
+  width:500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 3%;
 }
 
 .message_title {
@@ -307,39 +487,59 @@ textarea {
 }
 
 .LetsBeFriends {
-  margin-top: 0px;
-  margin-bottom: 60px;
-  margin-left: 25%;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom:3%;
+  }
 }
 
 .CordiallyInvited {
-  margin-top: 50px;
-  margin-bottom: 20px;
-  margin-left: 34%;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom:1%;
+  }
 }
 
 .SignupForm {
+  width: 400px;
   margin-top: 20px;
   margin-bottom: 30px;
-  margin-left: 36%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ChangeIsGood {
-  margin-top: 0px;
-  margin-bottom: 60px;
-  margin-left: 25%;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom:2%;
+  }
 }
 
 .PickAPass {
-  margin-top: 50px;
-  margin-bottom: 20px;
-  margin-left: 34%;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom:1%;
+  }
 }
 
 .EditpasswordForm {
+  width: 400px;
   margin-top: 20px;
   margin-bottom: 30px;
-  margin-left: 36%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .howitworks {

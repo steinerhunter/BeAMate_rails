@@ -77,6 +77,18 @@ class User < ActiveRecord::Base
     PasswordResetsMailer.password_reset(self).deliver
   end
 
+  def add_mate_points(num_to_add)
+    self.update_attribute(:mate_points, self.mate_points + num_to_add)
+  end
+
+  def subtract_mate_points(num_to_subtract)
+    if (self.mate_points - num_to_subtract < 0)
+      self.update_attribute(:mate_points, 0)
+    else
+      self.update_attribute(:mate_points, self.mate_points - num_to_subtract)
+    end
+  end
+
   private
 
     def create_remember_token

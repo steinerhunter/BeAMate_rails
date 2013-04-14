@@ -7,7 +7,7 @@
       <%= image_tag("CordiallyInvited.png")%>
     </div>
     <div class="row">
-      <div class="SignupForm span6">
+      <div class="SignupForm">
         <%= form_for(@user, :remote => true) do |f| %>
             <%= f.hidden_field :invitation_token %>
             <fieldset class="fields">

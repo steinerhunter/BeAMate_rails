@@ -6,12 +6,14 @@ class MatepostsController < ApplicationController
   def create
     @matepost = current_user.mateposts.build(params[:matepost])
     if @matepost.save
+      current_user.add_mate_points(50)
       respond_with(@matepost, :location => root_path)
     end
   end
 
   def destroy
     @matepost.destroy
+    current_user.subtract_mate_points(50)
     respond_to do |format|
       format.html { redirect_to(root_url) }
       format.json { head :no_content }

@@ -38,17 +38,38 @@ footer {
 }
 
 /* CSS definitions for HowItWorks page.*/
-.UnderTheHood {
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4%;
-    margin-bottom: 0px;
+
+.TextHowItWorks {
+  color: #000000;
+  font-family: Impact !important;
+  font-size: 1.8em;
+  text-align: left;
+  line-height: 110%;
+}
+
+.TextHowItWorksLight {
+  color: #ffffff;
+  font-family: Impact !important;
+  font-size: 1.8em;
+  text-align: right;
+  line-height: 110%;
+  margin-top: 4%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.TextHowItWorksDark {
+  color: #000000;
+  font-family: Impact !important;
+  font-size: 1.8em;
+  text-align: left;
+  line-height: 110%;;
+  ul li {
+    line-height: 110%;
+    list-style-position: outside;
   }
 }
 
-.SoHowCan {
+.UnderTheHood {
   img {
     display: block;
     margin-left: auto;
@@ -58,24 +79,30 @@ footer {
   }
 }
 
+.SoHowCan {
+  width:840px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+  margin-bottom: 1%;
+}
+
 .step1 {
   img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 8%;
+    margin-top: 10%;
     margin-bottom: 0px;
   }
 }
 
 .step1_desc {
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
+  width:840px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;;
+  margin-bottom: 1%;
 }
 
 .step2 {
@@ -89,13 +116,11 @@ footer {
 }
 
 .step2_desc {
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
+  width:760px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 1%;
 }
 
 .step3 {
@@ -109,13 +134,11 @@ footer {
 }
 
 .step3_desc {
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
+  width:840px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;;
+  margin-bottom: 1%;
 }
 
 /* CSS definitions for HomeSignedIn page.*/
@@ -139,7 +162,7 @@ footer {
   }
 }
 
-.ButtonsSignedIn {
+.bSignedIn {
     width: 830px;
     margin-left: auto;
     margin-right: auto;

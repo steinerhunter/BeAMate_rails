@@ -22,6 +22,25 @@ footer {
   }
 }
 
+.video {
+  width: 565px;
+  height: 325px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  padding-left: 5px;
+  padding-right: 1px;
+  background-color:#e2d4d0;
+  -moz-box-shadow: 5px 5px 5px #333333;; /* Old Firefox */
+  box-shadow: 5px 5px 5px #333333;
+  border:1px solid;
+  border-radius:10px;
+  -moz-border-radius:10px; /* Old Firefox */
+}
+
 .ButtonsNotSignedIn {
     width: 970px;
     margin-left: auto;
@@ -33,7 +52,7 @@ footer {
   font-family: Impact !important;
   font-size: 1.6em;
   text-align: center;
-  margin-top: 25%;
+  margin-top: 22%;
   line-height: 110%;
 }
 
@@ -137,8 +156,43 @@ footer {
   width:840px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0px;;
+  margin-top: 0px;
   margin-bottom: 1%;
+}
+
+.step4 {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11%;
+    margin-bottom: 0px;
+  }
+}
+
+.step4_desc {
+  width:840px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.step5 {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+  }
+}
+
+.step5_desc {
+  width:840px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 3%;
 }
 
 /* CSS definitions for HomeSignedIn page.*/
@@ -608,6 +662,24 @@ textarea {
 .fourth_how_it_works {
   background-image: url('FourthHowIts.jpg');
   background-color: #997682;
+  background-size:  100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  overflow: auto;
+}
+
+.fifth_how_it_works {
+  background-image: url('FifthHowIts.jpg');
+  background-color: #f7dbfe;
+  background-size:  100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  overflow: auto;
+}
+
+.sixth_how_it_works {
+  background-image: url('SixthHowIts.jpg');
+  background-color: #cf8010;
   background-size:  100%;
   background-repeat: no-repeat;
   background-position: left top;

@@ -1,5 +1,5 @@
 $(document).ready( ->
   $('.delete_matepost').live('ajax:success', ->
-    $(this).closest('div').animate({ height: 'toggle', opacity: 'toggle' }, 'slow');
+    $(this).closest('.feed_item').animate({ height: 'toggle', opacity: 'toggle' }, 'slow');
   );
 );

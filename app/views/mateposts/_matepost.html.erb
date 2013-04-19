@@ -1,23 +1,64 @@
 <div id="<%= matepost.id %>" class="feed_item" style="width:350px">
   <ul class="user_mate">
     <h4><%= matepost.user.name %> is flying soon!</h4>
-    <li><%=  link_to gravatar_for(matepost.user), matepost.user  %></li>
-    <li><b>Flying to:</b><%= matepost.flying_to %></li>
-    <li><b>Country of origin:</b> <%= matepost.flying_from  %></li>
-    <li><b>Departure date: </b><%= matepost.departing_on.strftime("%d/%m/%Y")  %></li>
-    <li><b>Return date:</b> <%= matepost.returning_on.strftime("%d/%m/%Y")  %></li>
-    <li><b>More details:</b><%= matepost.content %></li>
-    <% if current_user?(matepost.user)  %>
-        <center><li><%=  link_to image_tag("RemovePost.png") , matepost, method: :delete, title:matepost.content, :remote=>true, :class=>'delete_matepost' %></li></center>
-    <% else  %>
-        <% if current_user.admin?  %>
-            <center><li><%=  link_to "Remove this post" , matepost, method: :delete, title:matepost.content, :remote=>true, :class=>'delete_matepost' %></li></center>
-        <% end  %>
-        <center><li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => matepost.user.id}, :class => "modal-link",
-                        "data-target" => "#myModal",
-                        "data-toggle" => "modal",
-                        "data-backdrop" => "static" %></li></center>
-    <% end %>
+    <div class="FeedTopPart">
+      <div class="FeedGravatar">
+        <li><%=  link_to gravatar_for(matepost.user), matepost.user  %></li>
+      </div>
+      <div class="FlyingTo">
+        <div class="Flying">
+          <b>Flying To:</b><br>
+        </div>
+        <div class="To">
+          <%= matepost.flying_to %></div>
+      </div>
+    </div>
+    <div class="FeedMiddlePart">
+      <div class="FeedDetails">
+        <b>The details: </b><%= matepost.content %>
+      </div>
+      <div class="FlyingStats">
+        <div class="FlyingFrom" style="float:left">
+          Flying From:<br>
+          <%= matepost.flying_from  %>
+        </div>
+        <div class="GoingOn" style="float:left">
+          <div class="FeedLargeText">
+            Going On:<br>
+            <%= matepost.departing_on.strftime("%d/%m/%Y")   %>
+          </div>
+        </div>
+        <div class="ComingBack" style="float:left;">
+          Back On:<br>
+          <%= matepost.returning_on.strftime("%d/%m/%Y")  %>
+        </div>
+      </div>
+      <div class="UserStats">
+        <div class="FeedMatePoints" style="float:left">
+          <div class="FeedLargeText">
+            <%= image_tag("FeedMatePoints.png")%><br>
+            <%= matepost.user.mate_points  %>
+          </div>
+        </div>
+        <div class="FeedMateLevel">
+          <%= image_tag("FeedMateLevel.png")%><br>
+          1
+        </div>
+      </div>
+    </div>
+    <div class="FeedBottomPart">
+      <% if current_user?(matepost.user)  %>
+          <center><li><%=  link_to image_tag("RemovePost.png"), matepost, method: :delete, title:matepost.content, :remote=>true, :class=>'delete_requestpost'  %></li></center>
+      <% else  %>
+          <% if current_user.admin?  %>
+              <center><li><%=  link_to "Remove this post" , matepost, method: :delete, title:matepost.content, :remote=>true, :class=>'delete_matepost' %></li></center>
+          <% end  %>
+          <center><li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => matepost.user.id}, :class => "modal-link",
+                                  "data-target" => "#myModal",
+                                  "data-toggle" => "modal",
+                                  "data-backdrop" => "static" %></li></center>
+      <% end %>
+    </div>
     <div class="timestamp">
       <li>This was posted <%=  time_ago_in_words(matepost.created_at) %> ago.</li>
     </div>

@@ -1,21 +1,51 @@
 <div id="<%= requestpost.id %>" class="feed_item" style="width:350px">
   <ul class="user_request">
     <h4><%= requestpost.user.name %> needs help!</h4>
-    <li><%=  link_to gravatar_for(requestpost.user), requestpost.user  %></li>
-    <li><b>Wanted item:</b><%= requestpost.requested_item %></li>
-    <li><b>Willing to give: </b><%= requestpost.give_giftcards  %></li><br><br>
-    <li><b>More details:</b><%= requestpost.content %></li>
-    <% if current_user?(requestpost.user)  %>
-        <center><li><%=  link_to image_tag("RemovePost.png"), requestpost, method: :delete, title:requestpost.content, :remote=>true, :class=>'delete_requestpost'  %></li></center>
-    <% else  %>
-        <% if current_user.admin?  %>
-            <center><li><%=  link_to "Remove this post" , requestpost, method: :delete, title:requestpost.content, :remote=>true, :class=>'delete_matepost' %></li></center>
-        <% end  %>
-        <center><li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => requestpost.user.id}, :class => "modal-link",
-                        "data-target" => "#myModal",
-                        "data-toggle" => "modal",
-                        "data-backdrop" => "static" %></li></center>
-    <% end %>
+    <div class="FeedTopPart">
+      <div class="FeedGravatar">
+        <li><%=  link_to gravatar_for(requestpost.user), requestpost.user  %></li>
+      </div>
+      <div class="WantedItem">
+        <div class="Wanted">
+          <b>Wanted item:</b><br>
+        </div>
+        <div class="Item">
+          <%= requestpost.requested_item %></div>
+      </div>
+    </div>
+    <div class="FeedMiddlePart">
+      <div class="FeedDetails">
+        <b>The details: </b><%= requestpost.content %>
+      </div>
+      <div class="WillingToGive">
+        <b>Willing to give:</b> <%=  requestpost.give_giftcards %>
+      </div>
+      <div class="UserStats">
+        <div class="FeedMatePoints" style="float:left">
+          <div class="FeedLargeText">
+            <%= image_tag("FeedMatePoints.png")%><br>
+            <%= requestpost.user.mate_points  %>
+          </div>
+        </div>
+        <div class="FeedMateLevel">
+          <%= image_tag("FeedMateLevel.png")%><br>
+          1
+        </div>
+      </div>
+    </div>
+    <div class="FeedBottomPart">
+      <% if current_user?(requestpost.user)  %>
+          <center><li><%=  link_to image_tag("RemovePost.png"), requestpost, method: :delete, title:requestpost.content, :remote=>true, :class=>'delete_requestpost'  %></li></center>
+      <% else  %>
+          <% if current_user.admin?  %>
+              <center><li><%=  link_to "Remove this post" , requestpost, method: :delete, title:requestpost.content, :remote=>true, :class=>'delete_matepost' %></li></center>
+          <% end  %>
+          <center><li><%= link_to image_tag("SendMessage.png"),  {:controller => "conversations", :action => "new", :recipient_id => requestpost.user.id}, :class => "modal-link",
+                                  "data-target" => "#myModal",
+                                  "data-toggle" => "modal",
+                                  "data-backdrop" => "static" %></li></center>
+      <% end %>
+    </div>
     <div class="timestamp">
       <li>This was posted <%=  time_ago_in_words(requestpost.created_at) %> ago.</li>
     </div>

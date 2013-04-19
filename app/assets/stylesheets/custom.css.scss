@@ -247,6 +247,150 @@ footer {
     margin-bottom: 1%;
 }
 
+.TextAboveFeeds {
+  color: #ffffff;
+  font-family: Impact !important;
+  font-size: 2.8em;
+  text-align: left;
+  line-height: 110%;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.FeedTopPart {
+  height: 80px;
+}
+
+.FeedGravatar {
+  img {
+    vertical-align: middle;
+  }
+}
+
+.WantedItem {
+  font-size: 1.9em;
+  text-align: center;
+  br {
+    display: block;
+    margin: 2px 0;
+    line-height: 90%;
+  }
+}
+
+.Wanted {
+  padding-top: 10px;
+  height: 40px;
+  width: 300px;
+  vertical-align: middle;
+}
+
+.Item {
+  height:40px;
+  width: 300px;
+  vertical-align: bottom;
+  font-family: Impact !important;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: #ffffff;
+}
+
+.FlyingTo {
+  font-size: 1.9em;
+  text-align: center;
+  br {
+    display: block;
+    margin: 2px 0;
+    line-height: 90%;
+  }
+}
+
+.Flying {
+  padding-top: 10px;
+  height: 40px;
+  width: 300px;
+  vertical-align: middle;
+}
+
+.To {
+  height:40px;
+  width: 300px;
+  vertical-align: bottom;
+  font-family: Impact !important;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: #ffffff;
+}
+
+.FeedMiddlePart {
+  margin-top: 4%;
+  text-align: left;
+}
+
+.FlyingStats {
+  width: 330px;
+  text-align: center;
+  border-top: 1px solid #815f1f;
+  margin-top: 3%;
+  margin-bottom: 13%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 1.4em;
+  font-family: Impact !important;
+  br {
+    display: block;
+    margin: 3px 0;
+  }
+}
+
+.FlyingFrom {
+  width: 109px;
+  border-right: 1px solid #815f1f;
+  text-align: center;
+}
+
+.GoingOn {
+  width: 109px;
+  border-right: 1px solid #815f1f;
+  text-align: center;
+}
+
+.ComingBack {
+  width: 109px;
+  text-align: center;
+}
+
+.WillingToGive {
+  border-top: 1px solid #815f1f;
+  text-align: center;
+  font-size: 1.6em;
+  padding-top: 2%;
+}
+
+.UserStats {
+  width: 330px;
+  text-align: center;
+  border-top: 1px solid #815f1f;
+  border-bottom: 1px solid #815f1f;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 1.6em;
+  font-family: Impact !important;
+  br {
+    display: block;
+    margin: 3px 0;
+  }
+}
+
+.FeedMatePoints {
+  width: 170px;
+  border-right: 1px solid #815f1f;
+}
+
+.FeedMateLevel {
+
+}
+
 .feeds {
   width:800px;
   margin-left: auto;

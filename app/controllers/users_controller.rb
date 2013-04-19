@@ -21,7 +21,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      current_user.add_mate_points(200)
+      @user.add_mate_points(200)
+      @my_invitation = Invitation.find_by_recipient_email(@user.email)
+      if (@my_invitation.sender_id != nil)
+        @my_referer = User.find_by_id(@my_invitation.sender_id)
+        @my_referer.add_mate_points(100)
+      end
       sign_in @user
       flash[:success] = "Welcome to BeAMate!"
       respond_with(@user, :location => root_path)

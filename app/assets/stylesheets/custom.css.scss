@@ -237,6 +237,15 @@ footer {
   font-size: 1.2em;
 }
 
+.ParticipateText {
+  padding-top: 3%;
+  padding-left: 5%;
+  color: #000000;
+  font-family: Impact !important;
+  font-size: 1.4em;
+  width: 450px;
+}
+
 .NumberOfMatePoints {
   width: 260px;
   padding-left: 5%;
@@ -268,19 +277,19 @@ footer {
    width:840px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-bottom: 1%;
 }
 
 .TextAboveFeeds {
-  color: #ffffff;
+  color: #434343;
   font-family: Impact !important;
   font-size: 2.8em;
   text-align: left;
   line-height: 110%;
   margin-top: 4%;
   margin-bottom: 2%;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 
 .FeedTopPart {
@@ -357,7 +366,7 @@ footer {
   margin-top: 3%;
   margin-bottom: 13%;
   padding-top: 2px;
-  padding-bottom: 2px;
+  padding-bottom: 2%;
   font-size: 1.4em;
   font-family: Impact !important;
   br {
@@ -388,6 +397,7 @@ footer {
   text-align: center;
   font-size: 1.6em;
   padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .UserStats {

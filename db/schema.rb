@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406205838) do
+ActiveRecord::Schema.define(:version => 20130420212655) do
 
   create_table "conversations", :force => true do |t|
     t.string   "subject",    :default => ""
@@ -121,6 +121,7 @@ ActiveRecord::Schema.define(:version => 20130406205838) do
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
     t.integer  "mate_points",            :default => 0
+    t.integer  "mate_level",             :default => 1
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

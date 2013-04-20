@@ -15,6 +15,7 @@ class ConversationsController < ApplicationController
     recipients = User.where(email: recipient_emails).all
     @conversation = current_user.send_message(recipients, *conversation_params(:body, :subject))
     if @conversation.errors.blank?
+      current_user.add_mate_points(10)
       flash[:success] = "You've successfully sent your message!"
       respond_with(@conversation, :location => root_path)
     end
@@ -22,6 +23,7 @@ class ConversationsController < ApplicationController
 
   def reply
     current_user.reply_to_conversation(conversation, *message_params(:body, :subject))
+    current_user.add_mate_points(10)
     redirect_to conversation
   end
 

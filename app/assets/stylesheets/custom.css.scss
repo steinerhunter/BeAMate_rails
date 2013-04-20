@@ -220,9 +220,34 @@ footer {
     width: 830px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 400px;
+    margin-top: 7%;
+    margin-bottom: 40%;
 }
+
+.SingleSignedInButton {
+  width: 275px;
+  float: left;
+}
+
+.ButtonText {
+  width: 260px;
+  padding-left: 5%;
+  color: #000000;
+  font-family: Impact !important;
+  font-size: 1.2em;
+}
+
+.NumberOfMatePoints {
+  width: 260px;
+  padding-left: 5%;
+  margin-top: 2%;
+  color: #ffffff;
+  font-family: Impact !important;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 
 .InBetween1 {
   margin-top: -20px;
@@ -832,10 +857,6 @@ textarea {
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -844,12 +865,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-top: -5px;
+  font-size: 2.1em;
   text-align: center;
-  font-weight: normal;
-  color: #999;
+  color: #ffffff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 p {

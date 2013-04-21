@@ -6,8 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @user_request_feed_items = @user.user_request_feed
-    @user_mate_feed_items =@user.user_mate_feed
+    render "show.html.erb", :layout => false
   end
 
   def new

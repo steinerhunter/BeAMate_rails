@@ -1,28 +1,15 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="span2">
-    <section>
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name  %>
-      </h1>
-    </section>
-  </aside>
-  <div class="span5">
-    <% if @user.requestposts.any?  %>
-        <h3>You have (<%= @user.requestposts.count %>) Request Posts.</h3>
-        <ol class="requestposts">
-          <%=  render 'shared/user_request_feed' %>
-        </ol>
-    <% end  %>
+  <div class="UserProfile span6">
+    <div class="ProfileGravatar">
+      <%= gravatar_for @user %>
+      <h1>Here's your profile:</h1>
+    </div>
+    <div class="ProfileDetails">
+      Your name is: <h2><%= @user.name  %></h2><br>
+      Your Email address is: <h2><%= @user.email  %></h2><br>
+      The total Mate Points you've earned so far is:: <h2><%= @user.mate_points  %> pts.</h2><br>
+      Your current Mate Level is: <h2>Level <%= @user.mate_level %></h2><br>
+    </div>
   </div>
-  <div class="span5">
-    <% if @user.mateposts.any?  %>
-        <h3>You have (<%= @user.mateposts.count %>) Mate Posts.</h3>
-        <ol class="requestposts">
-          <%=  render 'shared/user_mate_feed' %>
-        </ol>
-    <% end  %>
-  </div>
-</div>
+
 

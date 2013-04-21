@@ -22,8 +22,12 @@
                   <%= image_tag("AccountHeader.png") %> <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to "My posts", '#'  %></li>
-                  <li><%= link_to "My Profile", edit_user_path(current_user), class:"modal-link",
+                  <li><%= link_to "View My Posts", '#'  %></li>
+                  <li><%= link_to "View My Profile", user_path(current_user), class:"modal-link",
+                                                                                                                                            "data-target" => "#myModal",
+                                                                                                                                            "data-toggle" => "modal",
+                                                                                                                                            "data-backdrop" => "static" %></li>
+                  <li><%= link_to "Edit My Details", edit_user_path(current_user), class:"modal-link",
                                                                                                                                             "data-target" => "#myModal",
                                                                                                                                             "data-toggle" => "modal",
                                                                                                                                             "data-backdrop" => "static" %></li>

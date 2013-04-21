@@ -556,6 +556,30 @@ html {
   }
 }
 
+.UserProfile {
+
+}
+
+.ProfileGravatar {
+  text-align: center !important;
+  margin-bottom: 13%;
+}
+
+.ProfileDetails {
+  padding-top: 3%;
+  color: #000000;
+  font-family: Impact !important;
+  font-size: 1.4em;
+  h1 {
+    text-align: left;
+  }
+  h2 {
+    text-align: right !important;
+    font-size: 1.5em;
+    color: #d4d4d4;
+  }
+}
+
 #logo {
   float: left;
   margin-left: 10px;

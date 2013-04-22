@@ -11,4 +11,5 @@
  *= require_self
  *= require fancybox
  *= require_tree .
+ *= require 'css3-progress-bar'
  */

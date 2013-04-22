@@ -36,6 +36,12 @@ class User < ActiveRecord::Base
   validates :invitation_id, :presence => { :message => "OOPS! Sorry, we cannot sign you up without an invitation..."}, on: :create
   validates :invitation_id, :uniqueness => { :message => "OOPS! Looks like someone has already registered with this invitation..." }, on: :create
 
+  LEVEL_2_POINTS = 500
+  LEVEL_3_POINTS = 1000
+  LEVEL_4_POINTS = 2000
+  LEVEL_5_POINTS = 4000
+  LEVEL_6_POINTS = 7000
+
   def user_request_feed
     Requestpost.where("user_id = ?", id)
   end
@@ -79,6 +85,13 @@ class User < ActiveRecord::Base
 
   def add_mate_points(num_to_add)
     self.update_attribute(:mate_points, self.mate_points + num_to_add)
+    if (((self.mate_points >= LEVEL_2_POINTS) && (self.mate_level == 1)) ||
+           ((self.mate_points >= LEVEL_3_POINTS) && (self.mate_level == 2)) ||
+           ((self.mate_points >= LEVEL_4_POINTS) && (self.mate_level == 3)) ||
+           ((self.mate_points >= LEVEL_5_POINTS) && (self.mate_level == 4)) ||
+           ((self.mate_points >= LEVEL_6_POINTS) && (self.mate_level == 5)) )
+      self.level_up
+    end
   end
 
   def subtract_mate_points(num_to_subtract)
@@ -87,6 +100,14 @@ class User < ActiveRecord::Base
     else
       self.update_attribute(:mate_points, self.mate_points - num_to_subtract)
     end
+  end
+
+  def level_up
+    self.update_attribute(:mate_level, self.mate_level + 1)
+  end
+
+  def level_down
+    self.update_attribute(:mate_level, self.mate_level - 1)
   end
 
   private

@@ -13,6 +13,7 @@ gem 'daemons'
 gem 'hirefire'
 gem 'newrelic_rpm'
 gem 'asset_sync'
+gem 'css3-progress-bar-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

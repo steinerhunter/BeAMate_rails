@@ -5,10 +5,14 @@
       <h1>Here's your profile:</h1>
     </div>
     <div class="ProfileDetails">
-      Your name is: <h2><%= @user.name  %></h2><br>
-      Your Email address is: <h2><%= @user.email  %></h2><br>
-      The total Mate Points you've earned so far is:: <h2><%= @user.mate_points  %> pts.</h2><br>
-      Your current Mate Level is: <h2>Level <%= @user.mate_level %></h2><br>
+      Your name is: <h2><%= @user.name  %></h2>
+      Your Email address is: <h2><%= @user.email  %></h2>
+      The total Mate Points you've earned so far is:: <h2><%= @user.mate_points  %> pts.</h2>
+      Your current Mate Level is: <h2>Level <%= @user.mate_level %></h2>
+      Your current progress: <div class="ProfileProgress"><%= progress_bar(mate_progress(@user), :color => 'blue', :rounded => true) %></div>  <br>
+      <div class="ProfileNextLevel">
+        <%= next_level(@user) %>
+      </div>
     </div>
   </div>
 

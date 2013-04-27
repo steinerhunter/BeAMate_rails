@@ -15,15 +15,16 @@ class ConversationsController < ApplicationController
     recipients = User.where(email: recipient_emails).all
     @conversation = current_user.send_message(recipients, *conversation_params(:body, :subject))
     if @conversation.errors.blank?
-      current_user.add_mate_points(10)
-      flash[:success] = "You've successfully sent your message!"
+      current_user.add_mate_points(BeAMateRails::Application::MESSAGE_MATE_POINTS)
+      flash[:earn_mate_points] = "You've just earned #{BeAMateRails::Application::MESSAGE_MATE_POINTS} Mate Points! Keep up the good work!"
       respond_with(@conversation, :location => root_path)
     end
   end
 
   def reply
     current_user.reply_to_conversation(conversation, *message_params(:body, :subject))
-    current_user.add_mate_points(10)
+    current_user.add_mate_points(BeAMateRails::Application::MESSAGE_MATE_POINTS)
+    flash[:earn_mate_points] = "You've just earned #{BeAMateRails::Application::MESSAGE_MATE_POINTS} Mate Points! Keep up the good work!"
     redirect_to conversation
   end
 

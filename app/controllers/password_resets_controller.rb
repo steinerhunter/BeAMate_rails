@@ -10,7 +10,7 @@ class PasswordResetsController < ApplicationController
     @user = user
     if @user
       user.send_password_reset
-      flash[:success] = "An email with password reset instructions is headed your way!"
+      flash[:pass_reset_email] = "An email with password reset instructions is headed your way!"
       respond_with(@user, :location => root_path)
     end
   end
@@ -24,7 +24,7 @@ class PasswordResetsController < ApplicationController
     if @user.password_reset_sent_at < 2.hours.ago
       redirect_to new_password_reset_path, :notice => "Your password reset windows has expired..."
     elsif @user.update_attributes(params[:user])
-      flash[:success] = "Your password has been reset!"
+      flash[:pass_reset_success] = "You've successfully updated your password!!"
       respond_with(@user, :location => root_path)
     end
   end

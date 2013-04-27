@@ -1,10 +1,10 @@
 <div class="row">
   <div class="span6">
     <h1>Invite a friend to BeAMate!</h1>
-    <h4>Hi again!<br>
+    <h4>
       Know any cool people?<br>
       Share BeAMate and earn extra Mate Points!<br>
-      Just put their email address here and we'll send them an invitation.</h4>
+      Leave their email address and we'll invite them.</h4>
     <center><%= image_tag("MatePointsToBeEarned.png")%><h2><%= BeAMateRails::Application::INVITE_MATE_POINTS %> pts. </h2></center>
     <%= form_for(@invitation, :remote => true, :html => { :id => "new_invitation" }) do |f| %>
         <%=  render 'shared/error_messages', object: f.object  %>

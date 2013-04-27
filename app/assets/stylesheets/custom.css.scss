@@ -1160,6 +1160,122 @@ aside {
     margin-right:auto;
 }
 
+.alert-earn_mate_points {
+  background-image: url('EarnMatePointsBG.png');
+  background-color: #2276ca;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 500px;
+  height: 350px;
+  color: #ffffff;
+  font-size: 2.5em;
+  border: 1px solid #000000;
+  position: absolute;
+  left:150px;
+  right:150px;
+  line-height: 110%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  font-family: Impact !important;
+  -moz-box-shadow: 5px 5px 5px #333333;; /* Old Firefox */
+  box-shadow: 5px 5px 5px #333333;
+  border:1px solid;
+  border-radius:10px;
+  -moz-border-radius:10px; /* Old Firefox */
+}
+
+#earn_mate_points {
+  margin-top: 10%;
+}
+
+.alert-user_signup {
+  background-image: url('UserSignupBG.png');
+  background-color: #1a841c;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 500px;
+  height: 350px;
+  color: #ffffff;
+  font-size: 2.5em;
+  border: 1px solid #000000;
+  position: absolute;
+  left:150px;
+  right:150px;
+  line-height: 110%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  font-family: Impact !important;
+  -moz-box-shadow: 5px 5px 5px #333333;; /* Old Firefox */
+  box-shadow: 5px 5px 5px #333333;
+  border:1px solid;
+  border-radius:10px;
+  -moz-border-radius:10px; /* Old Firefox */
+}
+
+#user_signup {
+  margin-top: 10%;
+}
+
+.alert-pass_reset_email {
+  background-image: url('PassResetBG.png');
+  background-color: #a95214;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 500px;
+  height: 350px;
+  color: #ffffff;
+  font-size: 2.5em;
+  border: 1px solid #000000;
+  position: absolute;
+  left:150px;
+  right:150px;
+  line-height: 110%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  font-family: Impact !important;
+  -moz-box-shadow: 5px 5px 5px #333333;; /* Old Firefox */
+  box-shadow: 5px 5px 5px #333333;
+  border:1px solid;
+  border-radius:10px;
+  -moz-border-radius:10px; /* Old Firefox */
+}
+
+#pass_reset_email {
+  margin-top: 10%;
+}
+
+.alert-pass_reset_success {
+  background-image: url('PassResetBG.png');
+  background-color: #9574b0;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 500px;
+  height: 350px;
+  color: #ffffff;
+  font-size: 2.5em;
+  border: 1px solid #000000;
+  position: absolute;
+  left:150px;
+  right:150px;
+  line-height: 110%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  font-family: Impact !important;
+  -moz-box-shadow: 5px 5px 5px #333333;; /* Old Firefox */
+  box-shadow: 5px 5px 5px #333333;
+  border:1px solid;
+  border-radius:10px;
+  -moz-border-radius:10px; /* Old Firefox */
+}
+
+#pass_reset_success {
+  margin-top: 10%;
+}
+
 .alert-update_user_details {
   background-image: url('UpdateDetailsBG.png');
   background-color: #a95214;
@@ -1188,6 +1304,64 @@ aside {
   #update_user_details {
     margin-top: 10%;
   }
+
+  .alert-invite_signedin {
+    background-image: url('InviteaFriendBG.png');
+    background-color: #a95214;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    width: 500px;
+    height: 350px;
+    color: #ffffff;
+    font-size: 2.5em;
+    border: 1px solid #000000;
+    position: absolute;
+    left:150px;
+    right:150px;
+    line-height: 110%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    font-family: Impact !important;
+    -moz-box-shadow: 5px 5px 5px #333333;; /* Old Firefox */
+    box-shadow: 5px 5px 5px #333333;
+    border:1px solid;
+    border-radius:10px;
+    -moz-border-radius:10px; /* Old Firefox */
+  }
+
+  #invite_signedin {
+    margin-top: 10%;
+  }
+
+.alert-invite_not_signedin {
+  background-image: url('RequestInviteBG.png');
+  background-color: #a95214;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 500px;
+  height: 350px;
+  color: #ffffff;
+  font-size: 2.5em;
+  border: 1px solid #000000;
+  position: absolute;
+  left:150px;
+  right:150px;
+  line-height: 110%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  font-family: Impact !important;
+  -moz-box-shadow: 5px 5px 5px #333333;; /* Old Firefox */
+  box-shadow: 5px 5px 5px #333333;
+  border:1px solid;
+  border-radius:10px;
+  -moz-border-radius:10px; /* Old Firefox */
+}
+
+#invite_not_signedin {
+  margin-top: 10%;
+}
 
 .EarnMatePointsClass {
   background-image: url('EarnMatePointsBG.png');

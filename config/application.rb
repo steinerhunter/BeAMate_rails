@@ -23,6 +23,7 @@ module BeAMateRails
     HELP_MATE_POINTS        = 50
     MESSAGE_MATE_POINTS = 10
     INVITE_MATE_POINTS   = 100
+    SIGNUP_MATE_POINTS   = 200
 
     LEVEL_2_POINTS             = 500
     LEVEL_3_POINTS             = 1000

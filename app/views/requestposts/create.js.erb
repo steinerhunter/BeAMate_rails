@@ -27,6 +27,6 @@ $('html, body').animate({
 $("#requestposts").prepend('<%= j(render(:partial => "requestpost", :object => @requestpost))%>').hide().fadeIn(1500);
 $('#myModal').modal('hide');
 $('#requestposts').prepend('<div class="EarnMatePointsClass" id="RequestpostPointID"><%= escape_javascript(flash.discard(:notice)) %></div>');
-$('#RequestpostPointID').hide().fadeIn(<%= BeAMateRails::Application::POINT_ID_FADEIN %>).delay(<%= BeAMateRails::Application::POINT_ID_DELAY%>).fadeOut();
+$('#RequestpostPointID').hide().fadeIn(<%= BeAMateRails::Application::NOTIF_ID_FADEIN %>).delay(<%= BeAMateRails::Application::NOTIF_ID_DELAY%>).fadeOut();
 
 <% end %>

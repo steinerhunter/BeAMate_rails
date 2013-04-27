@@ -27,7 +27,8 @@ $('<div />').addClass('errors').html(errors).prependTo("#edit_user");
 
 <% else %>
 
-// On successful creation of new user, redirect to main page
+// On successful edit of details, redirect to main page
+$('#myModal').modal('hide');
 window.location.href = "/"
 
 <% end %>

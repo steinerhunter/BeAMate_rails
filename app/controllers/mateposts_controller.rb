@@ -6,14 +6,15 @@ class MatepostsController < ApplicationController
   def create
     @matepost = current_user.mateposts.build(params[:matepost])
     if @matepost.save
-      current_user.add_mate_points(50)
+      flash[:notice] = "You've just earned #{BeAMateRails::Application::HELP_MATE_POINTS} Mate Points! Keep up the good work!"
+      current_user.add_mate_points(BeAMateRails::Application::HELP_MATE_POINTS)
       respond_with(@matepost, :location => root_path)
     end
   end
 
   def destroy
     @matepost.destroy
-    current_user.subtract_mate_points(50)
+    current_user.subtract_mate_points(BeAMateRails::Application::HELP_MATE_POINTS)
     respond_to do |format|
       format.html { redirect_to(root_url) }
       format.json { head :no_content }

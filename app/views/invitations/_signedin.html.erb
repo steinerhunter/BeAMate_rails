@@ -5,7 +5,7 @@
       Know any cool people?<br>
       Share BeAMate and earn extra Mate Points!<br>
       Just put their email address here and we'll send them an invitation.</h4>
-    <center><%= image_tag("MatePointsToBeEarned.png")%><h2><%= invite_mate_points %> pts. </h2></center>
+    <center><%= image_tag("MatePointsToBeEarned.png")%><h2><%= BeAMateRails::Application::INVITE_MATE_POINTS %> pts. </h2></center>
     <%= form_for(@invitation, :remote => true, :html => { :id => "new_invitation" }) do |f| %>
         <%=  render 'shared/error_messages', object: f.object  %>
         <fieldset class="fields">

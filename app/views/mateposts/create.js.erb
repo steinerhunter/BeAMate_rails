@@ -20,11 +20,14 @@ $('<div />').addClass('errors').html(errors).prependTo("#new_matepost");
 
 // Scroll down to matepost display area
 $('html, body').animate({
-    scrollTop: $("#mateposts").offset().top
+    scrollTop: $("#mate_feed").offset().top
 }, 1000);
 
 // Add the new matepost to the beginning of the #matepost division
 $("#mateposts").prepend('<%= j(render(:partial => "matepost", :object => @matepost))%>').hide().fadeIn(1500);
 $('#myModal').modal('hide');
+$('#mateposts').prepend('<div class="EarnMatePointsClass" id="MatepostPointID"><%= escape_javascript(flash.discard(:notice)) %></div>');
+$('#MatepostPointID').hide().fadeIn(<%= BeAMateRails::Application::POINT_ID_FADEIN %>).delay(<%= BeAMateRails::Application::POINT_ID_DELAY%>).fadeOut();
+
 
 <% end %>

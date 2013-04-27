@@ -19,19 +19,41 @@ module BeAMateRails
   class Application < Rails::Application
 
     # Global Variables
-    WANT_MATE_POINTS        = 25
-    HELP_MATE_POINTS        = 50
-    MESSAGE_MATE_POINTS = 10
-    INVITE_MATE_POINTS   = 100
+    def want_mate_points
+      25
+    end
 
-    LEVEL_2_POINTS             = 500
-    LEVEL_3_POINTS             = 1000
-    LEVEL_4_POINTS             = 2000
-    LEVEL_5_POINTS             = 4000
-    LEVEL_6_POINTS             = 7000
+    def help_mate_points
+      50
+    end
 
-    POINT_ID_FADEIN          = 2000
-    POINT_ID_DELAY            = 3000
+    def message_mate_points
+      10
+    end
+
+    def invite_mate_points
+      100
+    end
+
+    def level_2_points
+      500
+    end
+
+    def level_3_points
+      1000
+    end
+
+    def level_4_points
+      2000
+    end
+
+    def level_5_points
+      4000
+    end
+
+    def level_6_points
+      7000
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

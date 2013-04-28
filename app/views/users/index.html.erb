@@ -2,5 +2,12 @@
 <h1>All Users</h1>
 
 <ul class="users">
-  <%= render @users  %>
+  <% @users.each do |user|  %>
+    <%= gravatar_for(user) %>
+    Name: <%= user.name %><br>
+    Email: <%= user.email %><br>
+    Mate Points: <%= user.mate_points %><br>
+    Mate Level: <%= user.mate_level %><br>
+    <br>
+  <% end  %>
 </ul>

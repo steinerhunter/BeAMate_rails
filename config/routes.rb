@@ -20,7 +20,6 @@ BeAMateRails::Application.routes.draw do
   match '/signup_with_token/:invitation_token', to: 'users#new', as:'signup_with_token'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-
   match '/howitworks', to: 'static_pages#how_it_works'
   match '/request', to: 'static_pages#request_item'
   match '/mate', to: 'static_pages#matepost_item'
@@ -33,7 +32,7 @@ BeAMateRails::Application.routes.draw do
   match '/contact', to: 'contact#create', :as => 'contact', :via => :post
 
   match "empty_trash" => "users#empty_trash"
-
+  match "/auth/facebook/callback" =>      'sessions#createFacebook'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

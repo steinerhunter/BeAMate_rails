@@ -77,6 +77,26 @@ class User < ActiveRecord::Base
     PasswordResetsMailer.password_reset(self).deliver
   end
 
+  def self.create_with_omniauth(auth)
+    create! do |user|
+      user.provider = auth["provider"]
+      user.uid = auth["uid"]
+
+      user.name = auth["info"]["name"]
+      #user.email = auth["extra"]["user_hash"]["email"]
+
+      if (extra = omniauth['extra']['user_hash'] rescue false)
+        user.email = (extra['email'] rescue 'error@nomail.com')
+      else
+        user.email = auth["info"]["email"]
+      end
+      user.password = "12341234"
+      user.password_confirmation = "12341234"
+      user.invitation_id = "11111111222222"
+
+    end
+  end
+
   def add_mate_points(num_to_add)
     self.update_attribute(:mate_points, self.mate_points + num_to_add)
     if (((self.mate_points >= BeAMateRails::Application::LEVEL_2_POINTS) && (self.mate_level == 1)) ||

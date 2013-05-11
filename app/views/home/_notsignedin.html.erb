@@ -1,30 +1,59 @@
 <div class="HomeNotSignedIn">
     <%= image_tag("Text.png")%>
 </div>
+<div class="FirstNotSignedIn">
+  <div class="TextNotSignedIn" style="float:left">
+    BeAMate is a platform in which you can find someone who is willing to bring you something from abroad.<br><br>
+    Upon using BeAMate, you earn Mate Points, and later on you can convert those  to actual gift cards. <br><br>
+    We are currently in Beta, testing and tweaking our system. You can help! Ask for an invite and we'll let you know.
+  </div>
+  <div class="video" style="float:left">
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/txreJIWFwp0?rel=0&wmode=transparent" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
 <div class="ButtonsNotSignedIn">
-  <div class="span4">
+  <div class="SingleNotSignedInButton">
     <%= link_to image_tag("RequestInvite.png"),  invite_path, :class => "modal-link",
                 "data-target" => "#myModal",
                 "data-toggle" => "modal" ,
                 "data-backdrop" => "static" %>
-
+    <div class="ButtonTextTitle">
+      Join Our Beta.
+    </div>
+    <div class="ButtonText">
+      We're currently operating BeAMate in a private Beta. <br>
+      However, we are looking for people to join us and try it out!<br>
+      Interested? Go ahead and ask an invitation!
+    </div>
   </div>
-  <div class="span4">
+  <div class="SingleNotSignedInButton">
     <%= link_to image_tag("SignIn.png"), signin_path, class:"modal-link",
                 "data-target" => "#myModal",
                 "data-toggle" => "modal",
                 "data-backdrop" => "static" %>
+    <div class="ButtonTextTitle">
+      Sign In.
+    </div>
+    <div class="ButtonText">
+      Already a part of our Beta? <br>
+      Welcome back! We hope you're ready to check out some really cool stuff!<br>
+      We're constantly improving BeAMate thanks to you!
+    </div>
   </div>
-  <div class="span4">
-<%= link_to image_tag("SeeHow.png"), howitworks_path %>
+  <div class="SingleNotSignedInButton">
+    <%= link_to image_tag("SeeHow.png"), howitworks_path %>
+    <div class="ButtonTextTitle">
+      How It Works.
+    </div>
+    <div class="ButtonText">
+      How does BeAMate work?<br>
+      Can I trust the people here?<br>
+      What's in it for me?<br>
+      Get answers to the above questions.<br>
+      Learn how BeAMate works.
+    </div>
   </div>
-</div>
-<div class="TextNotSignedIn">
-  BeAMate is a platform in which you can find someone who is willing to bring you something from abroad.<br>
-  Upon using BeAMate, you earn Mate Points, and later on you can convert those  to actual gift cards. <br>
-  We are currently in Beta, testing and tweaking our system. You can help! Ask for an invite and we'll let you know.
-</div>
-<div class="video">
-  <iframe width="560" height="315" src="http://www.youtube.com/embed/txreJIWFwp0" frameborder="0" allowfullscreen></iframe>
-</div>
+ </div>
+
+
 

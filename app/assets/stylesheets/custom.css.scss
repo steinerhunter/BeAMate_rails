@@ -18,8 +18,16 @@ footer {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1%;
+    margin-top: 2%;
   }
+}
+
+.FirstNotSignedIn {
+  width:960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7%;
+  margin-bottom: 1%;
 }
 
 .video {
@@ -27,13 +35,13 @@ footer {
   height: 325px;
   margin-top: 3%;
   margin-bottom: 3%;
-  margin-left: auto;
+  margin-left:auto;
   margin-right: auto;
   padding-top: 5px;
   padding-bottom: 0px;
   padding-left: 5px;
   padding-right: 1px;
-  background-color:#e2d4d0;
+  background-color: #4881ea;
   -moz-box-shadow: 5px 5px 5px #333333;; /* Old Firefox */
   box-shadow: 5px 5px 5px #333333;
   border:1px solid;
@@ -42,17 +50,31 @@ footer {
 }
 
 .ButtonsNotSignedIn {
-    width: 970px;
+    width: 900px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 7%;
+    margin-top: 2%;
+   margin-bottom: 10%;
+}
+
+.SingleNotSignedInButton {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .TextNotSignedIn {
+  color: #000000;
   font-family: Impact !important;
-  font-size: 1.6em;
+  font-size: 2.1em;
   text-align: center;
-  margin-top: 25%;
+  margin-top: 3%;
   line-height: 110%;
 }
 
@@ -229,9 +251,20 @@ footer {
   float: left;
 }
 
-.ButtonText {
+.ButtonTextTitle {
   width: 260px;
+  margin-top: 3%;
   padding-left: 5%;
+  text-align: center;
+  color: #000000;
+  font-family: Impact !important;
+  font-size: 2.6em;
+}
+
+.ButtonText {
+  width: 220px;
+  margin-top: 3%;
+  padding-left: 15%;
   color: #000000;
   font-family: Impact !important;
   font-size: 1.2em;
@@ -447,11 +480,7 @@ html {
 }
 
 .body_nonsigned {
-  padding-top: 60px;
-  background-size: 100% 100%;
-  background-image: url('Concept.jpg');
-  background-repeat: no-repeat;
-  background-position: left top;
+
 }
 
 .body_signed {
@@ -622,7 +651,25 @@ textarea {
   right:0;
 }
 
-.first_home {
+.first_home_notsignedin {
+  background-image: url('Concept.jpg');
+
+  background-repeat: no-repeat;
+  background-position: left top;
+  overflow: auto;
+}
+
+.second_home_notsignedin {
+  background-image: url('Concept3.jpg');
+  background-color: #0a51f3;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left top;;
+  overflow: auto;
+  height: 300px;
+}
+
+.first_home_signedin {
   background-image: url('First.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -630,7 +677,7 @@ textarea {
   overflow: auto;
 }
 
-.second_home {
+.second_home_signedin {
   background-image: url('Second.jpg');
   background-color: #c8a589;
   background-size: 100%;
@@ -639,14 +686,37 @@ textarea {
   overflow: auto;
 }
 
-.third_home {
+.third_home_signedin {
   background-image: url('Third.jpg');
   background-color: #c5e7f3;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: left top;;
+  background-position: left top;
   overflow: auto;
   height: 240px;
+}
+
+.new_invite_signedin {
+
+}
+
+.new_invite_notsignedin {
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2%;
+}
+
+.modal_title {
+  font-family: Impact !important;
+  color:black;
+  font-size: 1.5em;
+}
+
+.modal_text {
+  font-family: Impact !important;
+  color:black;
+  font-size: 1.4em;
 }
 
 .TopOfThings {
@@ -998,6 +1068,7 @@ input {
 .actions {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0px;
 }
 
 #error_explanation {
@@ -1096,8 +1167,104 @@ aside {
   }
 }
 
+.myfield_invite_notsignedin label, .myfield_invite_notsignedin input {
+  display:inline-block;
+}
+
+.myfield_invite_notsignedin input {
+  width:200px;
+  margin-left: 1%;
+}
+
+.myfield_invite_notsignedin label {
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_session_email label, .myfield_session_email input {
+  display:inline-block;
+}
+
+.myfield_session_email input {
+  width:200px;
+  margin-left: 1%;
+}
+
+.myfield_session_email label {
+  width: 250px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_session_password label, .myfield_session_password input {
+  display:inline-block;
+}
+
+.myfield_session_password input {
+  width:200px;
+  margin-left: 1%;
+}
+
+.myfield_session_password label {
+  width: 250px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_feedback_name label, .myfield_feedback_name input {
+  display:inline-block;
+}
+
+.myfield_feedback_name input {
+  width:200px;
+  margin-left: 1%;
+}
+
+.myfield_feedback_name label {
+  width: 250px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_feedback_email label, .myfield_feedback_email input {
+  display:inline-block;
+}
+
+.myfield_feedback_email input {
+  width:200px;
+  margin-left: 1%;
+}
+
+.myfield_feedback_email label {
+  width: 250px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_feedback_content label, .myfield_feedback_content input {
+  display:inline-block;
+}
+
+.myfield_feedback_content input {
+  width:200px;
+  margin-left: 1%;
+}
+
+.myfield_feedback_content label {
+  width: 250px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
 .modal {
   margin-top: -20px;
+  background-color: #a0b7ec;
 }
 
 .modal, a:active, a:focus {
@@ -1106,10 +1273,10 @@ aside {
 
 .modal-header {
   height: 25px;
+  border-bottom: 0px;
 }
 
 .modal-footer {
-  height: 10px;
 }
 
  .modal-body {
@@ -1142,6 +1309,8 @@ aside {
 
 .errors {
   color: #ff0000;
+  font-size: 1.4em;
+  font-family: Impact !important;
 }
 
 .main_content {

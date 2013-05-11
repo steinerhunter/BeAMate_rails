@@ -1,5 +1,9 @@
 <% if signed_in? %>
-    <%= render 'signedin' %>
+    <div class="new_invite_signedin">
+      <%= render 'signedin' %>
+    </div>
 <% else  %>
-    <%= render 'notsignedin' %>
+    <div class="new_invite_notsignedin">
+      <%= render 'notsignedin' %>
+    </div>
 <% end %>

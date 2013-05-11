@@ -1,21 +1,25 @@
 <div class="row">
   <div class="span6">
-    <h1>Make things better.</h1>
-    <h3>What would you change on BeAMate?<br>
-      We'd  love to hear what's on your mind!</h3>
+    <div class="modal_title">
+      <h1>Feedback.</h1>
+    </div>
+    <div class="modal_text">
+      We care very much for what you think. <br>
+      Your feedback helps us see if we're on the right track. <br><br>
+    </div>
 <%= form_for(@feedback, :remote => true, :url => contact_path) do |form| %>
     <fieldset class="fields">
-      <div class="field">
+      <div class="myfield_feedback_name">
         <%= form.label :name, "What's your name?" %>
         <%= form.text_field :name %>
       </div>
 
-      <div class="field">
+      <div class="myfield_feedback_email">
         <%= form.label :email, "What's your email address?" %>
         <%= form.text_field :email %>
       </div>
 
-      <div class="field">
+      <div class="myfield_feedback_content">
         <%= form.label :body, "What's on your mind?" %>
         <%= form.text_area :body,  "rows" => 3 %>
       </div>

@@ -1,14 +1,17 @@
 <div class="row">
   <div class="span6">
-    <h1>Be a part of BeAMate!</h1>
-    <h4>Welcome! We are currently in  beta stage.<br>
-            Want to be a part of it?<br>
-            We're going to  need your email address for that.<br>
-            We'll send you an invite as soon as possible:</h4>
+    <div class="modal_title">
+      <h1>Join Our Beta.</h1>
+    </div>
+    <div class="modal_text">
+        We're currently operating BeAMate in a private Beta. <br>
+        But, we are looking for people to join us and try it out!<br>
+        Interested? Go ahead and ask for an invitation!<br><br>
+    </div>
     <%= form_for(@invitation, :remote => true, :html => { :id => "new_invitation" }) do |f| %>
         <%=  render 'shared/error_messages', object: f.object  %>
         <fieldset class="fields">
-          <div class="field">
+          <div class="myfield_invite_notsignedin">
             <%= f.label :recipient_email, "What's your email address?" %>
             <%= f.text_field :recipient_email %>
           </div>

@@ -1,0 +1,39 @@
+<div class="LogoBig" id="TopMost">
+  <%= image_tag("LogoBig.png")%>
+</div>
+<div class="ButtonsSignedIn">
+  <div class="SingleSignedInButton">
+    <%= link_to image_tag("Want.png"), request_path, :class => "modal-link",
+                "data-target" => "#myModal",
+                "data-toggle" => "modal" ,
+                "data-backdrop" => "static" %><br>
+    <div class="ButtonText">
+      Looking for a certain item to be brought from abroad? You've come to the right button! <br>
+      Click this one, and specify the item you want, the gift cards you're willing to give in return, as well as a bit more details about what you want.<br>
+      There are also Mate Points to be earned, just for posting what you want! <br><br>
+      <%= image_tag("MatePointsToBeEarned.png")%><h2><%= BeAMateRails::Application::WANT_MATE_POINTS %> pts.</h2>
+    </div>
+  </div>
+  <div class="SingleSignedInButton">
+    <%= link_to image_tag("Help.png"), mate_path, class:"modal-link",
+                "data-target" => "#myModal",
+                "data-toggle" => "modal",
+                "data-backdrop" => "static" %><br>
+    <div class="ButtonText" style="float: left;">
+      Flying somewhere soon? Don't mind picking something up for someone in need? Well then, this is the option for you! <br>
+      Click this one, and tell us where you're flying to, which country you're coming from, and your departure and arrival dates. <br>
+      Posting here will also increase your Mate Point count! <br><br>
+      <%= image_tag("MatePointsToBeEarned.png")%><h2><%= BeAMateRails::Application::HELP_MATE_POINTS %> pts. </h2>
+    </div>
+  </div>
+  <div class="SingleSignedInButton">
+    <%= link_to image_tag("Connect.png"), "#connect", class:"smoothScroll" %><br>
+    <div class="ButtonText">
+      If you're interested in seeing if anyone is offering to pick something up for you, or perhaps
+      There's someone who's in need for getting an item picked up, go ahead and find them!<br>
+      When you do find who you're looking for, you can connect with them and talk details.
+      Conversing with other people is good for Mate Points too! <br><br>
+      <%= image_tag("MatePointsToBeEarned.png")%><h2><%= BeAMateRails::Application::MESSAGE_MATE_POINTS %> pts. </h2>
+    </div>
+  </div>
+</div>

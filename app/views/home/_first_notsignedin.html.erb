@@ -1,0 +1,29 @@
+<div class="HomeNotSignedIn">
+  <%= image_tag("Text.png")%>
+</div>
+<div class="FirstNotSignedIn">
+  <div class="TextNotSignedIn">
+    BeAMate gives you the opportunity to deliver for someone when you fly.<br>
+    By delivering for another person, you make them happy, and get rewards.
+  </div>
+  <div class="video">
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/txreJIWFwp0?rel=0&wmode=transparent" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<div class="ButtonsNotSignedIn">
+  <div class="SingleNotSignedInButton">
+    <%= link_to image_tag("RequestInvite.png"),  invite_path, :class => "modal-link",
+                "data-target" => "#myModal",
+                "data-toggle" => "modal" ,
+                "data-backdrop" => "static" %>
+  </div>
+  <div class="SingleNotSignedInButton">
+    <%= link_to image_tag("SignIn.png"), signin_path, class:"modal-link",
+                "data-target" => "#myModal",
+                "data-toggle" => "modal",
+                "data-backdrop" => "static" %>
+  </div>
+  <div class="SingleNotSignedInButton">
+    <%= link_to image_tag("SeeHow.png"), howitworks_path %>
+  </div>
+</div>

@@ -2,14 +2,19 @@
     <div class="TopOfThings">
       <a name="topofthings"></a>
     </div>
-    <div class="first_home">
-      <%= render 'home/first'  %>
+    <div class="first_home_signedin">
+      <%= render 'home/first_signedin'  %>
     </div>
-    <div class="second_home">
-      <%= render 'home/second'  %>
+    <div class="second_home_signedin">
+      <%= render 'home/second_signedin'  %>
     </div>
-    <div class="third_home">
+    <div class="third_home_signedin">
     </div>
 <% else  %>
-    <%= render 'home/notsignedin'  %>
+    <div class="first_home_notsignedin">
+      <%= render 'home/first_notsignedin'  %>
+    </div>
+    <div class="second_home_notsignedin">
+      <%= render 'home/second_notsignedin'  %>
+    </div>
 <% end %>

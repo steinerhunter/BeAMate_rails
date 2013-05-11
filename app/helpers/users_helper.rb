@@ -1,9 +1,14 @@
 module UsersHelper
   # Returns a Gravatar for a given user (Thanks to http://gravatar.com)
   def gravatar_for(user)
-    gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
-    gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?d=wavatar"
-    image_tag(gravatar_url, alt: user.name, class:"gravatar")
+    if(user.provider == "facebook")
+      gravatar_url = "http://graph.facebook.com/#{user.uid}/picture?type=normal"
+    else
+      gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
+      gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?d=wavatar"
+
+    end
+      image_tag(gravatar_url, alt: user.name, class:"gravatar")
   end
 
   def mate_progress(user)

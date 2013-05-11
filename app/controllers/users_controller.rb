@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   end
 
   def create
+
     @user = User.new(params[:user])
     if @user.save
       @user.add_mate_points(BeAMateRails::Application::SIGNUP_MATE_POINTS)

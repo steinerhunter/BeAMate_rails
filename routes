@@ -1,0 +1,52 @@
+(in C:/Rails_Projects/BeAMate_rails)
+[2013-05-17 16:19:16][[32mHireFire[0m] Delayed::Backend::ActiveRecord::Job detected!
+                      invitations GET    /invitations(.:format)                         invitations#index
+                                  POST   /invitations(.:format)                         invitations#create
+                   new_invitation GET    /invitations/new(.:format)                     invitations#new
+                  edit_invitation GET    /invitations/:id/edit(.:format)                invitations#edit
+                       invitation GET    /invitations/:id(.:format)                     invitations#show
+                                  PUT    /invitations/:id(.:format)                     invitations#update
+                                  DELETE /invitations/:id(.:format)                     invitations#destroy
+                            users GET    /users(.:format)                               users#index
+                                  POST   /users(.:format)                               users#create
+                         new_user GET    /users/new(.:format)                           users#new
+                        edit_user GET    /users/:id/edit(.:format)                      users#edit
+                             user GET    /users/:id(.:format)                           users#show
+                                  PUT    /users/:id(.:format)                           users#update
+                                  DELETE /users/:id(.:format)                           users#destroy
+                  password_resets GET    /password_resets(.:format)                     password_resets#index
+                                  POST   /password_resets(.:format)                     password_resets#create
+               new_password_reset GET    /password_resets/new(.:format)                 password_resets#new
+              edit_password_reset GET    /password_resets/:id/edit(.:format)            password_resets#edit
+                   password_reset GET    /password_resets/:id(.:format)                 password_resets#show
+                                  PUT    /password_resets/:id(.:format)                 password_resets#update
+                                  DELETE /password_resets/:id(.:format)                 password_resets#destroy
+                         sessions POST   /sessions(.:format)                            sessions#create
+                      new_session GET    /sessions/new(.:format)                        sessions#new
+                          session DELETE /sessions/:id(.:format)                        sessions#destroy
+                     requestposts POST   /requestposts(.:format)                        requestposts#create
+                      requestpost DELETE /requestposts/:id(.:format)                    requestposts#destroy
+autocomplete_place_name_mateposts GET    /mateposts/autocomplete_place_name(.:format)   mateposts#autocomplete_place_name
+                        mateposts POST   /mateposts(.:format)                           mateposts#create
+                         matepost DELETE /mateposts/:id(.:format)                       mateposts#destroy
+               reply_conversation POST   /conversations/:id/reply(.:format)             conversations#reply
+               trash_conversation POST   /conversations/:id/trash(.:format)             conversations#trash
+             untrash_conversation POST   /conversations/:id/untrash(.:format)           conversations#untrash
+                    conversations GET    /conversations(.:format)                       conversations#index
+                                  POST   /conversations(.:format)                       conversations#create
+                 new_conversation GET    /conversations/new(.:format)                   conversations#new
+                     conversation GET    /conversations/:id(.:format)                   conversations#show
+                             root        /                                              static_pages#home
+                           signup        /signup(.:format)                              users#new
+                signup_with_token        /signup_with_token/:invitation_token(.:format) users#new
+                           signin        /signin(.:format)                              sessions#new
+                          signout DELETE /signout(.:format)                             sessions#destroy
+                       howitworks        /howitworks(.:format)                          static_pages#how_it_works
+                          request        /request(.:format)                             static_pages#request_item
+                             mate        /mate(.:format)                                static_pages#matepost_item
+                           invite        /invite(.:format)                              invitations#new
+                   reset_password        /reset_password(.:format)                      password_resets#new
+                          contact GET    /contact(.:format)                             contact#new
+                          contact POST   /contact(.:format)                             contact#create
+                      empty_trash        /empty_trash(.:format)                         users#empty_trash
+           auth_facebook_callback        /auth/facebook/callback(.:format)              sessions#createFacebook

@@ -11,7 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require fancybox
 //= require jquery_ujs
+//= require jquery-ui
+//= require autocomplete-rails
 //= require bootstrap
 //= require_tree .

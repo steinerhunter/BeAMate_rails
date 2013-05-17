@@ -3,11 +3,11 @@
     <fieldset class="fields">
       <div class="field">
         <%=  f.label :flying_to, "Where are you going?"   %>
-        <%= f.text_field :flying_to %>
+        <%= f.text_field :flying_to, :autocomplete => autocomplete_place_name_mateposts_path %>
       </div>
       <div class="field">
         <%=  f.label :flying_from, "Where are you flying from?"   %>
-        <%= f.text_field :flying_from %>
+        <%= f.text_field :flying_from, :autocomplete => autocomplete_place_name_mateposts_path %>
       </div>
       <div class="field">
         <%=  f.label :departing_on, "When are you going?"   %>

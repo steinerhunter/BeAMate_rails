@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130430202354) do
+ActiveRecord::Schema.define(:version => 20130517130708) do
 
   create_table "conversations", :force => true do |t|
     t.string   "subject",    :default => ""
@@ -82,6 +82,12 @@ ActiveRecord::Schema.define(:version => 20130430202354) do
   end
 
   add_index "notifications", ["conversation_id"], :name => "index_notifications_on_conversation_id"
+
+  create_table "places", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "receipts", :force => true do |t|
     t.integer  "receiver_id"

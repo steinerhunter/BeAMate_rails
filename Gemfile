@@ -16,6 +16,7 @@ gem 'asset_sync'
 gem 'css3-progress-bar-rails'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'rails3-jquery-autocomplete'
 
 
 

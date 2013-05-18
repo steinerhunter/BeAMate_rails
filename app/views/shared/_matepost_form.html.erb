@@ -1,27 +1,27 @@
 <%= form_for(@matepost, :remote => true) do |f| %>
     <%=  render 'shared/error_messages', object: f.object  %>
     <fieldset class="fields">
-      <div class="field">
+      <div class="myfield_matepost_flyingto">
         <%=  f.label :flying_to, "Where are you going?"   %>
         <%= f.text_field :flying_to, :autocomplete => autocomplete_place_name_mateposts_path %>
       </div>
-      <div class="field">
+      <div class="myfield_matepost_flyingfrom">
         <%=  f.label :flying_from, "Where are you flying from?"   %>
         <%= f.text_field :flying_from, :autocomplete => autocomplete_place_name_mateposts_path %>
       </div>
-      <div class="field">
+      <div class="myfield_matepost_departingon">
         <%=  f.label :departing_on, "When are you going?"   %>
         <%= f.date_select :departing_on, :default => Date.today, :order => [:day, :month, :year], :start_year => Date.today.year, :end_year => Date.today.year + 3,
                                                :id => "matepost_select" %>
       </div>
-      <div class="field">
+      <div class="myfield_matepost_returningon">
         <%=  f.label :returning_on, "When will you return?"   %>
         <%= f.date_select :returning_on, :default => Date.today, :order => [:day, :month, :year], :start_year => Date.today.year, :end_year => Date.today.year + 3,
                                                :id => "matepost_select" %>
       </div>
-      <div class="field">
+      <div class="myfield_matepost_content">
         <%=  f.label :content, "Please add some more details:"   %>
-        <%= f.text_area :content,  "rows" => 3 %>
+        <%= f.text_area :content,  "rows" => 2 %>
       </div>
     </fieldset>
     <fieldset class="actions">

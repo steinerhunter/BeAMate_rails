@@ -1090,11 +1090,9 @@ input {
     padding: 5px;
     margin-bottom: 15px;
     margin-right: 13px;
-    @include box_sizing;
-    float: left;
     width: 100%;
-    width: 140px;
-    height: 40px;
+    width: 80px;
+    height: 35px;
   }
 }
 
@@ -1257,6 +1255,87 @@ aside {
 
 .myfield_feedback_content label {
   width: 250px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_matepost_flyingto label, .myfield_matepost_flyingto input {
+  display:inline-block;
+}
+
+.myfield_matepost_flyingto input {
+  width:270px;
+  margin-left: 1%;
+}
+
+.myfield_matepost_flyingto label {
+  width: 200px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_matepost_flyingfrom label, .myfield_matepost_flyingfrom input {
+  display:inline-block;
+}
+
+.myfield_matepost_flyingfrom input {
+  width:270px;
+  margin-left: 1%;
+  margin-top: -5%;
+}
+
+.myfield_matepost_flyingfrom label {
+  width: 200px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_matepost_departingon label, .myfield_matepost_departingon input select{
+  display:inline-block;
+}
+
+.myfield_matepost_departingon input select{
+  width:250px;
+  margin-left: 1%;
+}
+
+.myfield_matepost_departingon label {
+  width: 200px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_matepost_returningon label, .myfield_matepost_returningon input select{
+  display:inline-block;
+}
+
+.myfield_matepost_returningon input select{
+  width:250px;
+  margin-left: 1%;
+}
+
+.myfield_matepost_returningon label {
+  width: 200px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_matepost_content label, .myfield_matepost_content input select{
+  display:inline-block;
+}
+
+.myfield_matepost_content input select{
+  width:250px;
+  margin-left: 1%;
+}
+
+.myfield_matepost_content label {
+  width: 300px;
   font-family: Impact !important;
   font-size: 1.5em;
   color: black;

@@ -1,17 +1,21 @@
   <%= form_for(@requestpost, :remote => true) do |f| %>
       <%=  render 'shared/error_messages', object: f.object  %>
       <fieldset class="fields">
-        <div class="field">
+        <div class="myfield_requestpost_item">
           <%= f.label :requested_item, "What do you want?"   %>
-	  <%= f.text_field :requested_item %>
+	      <%= f.text_field :requested_item %>
         </div>
-        <div class="field">
-          <%= f.label :give_giftcards, "How many gift cards will you give in return?"   %>
+        <div class="myfield_requestpost_wherefrom">
+          <%= f.label :wherefrom, "Which country sells that?"   %>
+          <%= f.text_field :wherefrom, :autocomplete => autocomplete_place_name_requestposts_path %>
+        </div>
+        <div class="myfield_requestpost_giftcards">
+          <%= f.label :give_giftcards, "How many gift cards will you offer?"   %>
           <%= f.select :give_giftcards, options_for_select([["Select One", ""], "1 Gift Card", "2 Gift Cards", "3 Gift Cards"]), :id => "requestpost_select"%>
         </div>
-        <div class="field">
+        <div class="myfield_requestpost_content">
            <%= f.label :content, "Please add some more details:"   %>
-	       <%= f.text_area :content,  "rows" => 3 %>
+	       <%= f.text_area :content,  "rows" => 2 %>
         </div>
       </fieldset>
       <fieldset class="actions">

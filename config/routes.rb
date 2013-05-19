@@ -4,7 +4,9 @@ BeAMateRails::Application.routes.draw do
   resources :users
   resources :password_resets
   resources :sessions, only: [:new, :create, :destroy]
-  resources :requestposts, only: [:create, :destroy]
+  resources :requestposts, only: [:create, :destroy] do
+    get :autocomplete_place_name, :on => :collection
+  end
   resources :mateposts, only: [:create, :destroy] do
     get :autocomplete_place_name, :on => :collection
   end

@@ -2,6 +2,7 @@ class RequestpostsController < ApplicationController
   before_filter :signed_in_user
   before_filter :correct_user, only: :destroy
   respond_to :html, :js
+  autocomplete :place, :name
 
   def create
     @requestpost = current_user.requestposts.build(params[:requestpost])

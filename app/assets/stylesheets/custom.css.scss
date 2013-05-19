@@ -1090,7 +1090,6 @@ input {
     padding: 5px;
     margin-bottom: 15px;
     margin-right: 13px;
-    width: 100%;
     width: 80px;
     height: 35px;
   }
@@ -1101,8 +1100,7 @@ input {
     border: 1px solid #bbb;
     padding: 5px;
     margin-bottom: 15px;
-    @include box_sizing;
-    width: 100%;
+    width: 175px;
     height: 35px;
   }
 }
@@ -1335,6 +1333,70 @@ aside {
 }
 
 .myfield_matepost_content label {
+  width: 300px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_requestpost_item label, .myfield_requestpost_item input {
+  display:inline-block;
+}
+
+.myfield_requestpost_item input {
+  width:240px;
+  margin-left: 1%;
+}
+
+.myfield_requestpost_item label {
+  width: 230px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_requestpost_wherefrom label, .myfield_requestpost_wherefrom input {
+  display:inline-block;
+}
+
+.myfield_requestpost_wherefrom input {
+  width:240px;
+  margin-left: 1%;
+}
+
+.myfield_requestpost_wherefrom label {
+  width: 230px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_requestpost_giftcards label, .myfield_requestpost_giftcards input select{
+  display:inline-block;
+}
+
+.myfield_requestpost_giftcards input select{
+  width:250px;
+  margin-left: 1%;
+}
+
+.myfield_requestpost_giftcards label {
+  width: 300px;
+  font-family: Impact !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.myfield_requestpost_content label, .myfield_requestpost_content input {
+  display:inline-block;
+}
+
+.myfield_requestpost_content input {
+  width:250px;
+  margin-left: 1%;
+}
+
+.myfield_requestpost_content label {
   width: 300px;
   font-family: Impact !important;
   font-size: 1.5em;

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517130708) do
+ActiveRecord::Schema.define(:version => 20130519210233) do
 
   create_table "conversations", :force => true do |t|
     t.string   "subject",    :default => ""
@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(:version => 20130517130708) do
     t.string   "requested_item"
     t.string   "give_giftcards"
     t.string   "giftCardsPlace"
+    t.string   "wherefrom"
   end
 
   add_index "requestposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"
